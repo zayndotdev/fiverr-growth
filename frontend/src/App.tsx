@@ -3,7 +3,6 @@ import gsap from 'gsap';
 import { AuthProvider } from './context/AuthContext';
 import { Navbar } from './components/layout/Navbar';
 import { AmbientBackdrop } from './components/3d/HeroScene';
-import { SellerCockpit } from './components/dashboard/SellerCockpit';
 import { OnboardingStrategistView } from './components/onboarding/OnboardingStrategistView';
 import { GigGeneratorView } from './components/modules/GigGeneratorView';
 import { BuyerBriefView } from './components/modules/BuyerBriefView';
@@ -66,14 +65,7 @@ const AppContent: React.FC = () => {
       />
 
       {/* Main Command Center Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 md:px-6 py-5 space-y-5 relative z-10">
-        {/* Executive Freelancer KPI Cockpit & Guided Pipeline */}
-        <SellerCockpit
-          activeTab={activeTab}
-          onNavigateTab={setActiveTab}
-          savedGigsCount={savedGigs.length}
-        />
-
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 md:px-6 py-6 space-y-6 relative z-10">
         {/* Tab Module Views (GSAP Animated) */}
         <div ref={contentRef} className="w-full">
           {activeTab === 'strategist' && (
