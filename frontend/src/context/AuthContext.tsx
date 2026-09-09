@@ -5,6 +5,7 @@ export interface User {
   username: string;
   email: string;
   fiverr_profile_url?: string;
+  fiverrProfile?: any;
   skills?: string[];
   created_at?: string;
 }
@@ -44,6 +45,9 @@ export interface UserContextData {
     intended_gigs: string[];
   };
   strategy: MarketStrategy;
+  fiverrProfile?: any;
+  onboardingStep?: number;
+  marketStrategy?: any;
   updated_at: string;
 }
 

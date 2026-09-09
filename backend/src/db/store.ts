@@ -7,12 +7,15 @@ const __dirname = path.dirname(__filename);
 const DATA_DIR = path.resolve(__dirname, "../../data");
 const DB_FILE = path.join(DATA_DIR, "store.json");
 
+import { ScrapedFiverrProfile } from "../services/fiverrScraper.service.js";
+
 export interface User {
   id: string;
   email: string;
   username: string;
   passwordHash: string;
   fiverr_profile_url?: string;
+  fiverrProfile?: ScrapedFiverrProfile;
   createdAt: string;
 }
 
@@ -24,6 +27,8 @@ export interface UserContext {
   primarySkills: string[];
   secondarySkills: string[];
   targetNiches: string[];
+  fiverrProfile?: ScrapedFiverrProfile;
+  onboardingStep?: number;
   marketStrategy: {
     recommendedNiches: {
       nicheTitle: string;
@@ -133,6 +138,31 @@ class Store {
     };
 
     this.data.userContexts[userId] = updated;
+    this.save();
+    return updated;
+  }
+
+  public saveFiverrProfile(userId: string, profile: ScrapedFiverrProfile): UserContext {
+    // 1. Link to user record
+    const user = this.findUserById(userId);
+    if (user) {
+      user.fiverr_profile_url = profile.profileUrl;
+      user.fiverrProfile = profile;
+    }
+
+    // 2. Populate primary skills and target niches from scraped data
+    const primarySkills = profile.skills.map((s) => s.name).filter(Boolean);
+    const targetNiches = profile.gigs.map((g) => g.title).filter(Boolean);
+
+    const updated = this.saveUserContext(userId, {
+      fullName: profile.displayName || user?.username || "Freelancer",
+      fiverrUrl: profile.profileUrl,
+      primarySkills: primarySkills.length > 0 ? primarySkills : ["Full-Stack Development", "AI Solutions"],
+      targetNiches: targetNiches.length > 0 ? targetNiches : ["Web Development", "AI Automation"],
+      fiverrProfile: profile,
+      onboardingStep: 2,
+    });
+
     this.save();
     return updated;
   }

@@ -2,6 +2,7 @@ import { Router } from "express";
 import { authController } from "../controllers/auth.controller.js";
 import { strategistController } from "../controllers/strategist.controller.js";
 import { apiController } from "../controllers/api.controller.js";
+import { scraperController } from "../controllers/scraper.controller.js";
 import { requireAuth, optionalAuth } from "../middlewares/auth.middleware.js";
 
 const router = Router();
@@ -10,6 +11,11 @@ const router = Router();
 router.post("/auth/register", (req, res) => authController.register(req, res));
 router.post("/auth/login", (req, res) => authController.login(req, res));
 router.get("/auth/me", requireAuth, (req, res) => authController.me(req, res));
+
+// --- Fiverr Scraping & Onboarding Step 1 Routes ---
+router.post("/scraper/fiverr-profile", optionalAuth, (req, res) => scraperController.scrapeProfile(req, res));
+router.post("/onboarding/fiverr-profile", optionalAuth, (req, res) => scraperController.saveProfile(req, res));
+router.post("/onboarding/fresh-start", optionalAuth, (req, res) => scraperController.freshStart(req, res));
 
 // --- Onboarding & Growth Strategist Routes ---
 router.post("/onboarding/message", optionalAuth, (req, res) => strategistController.handleInterviewTurn(req, res));

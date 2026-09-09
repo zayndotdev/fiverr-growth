@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Lock, Mail, User as UserIcon, Link2, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
+import { X, Lock, Mail, User as UserIcon, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
 interface AuthModalProps {
@@ -13,7 +13,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, defaultMo
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [fiverrUrl, setFiverrUrl] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -29,7 +28,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, defaultMo
     try {
       const endpoint = mode === 'register' ? '/api/v1/auth/register' : '/api/v1/auth/login';
       const payload = mode === 'register'
-        ? { username, email, password, fiverr_profile_url: fiverrUrl || undefined }
+        ? { username, email, password }
         : { email, password };
 
       const res = await fetch(endpoint, {
@@ -180,25 +179,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({ isOpen, onClose, defaultMo
               />
             </div>
           </div>
-
-          {mode === 'register' && (
-            <div>
-              <label className="block text-xs font-semibold text-gray-300 mb-1 flex items-center justify-between">
-                <span>Fiverr Profile URL</span>
-                <span className="text-[10px] text-gray-400 font-normal">Optional</span>
-              </label>
-              <div className="relative">
-                <Link2 className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
-                <input
-                  type="url"
-                  value={fiverrUrl}
-                  onChange={(e) => setFiverrUrl(e.target.value)}
-                  placeholder="https://fiverr.com/your_handle"
-                  className="w-full glass-input pl-10 pr-4 py-2 rounded-xl text-sm focus:ring-1 focus:ring-emerald-500"
-                />
-              </div>
-            </div>
-          )}
 
           <button
             type="submit"

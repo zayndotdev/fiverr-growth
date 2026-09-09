@@ -12,9 +12,11 @@ import {
   Layers,
   CheckCircle2,
   DollarSign,
-  Compass
+  Compass,
+  ChevronRight
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
+import { OnboardingStep1, type ScrapedFiverrProfile } from './OnboardingStep1';
 
 interface Message {
   role: 'agent' | 'user';
@@ -32,6 +34,10 @@ export const OnboardingStrategistView: React.FC<OnboardingStrategistViewProps> =
   onOpenAuth,
 }) => {
   const { user, userContext, updateUserContext } = useAuth();
+
+  const [currentStep, setCurrentStep] = useState<number>(
+    userContext?.onboardingStep || (userContext?.fiverrProfile ? 2 : 1)
+  );
 
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -58,13 +64,31 @@ I'm here to build your personalized blueprint for high-margin freelancing succes
   });
 
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // Only scroll internal chat container when messages are added, NEVER scroll window on mount
+    if (messages.length > 1 && messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTo({
+        top: messagesContainerRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
   }, [messages, loading]);
 
   useEffect(() => {
-    if (userContext?.profile) {
+    if (userContext?.fiverrProfile) {
+      const fp = userContext.fiverrProfile;
+      setExtractedData({
+        name: fp.displayName || fp.username || user?.username || '',
+        fiverr_url: fp.profileUrl || user?.fiverr_profile_url || '',
+        skills: fp.skills?.map((s: any) => s.name).join(', ') || '',
+        intended_gigs: fp.gigs?.map((g: any) => g.title).join(', ') || '',
+      });
+      if (!userContext.onboardingStep) {
+        setCurrentStep(2);
+      }
+    } else if (userContext?.profile) {
       setExtractedData({
         name: userContext.profile.name || user?.username || '',
         fiverr_url: userContext.profile.fiverr_profile_url || user?.fiverr_profile_url || '',
@@ -73,6 +97,29 @@ I'm here to build your personalized blueprint for high-margin freelancing succes
       });
     }
   }, [userContext, user]);
+
+  const handleProfileConfirmed = (profile: ScrapedFiverrProfile) => {
+    const skillNames = profile.skills.map((s) => s.name).join(', ');
+    const gigTitles = profile.gigs.map((g) => g.title).join(', ');
+    
+    setExtractedData({
+      name: profile.displayName || profile.username,
+      fiverr_url: profile.profileUrl,
+      skills: skillNames || 'Full-Stack Development, AI Agents, Python, React',
+      intended_gigs: gigTitles || 'Custom AI Solutions, Web Development',
+    });
+
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: 'agent',
+        text: `🎉 **Live Fiverr Profile Locked & Verified!**\n\nI have successfully verified your public reputation for **${profile.displayName}** (@${profile.username}) from **${profile.country}**.\n\n- **Reputation**: ${profile.rating}★ rating across ${profile.reviewCount} verified orders.\n- **Tier**: ${profile.sellerLevel} (${profile.responseTimeText} response turnaround).\n- **Skills Ingested**: ${profile.skills.length} verified technologies (${profile.skills.slice(0, 6).map((s) => s.name).join(', ')}...).\n\nLet's now cross-examine your high-ticket positioning and synthesize your market blueprint!`,
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      },
+    ]);
+
+    setCurrentStep(2);
+  };
 
   const handleSendMessage = async (textToSend?: string) => {
     const messageContent = textToSend || inputText;
@@ -247,8 +294,68 @@ I'm here to build your personalized blueprint for high-margin freelancing succes
         )}
       </div>
 
-      {/* Main Grid: Chat Interview vs Extracted Profile & Blueprint */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      {/* Onboarding Steps Navigation Bar */}
+      <div className="flex items-center gap-2 p-1.5 bg-gray-950/70 rounded-xl border border-white/10 overflow-x-auto scrollbar-none">
+        <button
+          type="button"
+          onClick={() => setCurrentStep(1)}
+          className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
+            currentStep === 1
+              ? 'bg-emerald-500 text-gray-950 shadow-md shadow-emerald-500/20'
+              : userContext?.fiverrProfile
+              ? 'bg-white/5 text-emerald-300 hover:bg-white/10'
+              : 'text-gray-400 hover:text-white'
+          }`}
+        >
+          <span className="w-4 h-4 rounded-full bg-black/20 flex items-center justify-center text-[10px]">
+            {userContext?.fiverrProfile ? '✓' : '1'}
+          </span>
+          <span>Step 1: Fiverr Profile Ingestion</span>
+        </button>
+
+        <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+
+        <button
+          type="button"
+          onClick={() => setCurrentStep(2)}
+          className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
+            currentStep === 2
+              ? 'bg-emerald-500 text-gray-950 shadow-md shadow-emerald-500/20'
+              : 'text-gray-400 hover:text-white'
+          }`}
+        >
+          <span className="w-4 h-4 rounded-full bg-black/20 flex items-center justify-center text-[10px]">
+            2
+          </span>
+          <span>Step 2: AI Strategist Interview</span>
+        </button>
+
+        <ChevronRight className="w-3.5 h-3.5 text-gray-600 shrink-0" />
+
+        <div className={`flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold whitespace-nowrap ${
+          userContext?.strategy ? 'text-cyan-300' : 'text-gray-500'
+        }`}>
+          <span className="w-4 h-4 rounded-full bg-white/5 flex items-center justify-center text-[10px]">
+            {userContext?.strategy ? '✓' : '3'}
+          </span>
+          <span>Step 3: Market Blueprint</span>
+          {userContext?.strategy && (
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+          )}
+        </div>
+      </div>
+
+      {/* View Switcher based on Onboarding Step */}
+      {currentStep === 1 ? (
+        <OnboardingStep1
+          onProfileConfirmed={handleProfileConfirmed}
+          onSkip={() => setCurrentStep(2)}
+          onOpenAuth={onOpenAuth}
+        />
+      ) : (
+        <>
+          {/* Main Grid: Chat Interview vs Extracted Profile & Blueprint */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left Column: Conversational Interviewer Agent */}
         <div className="lg:col-span-7 flex flex-col glass-panel rounded-2xl border border-white/5 h-[620px] overflow-hidden">
           {/* Chat Header */}
@@ -266,7 +373,7 @@ I'm here to build your personalized blueprint for high-margin freelancing succes
           </div>
 
           {/* Chat Messages */}
-          <div className="flex-1 p-4 overflow-y-auto space-y-4">
+          <div ref={messagesContainerRef} className="flex-1 p-4 overflow-y-auto space-y-4 custom-scrollbar">
             {messages.map((msg, i) => (
               <div
                 key={i}
@@ -600,6 +707,8 @@ I'm here to build your personalized blueprint for high-margin freelancing succes
             </div>
           </div>
         </div>
+      )}
+        </>
       )}
     </div>
   );

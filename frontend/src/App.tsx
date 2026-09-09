@@ -35,8 +35,9 @@ const AppContent: React.FC = () => {
     fetchSavedGigs();
   }, []);
 
-  // Animate tab transitions with GSAP
+  // Animate tab transitions with GSAP and ensure window stays anchored at top
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     if (contentRef.current) {
       gsap.fromTo(
         contentRef.current,
