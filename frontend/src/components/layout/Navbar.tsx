@@ -33,25 +33,25 @@ export const Navbar: React.FC<NavbarProps> = ({
   ];
 
   return (
-    <header className="w-full glass-panel border-b border-white/5 sticky top-0 z-50 px-4 md:px-6 py-2.5">
+    <header className="w-full bg-white border-b border-[#dadbdd] sticky top-0 z-50 px-4 md:px-6 py-2.5 shadow-xs">
       <div className="max-w-7xl mx-auto flex items-center justify-between relative">
-        {/* Left Side: ONLY the Logo */}
+        {/* Left Side: Fiverr Authentic Logo */}
         <div
           onClick={() => setActiveTab('strategist')}
-          className="flex items-center gap-2.5 cursor-pointer shrink-0 group select-none"
+          className="flex items-center gap-1.5 cursor-pointer shrink-0 select-none group"
           title="FiverrGrowth Home"
         >
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-emerald-500 via-teal-500 to-cyan-500 flex items-center justify-center shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
-            <Sparkles className="w-4 h-4 text-white" />
-          </div>
-          <span className="font-black text-base tracking-tight text-white group-hover:text-emerald-300 transition-colors">
-            Fiverr<span className="text-emerald-400">Growth</span>
+          <span className="font-black text-2xl tracking-tighter text-[#222325]">
+            fiverr<span className="text-[#1dbf73]">.</span>
+          </span>
+          <span className="text-[10px] font-bold uppercase tracking-wider text-white bg-[#222325] px-1.5 py-0.5 rounded ml-1">
+            Growth
           </span>
         </div>
 
-        {/* Center: Navigation Bar with Compact Navlinks */}
-        <div className="flex-1 flex justify-center px-2">
-          <nav className="flex items-center bg-gray-900/90 p-1 rounded-xl border border-white/10 gap-0.5 md:gap-1 scrollbar-none overflow-x-auto max-w-[60vw] sm:max-w-none shadow-sm">
+        {/* Center: Navigation Bar with Authentic Fiverr Light Pill Tabs */}
+        <div className="flex-1 flex justify-center px-4">
+          <nav className="flex items-center bg-[#f5f5f5] p-1 rounded-full border border-[#dadbdd] gap-1 overflow-x-auto max-w-[60vw] sm:max-w-none">
             {tabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
@@ -59,18 +59,18 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-1.5 px-2.5 md:px-3 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 whitespace-nowrap cursor-pointer ${
+                  className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
                     isActive
-                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-gray-950 shadow-md shadow-emerald-500/20 font-bold'
-                      : 'text-gray-400 hover:text-white hover:bg-white/5'
+                      ? 'bg-white text-[#1dbf73] shadow-xs border border-[#dadbdd]/70'
+                      : 'text-[#62646a] hover:text-[#222325] hover:bg-white/50'
                   }`}
                 >
-                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-gray-950' : 'text-gray-400'}`} />
+                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#1dbf73]' : 'text-[#74767e]'}`} />
                   <span>{tab.label}</span>
                   {tab.badge && (
                     <span
                       className={`px-1.5 py-0.2 rounded-full text-[9px] font-extrabold ${
-                        isActive ? 'bg-gray-950 text-emerald-400' : 'bg-cyan-400 text-gray-950 animate-pulse'
+                        isActive ? 'bg-[#1dbf73]/10 text-[#19a463]' : 'bg-[#1dbf73] text-white'
                       }`}
                     >
                       {tab.badge}
@@ -82,39 +82,50 @@ export const Navbar: React.FC<NavbarProps> = ({
           </nav>
         </div>
 
-        {/* Right Side: Profile Icon & Pop-up Dropdown */}
-        <div className="shrink-0 relative">
-          <button
-            onClick={() => setIsProfileOpen((prev) => !prev)}
-            className={`w-8 h-8 md:w-9 md:h-9 rounded-xl flex items-center justify-center transition-all cursor-pointer border relative ${
-              isProfileOpen
-                ? 'border-emerald-500/60 bg-emerald-500/20 shadow-lg shadow-emerald-500/20'
-                : 'border-white/10 bg-gray-900/90 hover:bg-white/5 hover:border-white/20'
-            }`}
-            title="Profile & Options"
-          >
-            {user ? (
-              <div className="w-full h-full rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center text-gray-950 text-xs font-black">
-                {user.username.charAt(0).toUpperCase()}
-              </div>
-            ) : (
-              <User className="w-4 h-4 text-gray-300" />
-            )}
+        {/* Right Side: Profile Icon & Pop-up Dropdown / Join CTA */}
+        <div className="shrink-0 flex items-center gap-3 relative">
+          {!user && (
+            <button
+              onClick={onOpenAuth}
+              className="fiverr-btn-green px-4 py-1.5 text-xs font-bold rounded cursor-pointer hidden sm:inline-flex items-center gap-1"
+            >
+              Sign In / Join
+            </button>
+          )}
 
-            {/* Active Strategy Status Indicator Dot */}
-            {user && userContext?.strategy && (
-              <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-gray-950" />
-            )}
-          </button>
+          <div className="relative">
+            <button
+              onClick={() => setIsProfileOpen((prev) => !prev)}
+              className={`w-8 h-8 md:w-9 md:h-9 rounded-full flex items-center justify-center transition-all cursor-pointer border relative ${
+                isProfileOpen
+                  ? 'border-[#1dbf73] bg-[#1dbf73]/10 shadow-xs'
+                  : 'border-[#dadbdd] bg-[#f5f5f5] hover:bg-[#e4e5e7] hover:border-[#b5b6ba]'
+              }`}
+              title="Profile & Options"
+            >
+              {user ? (
+                <div className="w-full h-full rounded-full bg-[#1dbf73] flex items-center justify-center text-white text-xs font-bold">
+                  {user.username.charAt(0).toUpperCase()}
+                </div>
+              ) : (
+                <User className="w-4 h-4 text-[#74767e]" />
+              )}
 
-          {/* Profile Dropdown Popup */}
-          <ProfileDropdown
-            isOpen={isProfileOpen}
-            onClose={() => setIsProfileOpen(false)}
-            onOpenAuth={onOpenAuth}
-            onNavigateTab={setActiveTab}
-            savedGigsCount={gigsCount}
-          />
+              {/* Active Strategy Status Indicator Dot */}
+              {user && userContext?.strategy && (
+                <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-[#1dbf73] rounded-full border-2 border-white shadow-xs" />
+              )}
+            </button>
+
+            {/* Profile Dropdown Popup */}
+            <ProfileDropdown
+              isOpen={isProfileOpen}
+              onClose={() => setIsProfileOpen(false)}
+              onOpenAuth={onOpenAuth}
+              onNavigateTab={setActiveTab}
+              savedGigsCount={gigsCount}
+            />
+          </div>
         </div>
       </div>
     </header>

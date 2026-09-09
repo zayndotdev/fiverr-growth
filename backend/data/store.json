@@ -1232,6 +1232,1000 @@
         ],
         "scrapedAt": "2026-09-09T19:20:24.325Z"
       }
+    },
+    {
+      "id": "usr_1788982798756_25f08",
+      "email": "seller_1788982798508@example.com",
+      "username": "seller_1788982798508",
+      "passwordHash": "$2b$10$bvT48w47Mz1t.XH/t/GkveEnC0rVtzoNw4PAceZlvIflcsrTtaC2G",
+      "fiverr_profile_url": "https://www.fiverr.com/dev_zaynee",
+      "createdAt": "2026-09-09T19:39:58.756Z",
+      "fiverrProfile": {
+        "username": "dev_zaynee",
+        "displayName": "Zayn Raza",
+        "profileUrl": "https://www.fiverr.com/dev_zaynee",
+        "avatarUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/7adf4016a19046ae4849caa67c830a1b-1751971225688/45f96031-5f04-4578-b65d-a39d9cb3ece2.jpg",
+        "profileCoverUrl": "",
+        "isAgency": false,
+        "tagline": "Full Stack Agency, AI Agents, Web and Mobile Apps",
+        "description": "Businesses hire us when they need something built right — \nwhether that's a website, a mobile app, an AI chatbot that \nhandles their customers, or a voice agent that answers their \ncalls 24/7.\n\nWe handle the full stack. React, Next.js, Node.js, Python, \nFastAPI, Flutter, LangChain, LangGraph, VAPI, TypeScript, \nMongoDB. From a simple landing page to a complex SaaS \nplatform or a multi-agent AI system — we deliver \nproduction-ready, clean code.\n\n24+ projects completed. 100% on-time delivery. \nMessage us — we respond instantly.",
+        "country": "Pakistan",
+        "countryCode": "PK",
+        "memberSince": "May 2023",
+        "joinedAtTimestamp": 1683821061,
+        "responseTimeHours": 0,
+        "responseTimeText": "< 1 hour",
+        "lastDeliveryText": "Feb 2025",
+        "sellerLevel": "New Seller",
+        "isPro": false,
+        "isVerified": false,
+        "isHighlyResponsive": false,
+        "rating": 4.6,
+        "reviewCount": 15,
+        "languages": [
+          {
+            "language": "English",
+            "code": "EN",
+            "level": "Fluent"
+          },
+          {
+            "language": "Urdu",
+            "code": "UR",
+            "level": "Native / Bilingual"
+          },
+          {
+            "language": "Hindi",
+            "code": "HI",
+            "level": "Fluent"
+          }
+        ],
+        "skills": [
+          {
+            "name": "Chatbot development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Software automation",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "AI developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Rest API",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "E-commerce development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Flutter",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Next.js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "TypeScript",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Node.js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Python",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "OpenAI",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "HTML & CSS",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Debugging",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Performance",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Security",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Design",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "AngularJS",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Bootstrap",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "JQuery",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Vue.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Django",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Express.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Laravel",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Web App Development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Web App Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React Node Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Full Stack Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Custom Web Developer",
+            "level": "PRO",
+            "verified": false
+          }
+        ],
+        "education": [
+          {
+            "degree": "bachelor in information technology",
+            "school": "Bahauddin Zakariya University,Multan",
+            "degreeTitle": "BSC",
+            "toYear": 2024,
+            "countryCode": "PK"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Web Design",
+            "from": "freecodecamp",
+            "year": 2023
+          },
+          {
+            "name": "Object Oriented Programming",
+            "from": "coursera",
+            "year": 2024
+          }
+        ],
+        "gigs": [
+          {
+            "id": 316571551,
+            "title": "build your custom full stack web app or website in any technology",
+            "slug": "be-your-front-end-web-developer-in-html-css-javascript",
+            "url": "https://www.fiverr.com/dev_zaynee/be-your-front-end-web-developer-in-html-css-javascript",
+            "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
+            "gallery": [
+              "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/316571551/original/2d6c689ee919f48d73ca00488c8776b3645b09c7/be-your-front-end-web-developer-in-html-css-javascript.png",
+              "https://fiverr-res.cloudinary.com/image/upload/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png"
+            ],
+            "startingPrice": "$75",
+            "rating": 5,
+            "reviewCount": 15,
+            "ordersInQueue": 0,
+            "category": "Programming & Tech",
+            "subCategory": "Software Development",
+            "nestedCategory": "Full Stack Web Applications",
+            "description": "You need something built. We build it full stack, any&nbsp;technology, any scale. Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything WHAT WE BUILD: - Business websites and landing pages - SaaS platforms and startup MVPs - E-commerce with payment integration - Admin dashboards with role-based access - Booking systems and customer portals - REST APIs and third-party integrations ANY TECHNOLOGY: Frontend React, Next.js, Vue.js, Tailwind, TypeScript Backend Node.js, Python, FastAPI, Django, PHP, Laravel Database MongoDB, PostgreSQL, MySQL, Firebase Other JWT Auth, Stripe, AWS, Docker, GraphQL EVERY PROJECT INCLUDES: - Clean, documented, scalable code - Fully responsive on all devices - SEO-friendly structure - Free consultation before we start - 100% on-time delivery - Post-delivery support 24+ projects completed. 100% on-time delivery. Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.",
+            "descriptionHtml": "<p><strong>You need something built. We build it full stack, any&nbsp;technology, any scale.</strong></p><p><br></p><p>Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything</p><p><br></p><p><strong>WHAT WE BUILD:</strong></p><p>- Business websites and landing pages</p><p>- SaaS platforms and startup MVPs</p><p>- E-commerce with payment integration</p><p>- Admin dashboards with role-based access</p><p>- Booking systems and customer portals</p><p>- REST APIs and third-party integrations</p><p><br></p><p><strong>ANY TECHNOLOGY:</strong></p><p><br></p><ul><li>Frontend React, Next.js, Vue.js, Tailwind, TypeScript</li><li>Backend Node.js, Python, FastAPI, Django, PHP, Laravel</li><li>Database MongoDB, PostgreSQL, MySQL, Firebase</li><li>Other JWT Auth, Stripe, AWS, Docker, GraphQL</li></ul><p><br></p><p><strong>EVERY PROJECT INCLUDES:</strong></p><p><br></p><p>- Clean, documented, scalable code</p><p>- Fully responsive on all devices</p><p>- SEO-friendly structure</p><p>- Free consultation before we start</p><p>- 100% on-time delivery</p><p>- Post-delivery support</p><p><br></p><p><strong>24+ projects completed. 100% on-time delivery.</strong></p><p><br></p><p>Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.</p>",
+            "faqs": [
+              {
+                "question": "I'm not technical — how do I know what I need?",
+                "answer": "Just tell us what your website needs to do. We recommend the right approach, explain everything in plain English, and handle all technical decisions. No tech knowledge needed at all."
+              },
+              {
+                "question": "Can you work with my existing website or code?",
+                "answer": "Yes. We can extend, fix, or rebuild existing projects in any technology. Share your codebase or describe the issue — we'll review it honestly and tell you exactly what we can do before you order."
+              },
+              {
+                "question": "Do I own the code after delivery?",
+                "answer": "100% yes. Full source code ownership on every package. Clean, documented code you can modify, deploy, or hand to any developer. No proprietary systems or recurring fees for code we built for you."
+              },
+              {
+                "question": "What if I need changes after delivery?",
+                "answer": "Every package includes revisions — 3 Basic, 7 Standard, unlimited Premium. After that we offer maintenance at fair rates. Most clients come back for Phase 2. We're here long term if you need us."
+              }
+            ],
+            "tags": [
+              "web app development",
+              "web app developer",
+              "react node developer",
+              "full stack developer",
+              "custom web developer"
+            ],
+            "packages": [
+              {
+                "id": 1,
+                "title": "Starter Website",
+                "description": "1-page responsive website, frontend only, any technology, clean code, mobile optimized.",
+                "price": 75,
+                "durationDays": 3,
+                "revisions": 3,
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 1
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "title": "Full Stack Web App",
+                "description": "Multi-page web app with backend, database, REST API & user auth. Any stack.",
+                "price": 225,
+                "durationDays": 7,
+                "revisions": 7,
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 3
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Enterprise System",
+                "description": "Full system: admin dashboard, multi-role access, payments, APIs & deployment.",
+                "price": 550,
+                "durationDays": 14,
+                "revisions": "Unlimited",
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 10
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              }
+            ],
+            "metadata": [
+              {
+                "type": "programming_language",
+                "value": [
+                  "HTML & CSS"
+                ]
+              },
+              {
+                "type": "expertise",
+                "value": [
+                  "Debugging",
+                  "Performance",
+                  "Security",
+                  "Design"
+                ]
+              },
+              {
+                "type": "frontend_framework",
+                "value": [
+                  "AngularJS",
+                  "Bootstrap",
+                  "jQuery",
+                  "React.js",
+                  "Vue.js"
+                ]
+              },
+              {
+                "type": "backend_framework",
+                "value": [
+                  "Django",
+                  "Express.js",
+                  "Laravel",
+                  "Next.js",
+                  "Node.js"
+                ]
+              }
+            ],
+            "aiSummary": [
+              "This service offers custom full stack web app development in any technology.",
+              "Clients value high-quality, scalable code and on-time delivery.",
+              "The agency has completed over 24 projects with a 4.6 rating.",
+              "Work includes websites, SaaS, e-commerce, APIs, and dashboards.",
+              "Reviews highlight professionalism, responsiveness, and rapid results."
+            ]
+          }
+        ],
+        "recentReviews": [
+          {
+            "id": "67b4bfce1767fc5bb8acf437",
+            "reviewer": "davidfelix_",
+            "reviewerCountry": "United Kingdom",
+            "reviewerCountryCode": "GB",
+            "rating": 5,
+            "comment": "I can confidently say that the final result exceeded my expectations. From the outset, Zayn demonstrated a high level of professionalism and expertise in their field, delivering high-quality work that was both efficient and insightful.",
+            "createdAt": "2025-02-18T17:46:40",
+            "workSample": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
+            "orderDuration": "8 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thanks\nmy pleasure\n"
+          },
+          {
+            "id": "67aa6746d7a07b18e01c9b87",
+            "reviewer": "davidfelix_",
+            "reviewerCountry": "United Kingdom",
+            "reviewerCountryCode": "GB",
+            "rating": 3.7,
+            "comment": "Zayn Raza's work in software development was generally satisfactory, While collaborating with Zayn was relatively smooth.",
+            "createdAt": "2025-02-10T21:14:23",
+            "orderDuration": "5 days",
+            "priceRange": "$50-$100"
+          },
+          {
+            "id": "66762814b9aaef325b08ba96",
+            "reviewer": "deborahkcole",
+            "reviewerCountry": "United States",
+            "reviewerCountryCode": "US",
+            "rating": 5,
+            "comment": "Zayn is skilled  and delivers professional quality work rapidly. Outstanding results & he was easy and delightful to work with + very responsive to my tweak requests. ",
+            "createdAt": "2024-06-22T03:39",
+            "orderDuration": "2 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thank You!"
+          },
+          {
+            "id": "6673b10ac7c17c43897f0129",
+            "reviewer": "deborahkcole",
+            "reviewerCountry": "United States",
+            "reviewerCountryCode": "US",
+            "rating": 5,
+            "comment": "Absolutely outstanding work. Very professional, excellent communication, rapid delivery & A+ results. Will definitely hire again",
+            "createdAt": "2024-06-20T05:02:10",
+            "orderDuration": "3 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thank you."
+          },
+          {
+            "id": "6661b154ce04e166f6ecb56e",
+            "reviewer": "carlos_galvis",
+            "reviewerCountry": "Bolivia",
+            "reviewerCountryCode": "BO",
+            "rating": 1,
+            "comment": "I have been very disappointed with Zayn's lack of professionalism, he lied for several weeks, even though his final delivery was made a couple of weeks ago, with many missing features that apparently, he does not know how to solve and instead of investigating he decided to give up after losing time.",
+            "createdAt": "2024-06-06T14:18:27",
+            "orderDuration": "5 weeks",
+            "priceRange": "$50-$100",
+            "sellerResponse": "The requirements were unclear, he was aiming for something that seemed nearly impossible. I wanted my potential clients to see my other reviews to get a clear picture."
+          }
+        ],
+        "scrapedAt": "2026-09-09T19:39:57.954Z"
+      }
+    },
+    {
+      "id": "usr_1788983747656_w5wf7",
+      "email": "seller_1788983747321@example.com",
+      "username": "seller_1788983747321",
+      "passwordHash": "$2b$10$g/kn1VC6Z/4kMmV5aGWcdeAPHXYnpBAxUvYH9zA/gQdUGN2MFY4oq",
+      "fiverr_profile_url": "https://www.fiverr.com/dev_zaynee",
+      "createdAt": "2026-09-09T19:55:47.656Z",
+      "fiverrProfile": {
+        "username": "dev_zaynee",
+        "displayName": "Zayn Raza",
+        "profileUrl": "https://www.fiverr.com/dev_zaynee",
+        "avatarUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/7adf4016a19046ae4849caa67c830a1b-1751971225688/45f96031-5f04-4578-b65d-a39d9cb3ece2.jpg",
+        "profileCoverUrl": "",
+        "isAgency": false,
+        "tagline": "Full Stack Agency, AI Agents, Web and Mobile Apps",
+        "description": "Businesses hire us when they need something built right — \nwhether that's a website, a mobile app, an AI chatbot that \nhandles their customers, or a voice agent that answers their \ncalls 24/7.\n\nWe handle the full stack. React, Next.js, Node.js, Python, \nFastAPI, Flutter, LangChain, LangGraph, VAPI, TypeScript, \nMongoDB. From a simple landing page to a complex SaaS \nplatform or a multi-agent AI system — we deliver \nproduction-ready, clean code.\n\n24+ projects completed. 100% on-time delivery. \nMessage us — we respond instantly.",
+        "country": "Pakistan",
+        "countryCode": "PK",
+        "memberSince": "May 2023",
+        "joinedAtTimestamp": 1683821061,
+        "responseTimeHours": 0,
+        "responseTimeText": "< 1 hour",
+        "lastDeliveryText": "Feb 2025",
+        "sellerLevel": "New Seller",
+        "isPro": false,
+        "isVerified": false,
+        "isHighlyResponsive": false,
+        "rating": 4.6,
+        "reviewCount": 15,
+        "languages": [
+          {
+            "language": "English",
+            "code": "EN",
+            "level": "Fluent"
+          },
+          {
+            "language": "Urdu",
+            "code": "UR",
+            "level": "Native / Bilingual"
+          },
+          {
+            "language": "Hindi",
+            "code": "HI",
+            "level": "Fluent"
+          }
+        ],
+        "skills": [
+          {
+            "name": "Chatbot development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Software automation",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "AI developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Rest API",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "E-commerce development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Flutter",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Next.js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "TypeScript",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Node.js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Python",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "OpenAI",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "HTML & CSS",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Debugging",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Performance",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Security",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Design",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "AngularJS",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Bootstrap",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "JQuery",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Vue.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Django",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Express.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Laravel",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Web App Development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Web App Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React Node Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Full Stack Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Custom Web Developer",
+            "level": "PRO",
+            "verified": false
+          }
+        ],
+        "education": [
+          {
+            "degree": "bachelor in information technology",
+            "school": "Bahauddin Zakariya University,Multan",
+            "degreeTitle": "BSC",
+            "toYear": 2024,
+            "countryCode": "PK"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Web Design",
+            "from": "freecodecamp",
+            "year": 2023
+          },
+          {
+            "name": "Object Oriented Programming",
+            "from": "coursera",
+            "year": 2024
+          }
+        ],
+        "gigs": [
+          {
+            "id": 316571551,
+            "title": "build your custom full stack web app or website in any technology",
+            "slug": "be-your-front-end-web-developer-in-html-css-javascript",
+            "url": "https://www.fiverr.com/dev_zaynee/be-your-front-end-web-developer-in-html-css-javascript",
+            "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
+            "gallery": [
+              "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/316571551/original/2d6c689ee919f48d73ca00488c8776b3645b09c7/be-your-front-end-web-developer-in-html-css-javascript.png",
+              "https://fiverr-res.cloudinary.com/image/upload/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png"
+            ],
+            "startingPrice": "$75",
+            "rating": 5,
+            "reviewCount": 15,
+            "ordersInQueue": 0,
+            "category": "Programming & Tech",
+            "subCategory": "Software Development",
+            "nestedCategory": "Full Stack Web Applications",
+            "description": "You need something built. We build it full stack, any&nbsp;technology, any scale. Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything WHAT WE BUILD: - Business websites and landing pages - SaaS platforms and startup MVPs - E-commerce with payment integration - Admin dashboards with role-based access - Booking systems and customer portals - REST APIs and third-party integrations ANY TECHNOLOGY: Frontend React, Next.js, Vue.js, Tailwind, TypeScript Backend Node.js, Python, FastAPI, Django, PHP, Laravel Database MongoDB, PostgreSQL, MySQL, Firebase Other JWT Auth, Stripe, AWS, Docker, GraphQL EVERY PROJECT INCLUDES: - Clean, documented, scalable code - Fully responsive on all devices - SEO-friendly structure - Free consultation before we start - 100% on-time delivery - Post-delivery support 24+ projects completed. 100% on-time delivery. Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.",
+            "descriptionHtml": "<p><strong>You need something built. We build it full stack, any&nbsp;technology, any scale.</strong></p><p><br></p><p>Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything</p><p><br></p><p><strong>WHAT WE BUILD:</strong></p><p>- Business websites and landing pages</p><p>- SaaS platforms and startup MVPs</p><p>- E-commerce with payment integration</p><p>- Admin dashboards with role-based access</p><p>- Booking systems and customer portals</p><p>- REST APIs and third-party integrations</p><p><br></p><p><strong>ANY TECHNOLOGY:</strong></p><p><br></p><ul><li>Frontend React, Next.js, Vue.js, Tailwind, TypeScript</li><li>Backend Node.js, Python, FastAPI, Django, PHP, Laravel</li><li>Database MongoDB, PostgreSQL, MySQL, Firebase</li><li>Other JWT Auth, Stripe, AWS, Docker, GraphQL</li></ul><p><br></p><p><strong>EVERY PROJECT INCLUDES:</strong></p><p><br></p><p>- Clean, documented, scalable code</p><p>- Fully responsive on all devices</p><p>- SEO-friendly structure</p><p>- Free consultation before we start</p><p>- 100% on-time delivery</p><p>- Post-delivery support</p><p><br></p><p><strong>24+ projects completed. 100% on-time delivery.</strong></p><p><br></p><p>Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.</p>",
+            "faqs": [
+              {
+                "question": "I'm not technical — how do I know what I need?",
+                "answer": "Just tell us what your website needs to do. We recommend the right approach, explain everything in plain English, and handle all technical decisions. No tech knowledge needed at all."
+              },
+              {
+                "question": "Can you work with my existing website or code?",
+                "answer": "Yes. We can extend, fix, or rebuild existing projects in any technology. Share your codebase or describe the issue — we'll review it honestly and tell you exactly what we can do before you order."
+              },
+              {
+                "question": "Do I own the code after delivery?",
+                "answer": "100% yes. Full source code ownership on every package. Clean, documented code you can modify, deploy, or hand to any developer. No proprietary systems or recurring fees for code we built for you."
+              },
+              {
+                "question": "What if I need changes after delivery?",
+                "answer": "Every package includes revisions — 3 Basic, 7 Standard, unlimited Premium. After that we offer maintenance at fair rates. Most clients come back for Phase 2. We're here long term if you need us."
+              }
+            ],
+            "tags": [
+              "web app development",
+              "web app developer",
+              "react node developer",
+              "full stack developer",
+              "custom web developer"
+            ],
+            "packages": [
+              {
+                "id": 1,
+                "title": "Starter Website",
+                "description": "1-page responsive website, frontend only, any technology, clean code, mobile optimized.",
+                "price": 75,
+                "durationDays": 3,
+                "revisions": 3,
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 1
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "title": "Full Stack Web App",
+                "description": "Multi-page web app with backend, database, REST API & user auth. Any stack.",
+                "price": 225,
+                "durationDays": 7,
+                "revisions": 7,
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 3
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Enterprise System",
+                "description": "Full system: admin dashboard, multi-role access, payments, APIs & deployment.",
+                "price": 550,
+                "durationDays": 14,
+                "revisions": "Unlimited",
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 10
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              }
+            ],
+            "metadata": [
+              {
+                "type": "programming_language",
+                "value": [
+                  "HTML & CSS"
+                ]
+              },
+              {
+                "type": "expertise",
+                "value": [
+                  "Debugging",
+                  "Performance",
+                  "Security",
+                  "Design"
+                ]
+              },
+              {
+                "type": "frontend_framework",
+                "value": [
+                  "AngularJS",
+                  "Bootstrap",
+                  "jQuery",
+                  "React.js",
+                  "Vue.js"
+                ]
+              },
+              {
+                "type": "backend_framework",
+                "value": [
+                  "Django",
+                  "Express.js",
+                  "Laravel",
+                  "Next.js",
+                  "Node.js"
+                ]
+              }
+            ],
+            "aiSummary": [
+              "This service offers custom full stack web app development in any technology.",
+              "Clients value high-quality, scalable code and on-time delivery.",
+              "The agency has completed over 24 projects with a 4.6 rating.",
+              "Work includes websites, SaaS, e-commerce, APIs, and dashboards.",
+              "Reviews highlight professionalism, responsiveness, and rapid results."
+            ]
+          }
+        ],
+        "recentReviews": [
+          {
+            "id": "67b4bfce1767fc5bb8acf437",
+            "reviewer": "davidfelix_",
+            "reviewerCountry": "United Kingdom",
+            "reviewerCountryCode": "GB",
+            "rating": 5,
+            "comment": "I can confidently say that the final result exceeded my expectations. From the outset, Zayn demonstrated a high level of professionalism and expertise in their field, delivering high-quality work that was both efficient and insightful.",
+            "createdAt": "2025-02-18T17:46:40",
+            "workSample": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
+            "orderDuration": "8 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thanks\nmy pleasure\n"
+          },
+          {
+            "id": "67aa6746d7a07b18e01c9b87",
+            "reviewer": "davidfelix_",
+            "reviewerCountry": "United Kingdom",
+            "reviewerCountryCode": "GB",
+            "rating": 3.7,
+            "comment": "Zayn Raza's work in software development was generally satisfactory, While collaborating with Zayn was relatively smooth.",
+            "createdAt": "2025-02-10T21:14:23",
+            "orderDuration": "5 days",
+            "priceRange": "$50-$100"
+          },
+          {
+            "id": "66762814b9aaef325b08ba96",
+            "reviewer": "deborahkcole",
+            "reviewerCountry": "United States",
+            "reviewerCountryCode": "US",
+            "rating": 5,
+            "comment": "Zayn is skilled  and delivers professional quality work rapidly. Outstanding results & he was easy and delightful to work with + very responsive to my tweak requests. ",
+            "createdAt": "2024-06-22T03:39",
+            "orderDuration": "2 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thank You!"
+          },
+          {
+            "id": "6673b10ac7c17c43897f0129",
+            "reviewer": "deborahkcole",
+            "reviewerCountry": "United States",
+            "reviewerCountryCode": "US",
+            "rating": 5,
+            "comment": "Absolutely outstanding work. Very professional, excellent communication, rapid delivery & A+ results. Will definitely hire again",
+            "createdAt": "2024-06-20T05:02:10",
+            "orderDuration": "3 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thank you."
+          },
+          {
+            "id": "6661b154ce04e166f6ecb56e",
+            "reviewer": "carlos_galvis",
+            "reviewerCountry": "Bolivia",
+            "reviewerCountryCode": "BO",
+            "rating": 1,
+            "comment": "I have been very disappointed with Zayn's lack of professionalism, he lied for several weeks, even though his final delivery was made a couple of weeks ago, with many missing features that apparently, he does not know how to solve and instead of investigating he decided to give up after losing time.",
+            "createdAt": "2024-06-06T14:18:27",
+            "orderDuration": "5 weeks",
+            "priceRange": "$50-$100",
+            "sellerResponse": "The requirements were unclear, he was aiming for something that seemed nearly impossible. I wanted my potential clients to see my other reviews to get a clear picture."
+          }
+        ],
+        "scrapedAt": "2026-09-09T19:55:39.387Z"
+      }
     }
   ],
   "userContexts": {
@@ -3118,6 +4112,1108 @@
           }
         ],
         "scrapedAt": "2026-09-09T19:20:24.325Z"
+      },
+      "onboardingStep": 2
+    },
+    "usr_1788982798756_25f08": {
+      "userId": "usr_1788982798756_25f08",
+      "fullName": "Zayn Raza",
+      "fiverrUrl": "https://www.fiverr.com/dev_zaynee",
+      "experienceYears": "",
+      "primarySkills": [
+        "Chatbot development",
+        "Software automation",
+        "AI developer",
+        "Rest API",
+        "React",
+        "E-commerce development",
+        "Flutter",
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Python",
+        "OpenAI",
+        "HTML & CSS",
+        "Debugging",
+        "Performance",
+        "Security",
+        "Design",
+        "AngularJS",
+        "Bootstrap",
+        "JQuery",
+        "React.Js",
+        "Vue.Js",
+        "Django",
+        "Express.Js",
+        "Laravel",
+        "Web App Development",
+        "Web App Developer",
+        "React Node Developer",
+        "Full Stack Developer",
+        "Custom Web Developer"
+      ],
+      "secondarySkills": [],
+      "targetNiches": [
+        "build your custom full stack web app or website in any technology"
+      ],
+      "marketStrategy": {
+        "recommendedNiches": [],
+        "marketHiringRateInsight": "",
+        "strategicPositioningAdvice": ""
+      },
+      "onboardingCompleted": false,
+      "updatedAt": "2026-09-09T19:39:58.778Z",
+      "fiverrProfile": {
+        "username": "dev_zaynee",
+        "displayName": "Zayn Raza",
+        "profileUrl": "https://www.fiverr.com/dev_zaynee",
+        "avatarUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/7adf4016a19046ae4849caa67c830a1b-1751971225688/45f96031-5f04-4578-b65d-a39d9cb3ece2.jpg",
+        "profileCoverUrl": "",
+        "isAgency": false,
+        "tagline": "Full Stack Agency, AI Agents, Web and Mobile Apps",
+        "description": "Businesses hire us when they need something built right — \nwhether that's a website, a mobile app, an AI chatbot that \nhandles their customers, or a voice agent that answers their \ncalls 24/7.\n\nWe handle the full stack. React, Next.js, Node.js, Python, \nFastAPI, Flutter, LangChain, LangGraph, VAPI, TypeScript, \nMongoDB. From a simple landing page to a complex SaaS \nplatform or a multi-agent AI system — we deliver \nproduction-ready, clean code.\n\n24+ projects completed. 100% on-time delivery. \nMessage us — we respond instantly.",
+        "country": "Pakistan",
+        "countryCode": "PK",
+        "memberSince": "May 2023",
+        "joinedAtTimestamp": 1683821061,
+        "responseTimeHours": 0,
+        "responseTimeText": "< 1 hour",
+        "lastDeliveryText": "Feb 2025",
+        "sellerLevel": "New Seller",
+        "isPro": false,
+        "isVerified": false,
+        "isHighlyResponsive": false,
+        "rating": 4.6,
+        "reviewCount": 15,
+        "languages": [
+          {
+            "language": "English",
+            "code": "EN",
+            "level": "Fluent"
+          },
+          {
+            "language": "Urdu",
+            "code": "UR",
+            "level": "Native / Bilingual"
+          },
+          {
+            "language": "Hindi",
+            "code": "HI",
+            "level": "Fluent"
+          }
+        ],
+        "skills": [
+          {
+            "name": "Chatbot development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Software automation",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "AI developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Rest API",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "E-commerce development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Flutter",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Next.js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "TypeScript",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Node.js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Python",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "OpenAI",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "HTML & CSS",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Debugging",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Performance",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Security",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Design",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "AngularJS",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Bootstrap",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "JQuery",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Vue.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Django",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Express.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Laravel",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Web App Development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Web App Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React Node Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Full Stack Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Custom Web Developer",
+            "level": "PRO",
+            "verified": false
+          }
+        ],
+        "education": [
+          {
+            "degree": "bachelor in information technology",
+            "school": "Bahauddin Zakariya University,Multan",
+            "degreeTitle": "BSC",
+            "toYear": 2024,
+            "countryCode": "PK"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Web Design",
+            "from": "freecodecamp",
+            "year": 2023
+          },
+          {
+            "name": "Object Oriented Programming",
+            "from": "coursera",
+            "year": 2024
+          }
+        ],
+        "gigs": [
+          {
+            "id": 316571551,
+            "title": "build your custom full stack web app or website in any technology",
+            "slug": "be-your-front-end-web-developer-in-html-css-javascript",
+            "url": "https://www.fiverr.com/dev_zaynee/be-your-front-end-web-developer-in-html-css-javascript",
+            "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
+            "gallery": [
+              "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/316571551/original/2d6c689ee919f48d73ca00488c8776b3645b09c7/be-your-front-end-web-developer-in-html-css-javascript.png",
+              "https://fiverr-res.cloudinary.com/image/upload/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png"
+            ],
+            "startingPrice": "$75",
+            "rating": 5,
+            "reviewCount": 15,
+            "ordersInQueue": 0,
+            "category": "Programming & Tech",
+            "subCategory": "Software Development",
+            "nestedCategory": "Full Stack Web Applications",
+            "description": "You need something built. We build it full stack, any&nbsp;technology, any scale. Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything WHAT WE BUILD: - Business websites and landing pages - SaaS platforms and startup MVPs - E-commerce with payment integration - Admin dashboards with role-based access - Booking systems and customer portals - REST APIs and third-party integrations ANY TECHNOLOGY: Frontend React, Next.js, Vue.js, Tailwind, TypeScript Backend Node.js, Python, FastAPI, Django, PHP, Laravel Database MongoDB, PostgreSQL, MySQL, Firebase Other JWT Auth, Stripe, AWS, Docker, GraphQL EVERY PROJECT INCLUDES: - Clean, documented, scalable code - Fully responsive on all devices - SEO-friendly structure - Free consultation before we start - 100% on-time delivery - Post-delivery support 24+ projects completed. 100% on-time delivery. Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.",
+            "descriptionHtml": "<p><strong>You need something built. We build it full stack, any&nbsp;technology, any scale.</strong></p><p><br></p><p>Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything</p><p><br></p><p><strong>WHAT WE BUILD:</strong></p><p>- Business websites and landing pages</p><p>- SaaS platforms and startup MVPs</p><p>- E-commerce with payment integration</p><p>- Admin dashboards with role-based access</p><p>- Booking systems and customer portals</p><p>- REST APIs and third-party integrations</p><p><br></p><p><strong>ANY TECHNOLOGY:</strong></p><p><br></p><ul><li>Frontend React, Next.js, Vue.js, Tailwind, TypeScript</li><li>Backend Node.js, Python, FastAPI, Django, PHP, Laravel</li><li>Database MongoDB, PostgreSQL, MySQL, Firebase</li><li>Other JWT Auth, Stripe, AWS, Docker, GraphQL</li></ul><p><br></p><p><strong>EVERY PROJECT INCLUDES:</strong></p><p><br></p><p>- Clean, documented, scalable code</p><p>- Fully responsive on all devices</p><p>- SEO-friendly structure</p><p>- Free consultation before we start</p><p>- 100% on-time delivery</p><p>- Post-delivery support</p><p><br></p><p><strong>24+ projects completed. 100% on-time delivery.</strong></p><p><br></p><p>Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.</p>",
+            "faqs": [
+              {
+                "question": "I'm not technical — how do I know what I need?",
+                "answer": "Just tell us what your website needs to do. We recommend the right approach, explain everything in plain English, and handle all technical decisions. No tech knowledge needed at all."
+              },
+              {
+                "question": "Can you work with my existing website or code?",
+                "answer": "Yes. We can extend, fix, or rebuild existing projects in any technology. Share your codebase or describe the issue — we'll review it honestly and tell you exactly what we can do before you order."
+              },
+              {
+                "question": "Do I own the code after delivery?",
+                "answer": "100% yes. Full source code ownership on every package. Clean, documented code you can modify, deploy, or hand to any developer. No proprietary systems or recurring fees for code we built for you."
+              },
+              {
+                "question": "What if I need changes after delivery?",
+                "answer": "Every package includes revisions — 3 Basic, 7 Standard, unlimited Premium. After that we offer maintenance at fair rates. Most clients come back for Phase 2. We're here long term if you need us."
+              }
+            ],
+            "tags": [
+              "web app development",
+              "web app developer",
+              "react node developer",
+              "full stack developer",
+              "custom web developer"
+            ],
+            "packages": [
+              {
+                "id": 1,
+                "title": "Starter Website",
+                "description": "1-page responsive website, frontend only, any technology, clean code, mobile optimized.",
+                "price": 75,
+                "durationDays": 3,
+                "revisions": 3,
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 1
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "title": "Full Stack Web App",
+                "description": "Multi-page web app with backend, database, REST API & user auth. Any stack.",
+                "price": 225,
+                "durationDays": 7,
+                "revisions": 7,
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 3
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Enterprise System",
+                "description": "Full system: admin dashboard, multi-role access, payments, APIs & deployment.",
+                "price": 550,
+                "durationDays": 14,
+                "revisions": "Unlimited",
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 10
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              }
+            ],
+            "metadata": [
+              {
+                "type": "programming_language",
+                "value": [
+                  "HTML & CSS"
+                ]
+              },
+              {
+                "type": "expertise",
+                "value": [
+                  "Debugging",
+                  "Performance",
+                  "Security",
+                  "Design"
+                ]
+              },
+              {
+                "type": "frontend_framework",
+                "value": [
+                  "AngularJS",
+                  "Bootstrap",
+                  "jQuery",
+                  "React.js",
+                  "Vue.js"
+                ]
+              },
+              {
+                "type": "backend_framework",
+                "value": [
+                  "Django",
+                  "Express.js",
+                  "Laravel",
+                  "Next.js",
+                  "Node.js"
+                ]
+              }
+            ],
+            "aiSummary": [
+              "This service offers custom full stack web app development in any technology.",
+              "Clients value high-quality, scalable code and on-time delivery.",
+              "The agency has completed over 24 projects with a 4.6 rating.",
+              "Work includes websites, SaaS, e-commerce, APIs, and dashboards.",
+              "Reviews highlight professionalism, responsiveness, and rapid results."
+            ]
+          }
+        ],
+        "recentReviews": [
+          {
+            "id": "67b4bfce1767fc5bb8acf437",
+            "reviewer": "davidfelix_",
+            "reviewerCountry": "United Kingdom",
+            "reviewerCountryCode": "GB",
+            "rating": 5,
+            "comment": "I can confidently say that the final result exceeded my expectations. From the outset, Zayn demonstrated a high level of professionalism and expertise in their field, delivering high-quality work that was both efficient and insightful.",
+            "createdAt": "2025-02-18T17:46:40",
+            "workSample": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
+            "orderDuration": "8 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thanks\nmy pleasure\n"
+          },
+          {
+            "id": "67aa6746d7a07b18e01c9b87",
+            "reviewer": "davidfelix_",
+            "reviewerCountry": "United Kingdom",
+            "reviewerCountryCode": "GB",
+            "rating": 3.7,
+            "comment": "Zayn Raza's work in software development was generally satisfactory, While collaborating with Zayn was relatively smooth.",
+            "createdAt": "2025-02-10T21:14:23",
+            "orderDuration": "5 days",
+            "priceRange": "$50-$100"
+          },
+          {
+            "id": "66762814b9aaef325b08ba96",
+            "reviewer": "deborahkcole",
+            "reviewerCountry": "United States",
+            "reviewerCountryCode": "US",
+            "rating": 5,
+            "comment": "Zayn is skilled  and delivers professional quality work rapidly. Outstanding results & he was easy and delightful to work with + very responsive to my tweak requests. ",
+            "createdAt": "2024-06-22T03:39",
+            "orderDuration": "2 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thank You!"
+          },
+          {
+            "id": "6673b10ac7c17c43897f0129",
+            "reviewer": "deborahkcole",
+            "reviewerCountry": "United States",
+            "reviewerCountryCode": "US",
+            "rating": 5,
+            "comment": "Absolutely outstanding work. Very professional, excellent communication, rapid delivery & A+ results. Will definitely hire again",
+            "createdAt": "2024-06-20T05:02:10",
+            "orderDuration": "3 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thank you."
+          },
+          {
+            "id": "6661b154ce04e166f6ecb56e",
+            "reviewer": "carlos_galvis",
+            "reviewerCountry": "Bolivia",
+            "reviewerCountryCode": "BO",
+            "rating": 1,
+            "comment": "I have been very disappointed with Zayn's lack of professionalism, he lied for several weeks, even though his final delivery was made a couple of weeks ago, with many missing features that apparently, he does not know how to solve and instead of investigating he decided to give up after losing time.",
+            "createdAt": "2024-06-06T14:18:27",
+            "orderDuration": "5 weeks",
+            "priceRange": "$50-$100",
+            "sellerResponse": "The requirements were unclear, he was aiming for something that seemed nearly impossible. I wanted my potential clients to see my other reviews to get a clear picture."
+          }
+        ],
+        "scrapedAt": "2026-09-09T19:39:57.954Z"
+      },
+      "onboardingStep": 2
+    },
+    "usr_1788898190068_awzqs": {
+      "userId": "usr_1788898190068_awzqs",
+      "fullName": "tasaquqe",
+      "fiverrUrl": "",
+      "experienceYears": "",
+      "primarySkills": [
+        "Web Development",
+        "Frontend",
+        "Full-Stack"
+      ],
+      "secondarySkills": [],
+      "targetNiches": [
+        "Modern Web Development",
+        "AI Automation"
+      ],
+      "marketStrategy": {
+        "recommendedNiches": [],
+        "marketHiringRateInsight": "",
+        "strategicPositioningAdvice": ""
+      },
+      "onboardingCompleted": false,
+      "updatedAt": "2026-09-09T19:45:08.278Z",
+      "onboardingStep": 2
+    },
+    "usr_1788983747656_w5wf7": {
+      "userId": "usr_1788983747656_w5wf7",
+      "fullName": "Zayn Raza",
+      "fiverrUrl": "https://www.fiverr.com/dev_zaynee",
+      "experienceYears": "",
+      "primarySkills": [
+        "Chatbot development",
+        "Software automation",
+        "AI developer",
+        "Rest API",
+        "React",
+        "E-commerce development",
+        "Flutter",
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Python",
+        "OpenAI",
+        "HTML & CSS",
+        "Debugging",
+        "Performance",
+        "Security",
+        "Design",
+        "AngularJS",
+        "Bootstrap",
+        "JQuery",
+        "React.Js",
+        "Vue.Js",
+        "Django",
+        "Express.Js",
+        "Laravel",
+        "Web App Development",
+        "Web App Developer",
+        "React Node Developer",
+        "Full Stack Developer",
+        "Custom Web Developer"
+      ],
+      "secondarySkills": [],
+      "targetNiches": [
+        "build your custom full stack web app or website in any technology"
+      ],
+      "marketStrategy": {
+        "recommendedNiches": [],
+        "marketHiringRateInsight": "",
+        "strategicPositioningAdvice": ""
+      },
+      "onboardingCompleted": false,
+      "updatedAt": "2026-09-09T19:55:47.688Z",
+      "fiverrProfile": {
+        "username": "dev_zaynee",
+        "displayName": "Zayn Raza",
+        "profileUrl": "https://www.fiverr.com/dev_zaynee",
+        "avatarUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/7adf4016a19046ae4849caa67c830a1b-1751971225688/45f96031-5f04-4578-b65d-a39d9cb3ece2.jpg",
+        "profileCoverUrl": "",
+        "isAgency": false,
+        "tagline": "Full Stack Agency, AI Agents, Web and Mobile Apps",
+        "description": "Businesses hire us when they need something built right — \nwhether that's a website, a mobile app, an AI chatbot that \nhandles their customers, or a voice agent that answers their \ncalls 24/7.\n\nWe handle the full stack. React, Next.js, Node.js, Python, \nFastAPI, Flutter, LangChain, LangGraph, VAPI, TypeScript, \nMongoDB. From a simple landing page to a complex SaaS \nplatform or a multi-agent AI system — we deliver \nproduction-ready, clean code.\n\n24+ projects completed. 100% on-time delivery. \nMessage us — we respond instantly.",
+        "country": "Pakistan",
+        "countryCode": "PK",
+        "memberSince": "May 2023",
+        "joinedAtTimestamp": 1683821061,
+        "responseTimeHours": 0,
+        "responseTimeText": "< 1 hour",
+        "lastDeliveryText": "Feb 2025",
+        "sellerLevel": "New Seller",
+        "isPro": false,
+        "isVerified": false,
+        "isHighlyResponsive": false,
+        "rating": 4.6,
+        "reviewCount": 15,
+        "languages": [
+          {
+            "language": "English",
+            "code": "EN",
+            "level": "Fluent"
+          },
+          {
+            "language": "Urdu",
+            "code": "UR",
+            "level": "Native / Bilingual"
+          },
+          {
+            "language": "Hindi",
+            "code": "HI",
+            "level": "Fluent"
+          }
+        ],
+        "skills": [
+          {
+            "name": "Chatbot development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Software automation",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "AI developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Rest API",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "E-commerce development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Flutter",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Next.js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "TypeScript",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Node.js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Python",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "OpenAI",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "HTML & CSS",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Debugging",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Performance",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Security",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Design",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "AngularJS",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Bootstrap",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "JQuery",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Vue.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Django",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Express.Js",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Laravel",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Web App Development",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Web App Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "React Node Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Full Stack Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Custom Web Developer",
+            "level": "PRO",
+            "verified": false
+          }
+        ],
+        "education": [
+          {
+            "degree": "bachelor in information technology",
+            "school": "Bahauddin Zakariya University,Multan",
+            "degreeTitle": "BSC",
+            "toYear": 2024,
+            "countryCode": "PK"
+          }
+        ],
+        "certifications": [
+          {
+            "name": "Web Design",
+            "from": "freecodecamp",
+            "year": 2023
+          },
+          {
+            "name": "Object Oriented Programming",
+            "from": "coursera",
+            "year": 2024
+          }
+        ],
+        "gigs": [
+          {
+            "id": 316571551,
+            "title": "build your custom full stack web app or website in any technology",
+            "slug": "be-your-front-end-web-developer-in-html-css-javascript",
+            "url": "https://www.fiverr.com/dev_zaynee/be-your-front-end-web-developer-in-html-css-javascript",
+            "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
+            "gallery": [
+              "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/316571551/original/2d6c689ee919f48d73ca00488c8776b3645b09c7/be-your-front-end-web-developer-in-html-css-javascript.png",
+              "https://fiverr-res.cloudinary.com/image/upload/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png"
+            ],
+            "startingPrice": "$75",
+            "rating": 5,
+            "reviewCount": 15,
+            "ordersInQueue": 0,
+            "category": "Programming & Tech",
+            "subCategory": "Software Development",
+            "nestedCategory": "Full Stack Web Applications",
+            "description": "You need something built. We build it full stack, any&nbsp;technology, any scale. Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything WHAT WE BUILD: - Business websites and landing pages - SaaS platforms and startup MVPs - E-commerce with payment integration - Admin dashboards with role-based access - Booking systems and customer portals - REST APIs and third-party integrations ANY TECHNOLOGY: Frontend React, Next.js, Vue.js, Tailwind, TypeScript Backend Node.js, Python, FastAPI, Django, PHP, Laravel Database MongoDB, PostgreSQL, MySQL, Firebase Other JWT Auth, Stripe, AWS, Docker, GraphQL EVERY PROJECT INCLUDES: - Clean, documented, scalable code - Fully responsive on all devices - SEO-friendly structure - Free consultation before we start - 100% on-time delivery - Post-delivery support 24+ projects completed. 100% on-time delivery. Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.",
+            "descriptionHtml": "<p><strong>You need something built. We build it full stack, any&nbsp;technology, any scale.</strong></p><p><br></p><p>Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything</p><p><br></p><p><strong>WHAT WE BUILD:</strong></p><p>- Business websites and landing pages</p><p>- SaaS platforms and startup MVPs</p><p>- E-commerce with payment integration</p><p>- Admin dashboards with role-based access</p><p>- Booking systems and customer portals</p><p>- REST APIs and third-party integrations</p><p><br></p><p><strong>ANY TECHNOLOGY:</strong></p><p><br></p><ul><li>Frontend React, Next.js, Vue.js, Tailwind, TypeScript</li><li>Backend Node.js, Python, FastAPI, Django, PHP, Laravel</li><li>Database MongoDB, PostgreSQL, MySQL, Firebase</li><li>Other JWT Auth, Stripe, AWS, Docker, GraphQL</li></ul><p><br></p><p><strong>EVERY PROJECT INCLUDES:</strong></p><p><br></p><p>- Clean, documented, scalable code</p><p>- Fully responsive on all devices</p><p>- SEO-friendly structure</p><p>- Free consultation before we start</p><p>- 100% on-time delivery</p><p>- Post-delivery support</p><p><br></p><p><strong>24+ projects completed. 100% on-time delivery.</strong></p><p><br></p><p>Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.</p>",
+            "faqs": [
+              {
+                "question": "I'm not technical — how do I know what I need?",
+                "answer": "Just tell us what your website needs to do. We recommend the right approach, explain everything in plain English, and handle all technical decisions. No tech knowledge needed at all."
+              },
+              {
+                "question": "Can you work with my existing website or code?",
+                "answer": "Yes. We can extend, fix, or rebuild existing projects in any technology. Share your codebase or describe the issue — we'll review it honestly and tell you exactly what we can do before you order."
+              },
+              {
+                "question": "Do I own the code after delivery?",
+                "answer": "100% yes. Full source code ownership on every package. Clean, documented code you can modify, deploy, or hand to any developer. No proprietary systems or recurring fees for code we built for you."
+              },
+              {
+                "question": "What if I need changes after delivery?",
+                "answer": "Every package includes revisions — 3 Basic, 7 Standard, unlimited Premium. After that we offer maintenance at fair rates. Most clients come back for Phase 2. We're here long term if you need us."
+              }
+            ],
+            "tags": [
+              "web app development",
+              "web app developer",
+              "react node developer",
+              "full stack developer",
+              "custom web developer"
+            ],
+            "packages": [
+              {
+                "id": 1,
+                "title": "Starter Website",
+                "description": "1-page responsive website, frontend only, any technology, clean code, mobile optimized.",
+                "price": 75,
+                "durationDays": 3,
+                "revisions": 3,
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 1
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "title": "Full Stack Web App",
+                "description": "Multi-page web app with backend, database, REST API & user auth. Any stack.",
+                "price": 225,
+                "durationDays": 7,
+                "revisions": 7,
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 3
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Enterprise System",
+                "description": "Full system: admin dashboard, multi-role access, payments, APIs & deployment.",
+                "price": 550,
+                "durationDays": 14,
+                "revisions": "Unlimited",
+                "features": [
+                  {
+                    "label": "Number of pages",
+                    "included": true,
+                    "value": 10
+                  },
+                  {
+                    "label": "Design customization",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Content upload",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Responsive design",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              }
+            ],
+            "metadata": [
+              {
+                "type": "programming_language",
+                "value": [
+                  "HTML & CSS"
+                ]
+              },
+              {
+                "type": "expertise",
+                "value": [
+                  "Debugging",
+                  "Performance",
+                  "Security",
+                  "Design"
+                ]
+              },
+              {
+                "type": "frontend_framework",
+                "value": [
+                  "AngularJS",
+                  "Bootstrap",
+                  "jQuery",
+                  "React.js",
+                  "Vue.js"
+                ]
+              },
+              {
+                "type": "backend_framework",
+                "value": [
+                  "Django",
+                  "Express.js",
+                  "Laravel",
+                  "Next.js",
+                  "Node.js"
+                ]
+              }
+            ],
+            "aiSummary": [
+              "This service offers custom full stack web app development in any technology.",
+              "Clients value high-quality, scalable code and on-time delivery.",
+              "The agency has completed over 24 projects with a 4.6 rating.",
+              "Work includes websites, SaaS, e-commerce, APIs, and dashboards.",
+              "Reviews highlight professionalism, responsiveness, and rapid results."
+            ]
+          }
+        ],
+        "recentReviews": [
+          {
+            "id": "67b4bfce1767fc5bb8acf437",
+            "reviewer": "davidfelix_",
+            "reviewerCountry": "United Kingdom",
+            "reviewerCountryCode": "GB",
+            "rating": 5,
+            "comment": "I can confidently say that the final result exceeded my expectations. From the outset, Zayn demonstrated a high level of professionalism and expertise in their field, delivering high-quality work that was both efficient and insightful.",
+            "createdAt": "2025-02-18T17:46:40",
+            "workSample": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
+            "orderDuration": "8 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thanks\nmy pleasure\n"
+          },
+          {
+            "id": "67aa6746d7a07b18e01c9b87",
+            "reviewer": "davidfelix_",
+            "reviewerCountry": "United Kingdom",
+            "reviewerCountryCode": "GB",
+            "rating": 3.7,
+            "comment": "Zayn Raza's work in software development was generally satisfactory, While collaborating with Zayn was relatively smooth.",
+            "createdAt": "2025-02-10T21:14:23",
+            "orderDuration": "5 days",
+            "priceRange": "$50-$100"
+          },
+          {
+            "id": "66762814b9aaef325b08ba96",
+            "reviewer": "deborahkcole",
+            "reviewerCountry": "United States",
+            "reviewerCountryCode": "US",
+            "rating": 5,
+            "comment": "Zayn is skilled  and delivers professional quality work rapidly. Outstanding results & he was easy and delightful to work with + very responsive to my tweak requests. ",
+            "createdAt": "2024-06-22T03:39",
+            "orderDuration": "2 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thank You!"
+          },
+          {
+            "id": "6673b10ac7c17c43897f0129",
+            "reviewer": "deborahkcole",
+            "reviewerCountry": "United States",
+            "reviewerCountryCode": "US",
+            "rating": 5,
+            "comment": "Absolutely outstanding work. Very professional, excellent communication, rapid delivery & A+ results. Will definitely hire again",
+            "createdAt": "2024-06-20T05:02:10",
+            "orderDuration": "3 days",
+            "priceRange": "Up to $50",
+            "sellerResponse": "Thank you."
+          },
+          {
+            "id": "6661b154ce04e166f6ecb56e",
+            "reviewer": "carlos_galvis",
+            "reviewerCountry": "Bolivia",
+            "reviewerCountryCode": "BO",
+            "rating": 1,
+            "comment": "I have been very disappointed with Zayn's lack of professionalism, he lied for several weeks, even though his final delivery was made a couple of weeks ago, with many missing features that apparently, he does not know how to solve and instead of investigating he decided to give up after losing time.",
+            "createdAt": "2024-06-06T14:18:27",
+            "orderDuration": "5 weeks",
+            "priceRange": "$50-$100",
+            "sellerResponse": "The requirements were unclear, he was aiming for something that seemed nearly impossible. I wanted my potential clients to see my other reviews to get a clear picture."
+          }
+        ],
+        "scrapedAt": "2026-09-09T19:55:39.387Z"
       },
       "onboardingStep": 2
     }

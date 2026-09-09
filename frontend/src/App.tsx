@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { AuthProvider } from './context/AuthContext';
 import { Navbar } from './components/layout/Navbar';
-import { AmbientBackdrop } from './components/3d/HeroScene';
 import { OnboardingStrategistView } from './components/onboarding/OnboardingStrategistView';
 import { GigGeneratorView } from './components/modules/GigGeneratorView';
 import { BuyerBriefView } from './components/modules/BuyerBriefView';
@@ -41,8 +40,8 @@ const AppContent: React.FC = () => {
     if (contentRef.current) {
       gsap.fromTo(
         contentRef.current,
-        { opacity: 0, y: 12 },
-        { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.25, ease: 'power2.out' }
       );
     }
   }, [activeTab]);
@@ -53,10 +52,7 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#07090e] text-gray-100 selection:bg-emerald-500 selection:text-gray-950 relative overflow-x-hidden">
-      {/* Ambient 3D Three.js Glow Backdrop */}
-      <AmbientBackdrop />
-
+    <div className="min-h-screen flex flex-col bg-[#f7f7f7] text-[#222325] selection:bg-[#1dbf73] selection:text-white relative overflow-x-hidden font-sans">
       {/* Navbar */}
       <Navbar
         activeTab={activeTab}
@@ -99,15 +95,16 @@ const AppContent: React.FC = () => {
       />
 
       {/* Footer */}
-      <footer className="glass-panel border-t border-white/5 py-6 px-6 mt-12 text-center text-xs text-gray-500">
+      <footer className="bg-white border-t border-[#dadbdd] py-6 px-6 mt-12 text-center text-xs text-[#74767e]">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-          <div>
-            FiverrGrowth AI Platform &copy; 2026. Built with React 19, Three.js, GSAP, Node.js & Groq/Gemini AI.
+          <div className="flex items-center gap-2">
+            <span className="font-bold text-[#222325]">fiverr<span className="text-[#1dbf73]">.</span></span>
+            <span>Growth Intelligence Engine &copy; 2026.</span>
           </div>
-          <div className="flex items-center gap-4 text-gray-400">
-            <span>Verified Market Strategy Engine</span>
+          <div className="flex items-center gap-4 text-[#74767e]">
+            <span>Verified Fiverr Marketplace Scraping</span>
             <span>&bull;</span>
-            <span>Human-in-the-Loop Architecture</span>
+            <span>Strategic Growth Architecture</span>
           </div>
         </div>
       </footer>

@@ -229,6 +229,8 @@ function formatRelativeTime(dateStr?: string): string {
 }
 
 export class FiverrScraperService {
+  private static profileCache = new Map<string, ScrapedFiverrProfile>();
+
   /**
    * Fetches raw HTML from Fiverr with realistic browser headers and custom timeout
    */
@@ -245,6 +247,7 @@ export class FiverrScraperService {
           Accept:
             "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
           "Accept-Language": "en-US,en;q=0.9",
+          Referer: "https://www.google.com/",
           "Cache-Control": "no-cache",
           Pragma: "no-cache",
           "Sec-Ch-Ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
@@ -252,7 +255,7 @@ export class FiverrScraperService {
           "Sec-Ch-Ua-Platform": '"Windows"',
           "Sec-Fetch-Dest": "document",
           "Sec-Fetch-Mode": "navigate",
-          "Sec-Fetch-Site": "none",
+          "Sec-Fetch-Site": "cross-site",
           "Sec-Fetch-User": "?1",
           "Upgrade-Insecure-Requests": "1",
         },
@@ -473,6 +476,9 @@ export class FiverrScraperService {
     }
 
     if (status >= 400) {
+      if (FiverrScraperService.profileCache.has(cleanUsername)) {
+        return FiverrScraperService.profileCache.get(cleanUsername)!;
+      }
       throw new Error(`Fiverr returned HTTP status ${status}. The profile may be restricted or private.`);
     }
 
@@ -805,7 +811,7 @@ export class FiverrScraperService {
 
     const skills: FiverrSkill[] = Array.from(skillsMap.values());
 
-    return {
+    const resultProfile: ScrapedFiverrProfile = {
       username,
       displayName,
       profileUrl,
@@ -835,6 +841,8 @@ export class FiverrScraperService {
       recentReviews,
       scrapedAt: new Date().toISOString(),
     };
+    FiverrScraperService.profileCache.set(cleanUsername, resultProfile);
+    return resultProfile;
   }
 }
 
