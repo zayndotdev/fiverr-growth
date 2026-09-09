@@ -9,7 +9,7 @@ export const MarketResearchView: React.FC = () => {
 
   const fetchLiveSignals = async (query: string) => {
     try {
-      const res = await fetch(`/api/v1/research/live?niche=${encodeURIComponent(query)}`);
+      const res = await fetch(`/api/v1/market/intelligence?niche=${encodeURIComponent(query)}`);
       const json = await res.json();
       if (json.success && json.data) {
         setLiveIntelligence(json.data);
@@ -29,7 +29,7 @@ export const MarketResearchView: React.FC = () => {
     try {
       fetchLiveSignals(keywords);
 
-      const res = await fetch('/api/v1/research/analyze', {
+      const res = await fetch('/api/v1/research/niche', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ niche: keywords }),

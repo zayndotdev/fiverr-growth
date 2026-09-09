@@ -3,6 +3,7 @@ import { authController } from "../controllers/auth.controller.js";
 import { strategistController } from "../controllers/strategist.controller.js";
 import { apiController } from "../controllers/api.controller.js";
 import { scraperController } from "../controllers/scraper.controller.js";
+import { onboardingController } from "../controllers/onboarding.controller.js";
 import { requireAuth, optionalAuth } from "../middlewares/auth.middleware.js";
 
 const router = Router();
@@ -16,6 +17,12 @@ router.get("/auth/me", requireAuth, (req, res) => authController.me(req, res));
 router.post("/scraper/fiverr-profile", optionalAuth, (req, res) => scraperController.scrapeProfile(req, res));
 router.post("/onboarding/fiverr-profile", optionalAuth, (req, res) => scraperController.saveProfile(req, res));
 router.post("/onboarding/fresh-start", optionalAuth, (req, res) => scraperController.freshStart(req, res));
+
+// --- Onboarding ICP routes ---
+router.post('/onboarding/generate-icps', requireAuth, (req, res) => onboardingController.generateIcps(req, res));
+router.post('/onboarding/confirm-icps', requireAuth, (req, res) => onboardingController.confirmIcps(req, res));
+router.put('/user/onboarding', requireAuth, (req, res) => onboardingController.updateOnboardingStatus(req, res));
+router.get('/user/onboarding', requireAuth, (req, res) => onboardingController.getOnboardingStatus(req, res));
 
 // --- Onboarding & Growth Strategist Routes ---
 router.post("/onboarding/message", optionalAuth, (req, res) => strategistController.handleInterviewTurn(req, res));

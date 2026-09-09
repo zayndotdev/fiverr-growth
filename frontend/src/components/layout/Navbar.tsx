@@ -1,43 +1,39 @@
 import React, { useState } from 'react';
-import { Sparkles, BarChart3, Send, Bookmark, Compass, User } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Sparkles, BarChart3, Send, Bookmark, LayoutDashboard, User } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { ProfileDropdown } from './ProfileDropdown';
 
 interface NavbarProps {
-  activeTab: string;
-  setActiveTab: (tab: string) => void;
   gigsCount: number;
   onOpenAuth: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({
-  activeTab,
-  setActiveTab,
-  gigsCount,
-  onOpenAuth,
-}) => {
-  const { user, userContext } = useAuth();
+export const Navbar: React.FC<NavbarProps> = ({ gigsCount, onOpenAuth }) => {
+  const { user } = useAuth();
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Only show nav tabs when user is logged in and past onboarding
+  const showNavTabs = user && (user.onboardingCompleted || user.onboardingSkipped);
 
   const tabs = [
-    {
-      id: 'strategist',
-      label: 'Strategist',
-      icon: Compass,
-      badge: !userContext?.strategy ? 'New' : undefined,
-    },
-    { id: 'gigs', label: 'Gigs', icon: Sparkles },
-    { id: 'briefs', label: 'Briefs', icon: Send },
-    { id: 'research', label: 'Research', icon: BarChart3 },
-    { id: 'saved', label: `Saved (${gigsCount})`, icon: Bookmark },
+    { id: 'dashboard', path: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+    { id: 'gigs', path: '/gigs', label: 'Gigs', icon: Sparkles },
+    { id: 'briefs', path: '/briefs', label: 'Briefs', icon: Send },
+    { id: 'research', path: '/research', label: 'Research', icon: BarChart3 },
+    { id: 'saved', path: '/saved', label: `Saved (${gigsCount})`, icon: Bookmark },
   ];
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className="w-full bg-white border-b border-[#dadbdd] sticky top-0 z-50 px-4 md:px-6 py-2.5 shadow-xs">
       <div className="max-w-7xl mx-auto flex items-center justify-between relative">
-        {/* Left Side: Fiverr Authentic Logo */}
+        {/* Left Side: Logo */}
         <div
-          onClick={() => setActiveTab('strategist')}
+          onClick={() => navigate(user ? '/dashboard' : '/')}
           className="flex items-center gap-1.5 cursor-pointer shrink-0 select-none group"
           title="FiverrGrowth Home"
         >
@@ -49,40 +45,33 @@ export const Navbar: React.FC<NavbarProps> = ({
           </span>
         </div>
 
-        {/* Center: Navigation Bar with Authentic Fiverr Light Pill Tabs */}
-        <div className="flex-1 flex justify-center px-4">
-          <nav className="flex items-center bg-[#f5f5f5] p-1 rounded-full border border-[#dadbdd] gap-1 overflow-x-auto max-w-[60vw] sm:max-w-none">
-            {tabs.map((tab) => {
-              const Icon = tab.icon;
-              const isActive = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
-                    isActive
-                      ? 'bg-white text-[#1dbf73] shadow-xs border border-[#dadbdd]/70'
-                      : 'text-[#62646a] hover:text-[#222325] hover:bg-white/50'
-                  }`}
-                >
-                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#1dbf73]' : 'text-[#74767e]'}`} />
-                  <span>{tab.label}</span>
-                  {tab.badge && (
-                    <span
-                      className={`px-1.5 py-0.2 rounded-full text-[9px] font-extrabold ${
-                        isActive ? 'bg-[#1dbf73]/10 text-[#19a463]' : 'bg-[#1dbf73] text-white'
-                      }`}
-                    >
-                      {tab.badge}
-                    </span>
-                  )}
-                </button>
-              );
-            })}
-          </nav>
-        </div>
+        {/* Center: Navigation Tabs (only shown when logged in + past onboarding) */}
+        {showNavTabs && (
+          <div className="flex-1 flex justify-center px-4">
+            <nav className="flex items-center bg-[#f5f5f5] p-1 rounded-full border border-[#dadbdd] gap-1 overflow-x-auto max-w-[60vw] sm:max-w-none">
+              {tabs.map((tab) => {
+                const Icon = tab.icon;
+                const active = isActive(tab.path);
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => navigate(tab.path)}
+                    className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
+                      active
+                        ? 'bg-white text-[#1dbf73] shadow-xs border border-[#dadbdd]/70'
+                        : 'text-[#62646a] hover:text-[#222325] hover:bg-white/50'
+                    }`}
+                  >
+                    <Icon className={`w-3.5 h-3.5 ${active ? 'text-[#1dbf73]' : 'text-[#74767e]'}`} />
+                    <span>{tab.label}</span>
+                  </button>
+                );
+              })}
+            </nav>
+          </div>
+        )}
 
-        {/* Right Side: Profile Icon & Pop-up Dropdown / Join CTA */}
+        {/* Right Side: Profile / Join CTA */}
         <div className="shrink-0 flex items-center gap-3 relative">
           {!user && (
             <button
@@ -112,7 +101,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               )}
 
               {/* Active Strategy Status Indicator Dot */}
-              {user && userContext?.strategy && (
+              {user && user.onboardingCompleted && (
                 <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-[#1dbf73] rounded-full border-2 border-white shadow-xs" />
               )}
             </button>
@@ -122,8 +111,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               isOpen={isProfileOpen}
               onClose={() => setIsProfileOpen(false)}
               onOpenAuth={onOpenAuth}
-              onNavigateTab={setActiveTab}
-              savedGigsCount={gigsCount}
             />
           </div>
         </div>

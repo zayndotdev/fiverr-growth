@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   ArrowRight,
   ExternalLink,
@@ -151,7 +152,7 @@ export function cleanHtmlEntities(text?: string): string {
 }
 
 interface OnboardingStep1Props {
-  onProfileConfirmed: (profile: ScrapedFiverrProfile) => void;
+  onProfileConfirmed?: (profile: ScrapedFiverrProfile) => void;
   onSkip?: () => void;
   onOpenAuth?: () => void;
 }
@@ -161,7 +162,8 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
   onSkip,
   onOpenAuth,
 }) => {
-  const { user, userContext, updateUserContext } = useAuth();
+  const { user, userContext, updateUserContext, updateOnboardingState } = useAuth();
+  const navigate = useNavigate();
 
   const [inputHandle, setInputHandle] = useState('');
   const [loading, setLoading] = useState(false);
@@ -171,6 +173,7 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
   const [scrapedProfile, setScrapedProfile] = useState<ScrapedFiverrProfile | null>(
     userContext?.fiverrProfile || null
   );
+  const [activeStep1Tab, setActiveStep1Tab] = useState<'profile' | 'gigs'>('profile');
 
   // Interaction states for the Fiverr UI
   const [selectedGigIndex, setSelectedGigIndex] = useState<number>(0);
@@ -275,7 +278,16 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
         updateUserContext(json.data.context);
       }
 
-      onProfileConfirmed(scrapedProfile);
+      updateOnboardingState({
+        onboardingStep: 2,
+        fiverrProfile: scrapedProfile,
+      });
+
+      if (onProfileConfirmed) {
+        onProfileConfirmed(scrapedProfile);
+      } else {
+        navigate('/onboarding/step/2');
+      }
     } catch (err: any) {
       setError(err.message || 'Error saving profile.');
     } finally {
@@ -304,10 +316,23 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
       if (json.success && json.data?.context) {
         updateUserContext(json.data.context);
       }
-      if (onSkip) onSkip();
+
+      updateOnboardingState({
+        onboardingStep: 2,
+      });
+
+      if (onSkip) {
+        onSkip();
+      } else {
+        navigate('/onboarding/step/2');
+      }
     } catch (err) {
       console.warn('Fresh start error:', err);
-      if (onSkip) onSkip();
+      if (onSkip) {
+        onSkip();
+      } else {
+        navigate('/onboarding/step/2');
+      }
     } finally {
       setSaving(false);
     }
@@ -515,274 +540,450 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
             </div>
           </div>
 
-          {/* 2-Column Authentic Fiverr Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-            {/* ============================================================== */}
-            {/* LEFT COLUMN: 360px Authentic Fiverr Seller Sidebar              */}
-            {/* ============================================================== */}
-            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-4">
-              {/* Card 1: Identity & Quick Stats */}
-              <div className="fiverr-card bg-white border border-[#dadbdd] rounded-lg p-6 text-center shadow-sm">
-                {/* 130px Avatar with Online Indicator */}
-                <div className="relative inline-block mx-auto mb-4">
-                  {scrapedProfile.avatarUrl ? (
-                    <img
-                      src={scrapedProfile.avatarUrl}
-                      alt={scrapedProfile.displayName}
-                      className="w-32 h-32 rounded-full object-cover border border-[#dadbdd] shadow-sm"
+          {/* ─── Profile / Gigs Tab Navigation Bar ─── */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-b border-[#dadbdd] pb-3 pt-1">
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => setActiveStep1Tab('profile')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold transition-all cursor-pointer ${
+                  activeStep1Tab === 'profile'
+                    ? 'bg-white text-[#1dbf73] shadow-xs border border-[#dadbdd] ring-1 ring-[#1dbf73]/20'
+                    : 'text-[#62646a] hover:text-[#222325] hover:bg-white/60'
+                }`}
+              >
+                <User className={`w-4 h-4 ${activeStep1Tab === 'profile' ? 'text-[#1dbf73]' : 'text-[#74767e]'}`} />
+                <span>Seller Profile</span>
+                <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold ${
+                  activeStep1Tab === 'profile' ? 'bg-[#1dbf73]/10 text-[#1dbf73]' : 'bg-[#e4e5e7] text-[#62646a]'
+                }`}>
+                  {scrapedProfile.skills.length} Skills &bull; {scrapedProfile.rating.toFixed(1)}★
+                </span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setActiveStep1Tab('gigs')}
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-bold transition-all cursor-pointer ${
+                  activeStep1Tab === 'gigs'
+                    ? 'bg-white text-[#1dbf73] shadow-xs border border-[#dadbdd] ring-1 ring-[#1dbf73]/20'
+                    : 'text-[#62646a] hover:text-[#222325] hover:bg-white/60'
+                }`}
+              >
+                <Sparkles className={`w-4 h-4 ${activeStep1Tab === 'gigs' ? 'text-[#1dbf73]' : 'text-[#74767e]'}`} />
+                <span>Gigs &amp; Packages</span>
+                <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold ${
+                  activeStep1Tab === 'gigs' ? 'bg-[#1dbf73]/10 text-[#1dbf73]' : 'bg-[#e4e5e7] text-[#62646a]'
+                }`}>
+                  {scrapedProfile.gigs.length} {scrapedProfile.gigs.length === 1 ? 'Gig' : 'Gigs'}
+                </span>
+              </button>
+            </div>
+
+            <div className="text-xs text-[#74767e] hidden sm:block">
+              Switch tabs to preview all extracted data before proceeding
+            </div>
+          </div>
+
+          {/* ============================================================== */}
+          {/* TAB 1: SELLER PROFILE VIEW                                     */}
+          {/* ============================================================== */}
+          {activeStep1Tab === 'profile' && (
+            <div className="space-y-6">
+              {/* Card 1: Identity & Quick Stats Header */}
+              <div className="fiverr-card bg-white border border-[#dadbdd] rounded-xl p-6 sm:p-8 shadow-sm space-y-6">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                  {/* 110px Avatar with Online Indicator */}
+                  <div className="relative inline-block shrink-0 mx-auto md:mx-0">
+                    {scrapedProfile.avatarUrl ? (
+                      <img
+                        src={scrapedProfile.avatarUrl}
+                        alt={scrapedProfile.displayName}
+                        className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-white shadow-md ring-1 ring-[#dadbdd]"
+                      />
+                    ) : (
+                      <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[#e4e5e7] flex items-center justify-center text-3xl font-bold text-[#74767e]">
+                        {scrapedProfile.displayName.charAt(0)}
+                      </div>
+                    )}
+                    <span
+                      className="absolute bottom-1 right-1 w-4 h-4 bg-[#1dbf73] rounded-full border-2 border-white shadow-sm"
+                      title="Online"
                     />
-                  ) : (
-                    <div className="w-32 h-32 rounded-full bg-[#e4e5e7] flex items-center justify-center text-3xl font-bold text-[#74767e]">
-                      {scrapedProfile.displayName.charAt(0)}
-                    </div>
-                  )}
-                  {/* Fiverr Online Dot */}
-                  <span
-                    className="absolute bottom-2 right-2 w-4 h-4 bg-[#1dbf73] rounded-full border-2 border-white shadow-sm"
-                    title="Online"
-                  />
-                </div>
-
-                {/* Display Name & Handle */}
-                <h1 className="text-xl font-bold text-[#222325] leading-snug">
-                  {scrapedProfile.displayName}
-                </h1>
-                <div className="text-sm text-[#74767e] font-normal mt-0.5">
-                  @{scrapedProfile.username}
-                </div>
-
-                {/* Tagline */}
-                {scrapedProfile.tagline && (
-                  <p className="text-sm text-[#62646a] mt-2 italic px-2">
-                    {scrapedProfile.tagline}
-                  </p>
-                )}
-
-                {/* Star Rating & Level */}
-                <div className="flex items-center justify-center gap-2 mt-3 text-sm">
-                  <div className="flex items-center gap-1 font-bold text-[#222325]">
-                    <Star className="w-4 h-4 text-[#ffb33e] fill-[#ffb33e]" />
-                    <span>{scrapedProfile.rating.toFixed(1)}</span>
                   </div>
-                  <span className="text-[#74767e]">({scrapedProfile.reviewCount})</span>
-                  <span className="text-[#dadbdd]">&bull;</span>
-                  <span className="px-2 py-0.5 rounded text-xs font-semibold bg-[#f5f5f5] text-[#404145] border border-[#dadbdd]">
-                    {scrapedProfile.sellerLevel || 'Level 2 Seller'}
-                  </span>
+
+                  {/* Name, Handle, Badges, Rating */}
+                  <div className="space-y-2 flex-1 min-w-0 text-center md:text-left">
+                    <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5">
+                      <h1 className="text-2xl sm:text-3xl font-bold text-[#222325]">
+                        {scrapedProfile.displayName}
+                      </h1>
+                      <span className="text-sm text-[#74767e] font-normal">
+                        @{scrapedProfile.username}
+                      </span>
+                      {scrapedProfile.sellerLevel && (
+                        <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#f5f5f5] text-[#222325] border border-[#dadbdd]">
+                          {scrapedProfile.sellerLevel}
+                        </span>
+                      )}
+                      {scrapedProfile.isPro && (
+                        <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#222325] text-white">
+                          PRO
+                        </span>
+                      )}
+                      {scrapedProfile.isAgency && (
+                        <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#1dbf73]/10 text-[#19a463] border border-[#1dbf73]/20">
+                          Agency
+                        </span>
+                      )}
+                    </div>
+
+                    {scrapedProfile.tagline && (
+                      <p className="text-sm sm:text-base text-[#62646a] italic">
+                        "{scrapedProfile.tagline}"
+                      </p>
+                    )}
+
+                    {/* Star Rating & Reviews */}
+                    <div className="flex items-center justify-center md:justify-start gap-2 text-sm pt-1">
+                      <div className="flex items-center gap-1 font-bold text-[#222325]">
+                        <Star className="w-4 h-4 text-[#ffb33e] fill-[#ffb33e]" />
+                        <span>{scrapedProfile.rating.toFixed(1)}</span>
+                      </div>
+                      <span className="text-[#74767e]">
+                        ({scrapedProfile.reviewCount} reviews)
+                      </span>
+                      <span className="text-[#dadbdd]">&bull;</span>
+                      <span className="text-xs text-[#1dbf73] font-semibold flex items-center gap-1">
+                        <ShieldCheck className="w-3.5 h-3.5" />
+                        Fiverr Verified Seller
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Contact Me Button */}
-                <div className="mt-5">
-                  <button
-                    type="button"
-                    className="fiverr-btn-outline w-full py-2 text-sm font-bold cursor-pointer"
-                  >
-                    Contact Me
-                  </button>
-                </div>
-
-                {/* Divider Line */}
-                <div className="border-t border-[#dadbdd] my-5" />
-
-                {/* Quick Stats Key-Value Rows */}
-                <div className="space-y-3.5 text-left text-sm">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#62646a] flex items-center gap-2">
-                      <MapPin className="w-4 h-4 text-[#74767e]" />
+                {/* 4-Item Quick Stats Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-5 border-t border-[#efeff0]">
+                  <div className="p-3 bg-[#f7f7f7] rounded-lg border border-[#e4e5e7]">
+                    <span className="text-[11px] font-bold text-[#74767e] uppercase flex items-center gap-1.5">
+                      <MapPin className="w-3.5 h-3.5 text-[#74767e]" />
                       From
                     </span>
-                    <span className="font-bold text-[#222325]">
+                    <p className="text-sm font-bold text-[#222325] mt-1">
                       {scrapedProfile.country} {scrapedProfile.countryCode ? `(${scrapedProfile.countryCode})` : ''}
-                    </span>
+                    </p>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#62646a] flex items-center gap-2">
-                      <User className="w-4 h-4 text-[#74767e]" />
-                      Member since
+                  <div className="p-3 bg-[#f7f7f7] rounded-lg border border-[#e4e5e7]">
+                    <span className="text-[11px] font-bold text-[#74767e] uppercase flex items-center gap-1.5">
+                      <User className="w-3.5 h-3.5 text-[#74767e]" />
+                      Member Since
                     </span>
-                    <span className="font-bold text-[#222325]">
+                    <p className="text-sm font-bold text-[#222325] mt-1">
                       {scrapedProfile.memberSince || 'May 2023'}
-                    </span>
+                    </p>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#62646a] flex items-center gap-2">
-                      <Clock className="w-4 h-4 text-[#74767e]" />
-                      Avg. response time
+                  <div className="p-3 bg-[#f7f7f7] rounded-lg border border-[#e4e5e7]">
+                    <span className="text-[11px] font-bold text-[#74767e] uppercase flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5 text-[#74767e]" />
+                      Avg. Response
                     </span>
-                    <span className="font-bold text-[#222325]">
-                      {scrapedProfile.responseTimeText || '1 hour'}
-                    </span>
+                    <p className="text-sm font-bold text-[#222325] mt-1">
+                      {scrapedProfile.responseTimeText || '< 1 hour'}
+                    </p>
                   </div>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-[#62646a] flex items-center gap-2">
-                      <Send className="w-4 h-4 text-[#74767e]" />
-                      Last delivery
+                  <div className="p-3 bg-[#f7f7f7] rounded-lg border border-[#e4e5e7]">
+                    <span className="text-[11px] font-bold text-[#74767e] uppercase flex items-center gap-1.5">
+                      <Send className="w-3.5 h-3.5 text-[#74767e]" />
+                      Last Delivery
                     </span>
-                    <span className="font-bold text-[#222325]">
-                      {scrapedProfile.lastDeliveryText || '1 day'}
-                    </span>
+                    <p className="text-sm font-bold text-[#222325] mt-1">
+                      {scrapedProfile.lastDeliveryText || 'Recent'}
+                    </p>
                   </div>
                 </div>
               </div>
 
-              {/* Card 2: Credentials & About */}
-              <div className="fiverr-card bg-white border border-[#dadbdd] rounded-lg p-6 space-y-6 text-left shadow-sm">
-                {/* Description / Bio */}
-                {scrapedProfile.description && (
-                  <div>
-                    <h3 className="text-base font-bold text-[#222325] mb-2.5">
-                      Description
-                    </h3>
-                    <div className="text-sm text-[#404145] leading-relaxed whitespace-pre-line">
-                      {expandedBio || scrapedProfile.description.length <= 300 ? (
-                        cleanHtmlEntities(scrapedProfile.description)
-                      ) : (
-                        <>
-                          {cleanHtmlEntities(scrapedProfile.description).slice(0, 300)}...
-                          <button
-                            type="button"
-                            onClick={() => setExpandedBio(true)}
-                            className="text-[#1dbf73] font-semibold text-xs ml-1 hover:underline cursor-pointer"
-                          >
-                            + See More
-                          </button>
-                        </>
-                      )}
-                      {expandedBio && scrapedProfile.description.length > 300 && (
+              {/* Card 2: Description / Bio */}
+              {scrapedProfile.description && (
+                <div className="fiverr-card bg-white border border-[#dadbdd] rounded-xl p-6 shadow-sm space-y-3">
+                  <h3 className="text-base font-bold text-[#222325] pb-2 border-b border-[#efeff0]">
+                    Description &amp; About
+                  </h3>
+                  <div className="text-sm text-[#404145] leading-relaxed whitespace-pre-line">
+                    {expandedBio || scrapedProfile.description.length <= 400 ? (
+                      cleanHtmlEntities(scrapedProfile.description)
+                    ) : (
+                      <>
+                        {cleanHtmlEntities(scrapedProfile.description).slice(0, 400)}...
                         <button
                           type="button"
-                          onClick={() => setExpandedBio(false)}
-                          className="text-[#1dbf73] font-semibold text-xs ml-1 hover:underline cursor-pointer block mt-1"
+                          onClick={() => setExpandedBio(true)}
+                          className="text-[#1dbf73] font-bold text-xs ml-1 hover:underline cursor-pointer"
                         >
-                          - See Less
+                          + See More
                         </button>
-                      )}
-                    </div>
+                      </>
+                    )}
+                    {expandedBio && scrapedProfile.description.length > 400 && (
+                      <button
+                        type="button"
+                        onClick={() => setExpandedBio(false)}
+                        className="text-[#1dbf73] font-bold text-xs ml-1 hover:underline cursor-pointer block mt-2"
+                      >
+                        - See Less
+                      </button>
+                    )}
                   </div>
-                )}
+                </div>
+              )}
 
-                {/* Languages */}
-                {scrapedProfile.languages.length > 0 && (
-                  <div className="pt-4 border-t border-[#dadbdd]">
-                    <h3 className="text-base font-bold text-[#222325] mb-2.5">
-                      Languages
+              {/* Card 3: Skills & Tech Stack */}
+              {scrapedProfile.skills.length > 0 && (
+                <div className="fiverr-card bg-white border border-[#dadbdd] rounded-xl p-6 shadow-sm space-y-3">
+                  <div className="flex items-center justify-between pb-2 border-b border-[#efeff0]">
+                    <h3 className="text-base font-bold text-[#222325]">
+                      Skills &amp; Technologies
                     </h3>
-                    <div className="space-y-1.5 text-sm">
+                    <span className="text-xs font-semibold text-[#74767e] bg-[#f5f5f5] px-2.5 py-0.5 rounded-full border border-[#dadbdd]">
+                      {scrapedProfile.skills.length} Endorsed Skills
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {scrapedProfile.skills.map((skill, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3.5 py-1.5 rounded-full bg-[#f5f5f5] border border-[#dadbdd] text-xs font-medium text-[#404145] hover:border-[#1dbf73] hover:text-[#1dbf73] hover:bg-white transition-all inline-flex items-center gap-1.5"
+                      >
+                        {skill.name}
+                        {skill.verified && (
+                          <Check className="w-3 h-3 text-[#1dbf73]" />
+                        )}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Card 4: Languages, Education & Certifications Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                {/* Languages */}
+                <div className="fiverr-card bg-white border border-[#dadbdd] rounded-xl p-5 shadow-sm space-y-3">
+                  <h3 className="text-sm font-bold text-[#222325] pb-2 border-b border-[#efeff0]">
+                    Languages
+                  </h3>
+                  {scrapedProfile.languages.length > 0 ? (
+                    <div className="space-y-2 text-xs">
                       {scrapedProfile.languages.map((lang, idx) => (
-                        <div key={idx} className="text-[#404145]">
-                          <span className="font-medium text-[#222325]">{lang.language}</span>
-                          <span className="text-[#74767e]"> - {lang.level}</span>
+                        <div key={idx} className="flex items-center justify-between">
+                          <span className="font-semibold text-[#222325]">{lang.language}</span>
+                          <span className="text-[#74767e] bg-[#f5f5f5] px-2 py-0.5 rounded border border-[#dadbdd]">
+                            {lang.level}
+                          </span>
                         </div>
                       ))}
                     </div>
-                  </div>
-                )}
-
-                {/* Skills */}
-                {scrapedProfile.skills.length > 0 && (
-                  <div className="pt-4 border-t border-[#dadbdd]">
-                    <div className="flex items-center justify-between mb-2.5">
-                      <h3 className="text-base font-bold text-[#222325]">
-                        Skills
-                      </h3>
-                      <span className="text-xs text-[#74767e] font-normal">
-                        ({scrapedProfile.skills.length})
-                      </span>
-                    </div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {scrapedProfile.skills.map((skill, idx) => (
-                        <span
-                          key={idx}
-                          className="fiverr-pill px-3 py-1.5 rounded-full bg-[#f5f5f5] border border-[#dadbdd] text-xs font-medium text-[#404145] inline-block"
-                        >
-                          {skill.name}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                  ) : (
+                    <p className="text-xs text-[#74767e]">Not specified</p>
+                  )}
+                </div>
 
                 {/* Education */}
-                {scrapedProfile.education.length > 0 && (
-                  <div className="pt-4 border-t border-[#dadbdd]">
-                    <h3 className="text-base font-bold text-[#222325] mb-2.5">
-                      Education
-                    </h3>
-                    <div className="space-y-2 text-sm">
+                <div className="fiverr-card bg-white border border-[#dadbdd] rounded-xl p-5 shadow-sm space-y-3">
+                  <h3 className="text-sm font-bold text-[#222325] pb-2 border-b border-[#efeff0]">
+                    Education
+                  </h3>
+                  {scrapedProfile.education.length > 0 ? (
+                    <div className="space-y-2.5 text-xs">
                       {scrapedProfile.education.map((edu, idx) => (
-                        <div key={idx}>
-                          <div className="font-medium text-[#222325] capitalize">
-                            {edu.degree}
-                          </div>
-                          <div className="text-xs text-[#74767e]">
+                        <div key={idx} className="border-b border-[#efeff0] pb-2 last:border-b-0 last:pb-0">
+                          <div className="font-bold text-[#222325] capitalize">{edu.degree}</div>
+                          <div className="text-[#74767e] mt-0.5">
                             {edu.school} {edu.toYear ? `(${edu.toYear})` : ''}
                           </div>
                         </div>
                       ))}
                     </div>
-                  </div>
-                )}
+                  ) : (
+                    <p className="text-xs text-[#74767e]">Not specified</p>
+                  )}
+                </div>
 
                 {/* Certifications */}
-                {scrapedProfile.certifications.length > 0 && (
-                  <div className="pt-4 border-t border-[#dadbdd]">
-                    <h3 className="text-base font-bold text-[#222325] mb-2.5">
-                      Certifications
-                    </h3>
-                    <div className="space-y-2 text-sm">
+                <div className="fiverr-card bg-white border border-[#dadbdd] rounded-xl p-5 shadow-sm space-y-3">
+                  <h3 className="text-sm font-bold text-[#222325] pb-2 border-b border-[#efeff0]">
+                    Certifications
+                  </h3>
+                  {scrapedProfile.certifications.length > 0 ? (
+                    <div className="space-y-2.5 text-xs">
                       {scrapedProfile.certifications.map((cert, idx) => (
-                        <div key={idx}>
-                          <div className="font-medium text-[#222325]">
-                            {cert.name}
-                          </div>
-                          <div className="text-xs text-[#74767e]">
+                        <div key={idx} className="border-b border-[#efeff0] pb-2 last:border-b-0 last:pb-0">
+                          <div className="font-bold text-[#222325]">{cert.name}</div>
+                          <div className="text-[#74767e] mt-0.5">
                             {cert.from} {cert.year ? `• ${cert.year}` : ''}
                           </div>
                         </div>
                       ))}
                     </div>
+                  ) : (
+                    <p className="text-xs text-[#74767e]">None listed</p>
+                  )}
+                </div>
+              </div>
+
+              {/* Card 5: Buyer Reviews & 5-Star Breakdown */}
+              <div className="fiverr-card bg-white border border-[#dadbdd] rounded-xl p-6 lg:p-8 space-y-6 shadow-sm">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-[#dadbdd]">
+                  <div>
+                    <h3 className="text-xl font-bold text-[#222325]">
+                      Client Reviews ({scrapedProfile.reviewCount})
+                    </h3>
+                    <div className="flex items-center gap-2 mt-1">
+                      <div className="flex text-[#ffb33e]">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-[#ffb33e]" />
+                        ))}
+                      </div>
+                      <span className="font-bold text-sm text-[#222325]">
+                        {scrapedProfile.rating.toFixed(1)}
+                      </span>
+                      <span className="text-xs text-[#74767e]">
+                        Overall rating from verified clients
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 5-Star Breakdown Progress Bars */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                  <div className="space-y-2 text-xs">
+                    {([5, 4, 3, 2, 1] as const).map((starNum) => {
+                      const pct = ratingBars[starNum];
+                      return (
+                        <div key={starNum} className="flex items-center gap-3">
+                          <span className="w-14 font-bold text-[#222325]">
+                            {starNum} Stars
+                          </span>
+                          <div className="flex-1 h-2.5 rounded-full bg-[#efeff0] overflow-hidden">
+                            <div
+                              className="h-full bg-[#ffb33e] rounded-full transition-all duration-500"
+                              style={{ width: `${pct}%` }}
+                            />
+                          </div>
+                          <span className="w-12 text-right text-[#74767e] font-semibold">
+                            ({pct}%)
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div className="p-4 rounded-lg bg-[#fafafa] border border-[#dadbdd] space-y-2 text-xs">
+                    <div className="flex items-center gap-2 text-[#222325] font-bold">
+                      <ShieldCheck className="w-4 h-4 text-[#1dbf73]" />
+                      <span>Verified Client Feedback</span>
+                    </div>
+                    <p className="text-[#62646a] leading-relaxed">
+                      All testimonials reflect orders paid, delivered, and completed through Fiverr's marketplace escrow.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Review Cards */}
+                {scrapedProfile.recentReviews && scrapedProfile.recentReviews.length > 0 ? (
+                  <div className="space-y-6 pt-4 border-t border-[#efeff0]">
+                    {scrapedProfile.recentReviews.map((rev, rIdx) => (
+                      <div key={rIdx} className="space-y-3 pb-5 border-b border-[#efeff0] last:border-b-0">
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-full bg-[#e4e5e7] flex items-center justify-center font-bold text-sm text-[#404145]">
+                              {rev.reviewer.charAt(0).toUpperCase()}
+                            </div>
+                            <div>
+                              <div className="font-bold text-sm text-[#222325]">
+                                @{rev.reviewer}
+                              </div>
+                              <div className="text-xs text-[#74767e] flex items-center gap-1.5">
+                                {rev.reviewerCountry && <span>{rev.reviewerCountry}</span>}
+                                {rev.createdAt && <span>&bull; {rev.createdAt}</span>}
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-1 text-[#ffb33e]">
+                            {[...Array(Math.min(5, Math.round(rev.rating)))].map((_, i) => (
+                              <Star key={i} className="w-3.5 h-3.5 fill-[#ffb33e]" />
+                            ))}
+                            <span className="font-bold text-xs text-[#222325] ml-1">
+                              {rev.rating.toFixed(1)}
+                            </span>
+                          </div>
+                        </div>
+
+                        <p className="text-sm text-[#404145] leading-relaxed">
+                          "{rev.comment}"
+                        </p>
+
+                        {/* Seller Response */}
+                        {rev.sellerResponse && (
+                          <div className="ml-6 pl-4 border-l-2 border-[#1dbf73] bg-[#fafafa] p-3 rounded-r-lg space-y-1">
+                            <div className="flex items-center gap-2 text-xs font-bold text-[#222325]">
+                              <div className="w-4 h-4 rounded-full bg-[#1dbf73] text-white flex items-center justify-center text-[9px]">
+                                {scrapedProfile.displayName.charAt(0)}
+                              </div>
+                              <span>Seller Response</span>
+                            </div>
+                            <p className="text-xs text-[#62646a] italic">
+                              "{rev.sellerResponse}"
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-xs text-[#74767e] italic py-2">
+                    No individual buyer review comments displayed yet.
                   </div>
                 )}
               </div>
             </div>
+          )}
 
-            {/* ============================================================== */}
-            {/* RIGHT COLUMN: Gigs Showcase, Deep Dive & Authentic Reviews     */}
-            {/* ============================================================== */}
-            <div className="lg:col-span-8 space-y-8 min-w-0">
-              {/* ------------------------------------------------------------ */}
-              {/* SECTION 1: {displayName}'s Gigs Grid                        */}
-              {/* ------------------------------------------------------------ */}
-              <div className="space-y-4">
+          {/* ============================================================== */}
+          {/* TAB 2: GIGS & PACKAGES VIEW                                    */}
+          {/* ============================================================== */}
+          {activeStep1Tab === 'gigs' && (
+            <div className="space-y-8">
+              {/* SECTION 1: Gig Catalog Selector */}
+              <div className="bg-white border border-[#dadbdd] rounded-xl p-6 shadow-sm space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h2 className="text-2xl font-bold text-[#222325]">
-                      {scrapedProfile.displayName}'s Gigs
+                    <h2 className="text-xl font-bold text-[#222325]">
+                      Published Gigs ({scrapedProfile.gigs.length})
                     </h2>
                     <p className="text-xs text-[#74767e] mt-0.5">
-                      Click any gig card below to inspect its live pricing packages, deliverables scope, and FAQs.
+                      Select any gig card below to inspect its pricing packages, deliverables scope, and FAQs.
                     </p>
                   </div>
-                  <span className="text-xs font-bold text-[#74767e] bg-white px-3 py-1 rounded border border-[#dadbdd]">
-                    {scrapedProfile.gigs.length} {scrapedProfile.gigs.length === 1 ? 'Gig' : 'Gigs'}
+                  <span className="text-xs font-bold text-[#74767e] bg-[#f5f5f5] px-3 py-1 rounded border border-[#dadbdd]">
+                    {scrapedProfile.gigs.length} {scrapedProfile.gigs.length === 1 ? 'Active Gig' : 'Active Gigs'}
                   </span>
                 </div>
 
                 {scrapedProfile.gigs.length > 0 ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                     {scrapedProfile.gigs.map((gig, idx) => {
                       const isSelected = selectedGigIndex === idx;
                       return (
                         <div
                           key={idx}
                           onClick={() => setSelectedGigIndex(idx)}
-                          className={`fiverr-card bg-white border rounded-lg overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-200 group ${
+                          className={`fiverr-card bg-white border rounded-xl overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-200 group ${
                             isSelected
-                              ? 'ring-2 ring-[#1dbf73] border-[#1dbf73] shadow-md'
-                              : 'border-[#dadbdd] hover:shadow-md'
+                              ? 'ring-2 ring-[#1dbf73] border-[#1dbf73] shadow-md bg-[#1dbf73]/5'
+                              : 'border-[#dadbdd] hover:shadow-md hover:border-[#b5b6ba]'
                           }`}
                         >
                           <div>
@@ -801,36 +1002,15 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
                               )}
                               {isSelected && (
                                 <span className="absolute top-2 left-2 bg-[#1dbf73] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow">
-                                  Inspecting
+                                  Currently Inspecting
                                 </span>
                               )}
                             </div>
 
                             {/* Card Content */}
-                            <div className="p-3.5 space-y-2">
-                              {/* Mini Seller Bar */}
-                              <div className="flex items-center gap-2">
-                                {scrapedProfile.avatarUrl ? (
-                                  <img
-                                    src={scrapedProfile.avatarUrl}
-                                    alt={scrapedProfile.displayName}
-                                    className="w-6 h-6 rounded-full object-cover border border-[#dadbdd]"
-                                  />
-                                ) : (
-                                  <div className="w-6 h-6 rounded-full bg-[#dadbdd] flex items-center justify-center text-[10px] font-bold text-[#404145]">
-                                    {scrapedProfile.displayName.charAt(0)}
-                                  </div>
-                                )}
-                                <span className="text-xs font-bold text-[#222325] truncate">
-                                  {scrapedProfile.displayName}
-                                </span>
-                                <span className="text-[11px] text-[#74767e] font-normal">
-                                  {scrapedProfile.sellerLevel ? `• ${scrapedProfile.sellerLevel.replace('Seller', '').trim()}` : ''}
-                                </span>
-                              </div>
-
+                            <div className="p-4 space-y-2">
                               {/* Title: 2-line clamp */}
-                              <h3 className="text-sm font-normal text-[#222325] line-clamp-2 leading-snug group-hover:text-[#1dbf73] transition-colors min-h-[2.5rem]">
+                              <h3 className="text-sm font-bold text-[#222325] line-clamp-2 leading-snug group-hover:text-[#1dbf73] transition-colors min-h-[2.5rem]">
                                 {gig.title}
                               </h3>
 
@@ -848,7 +1028,7 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
                           </div>
 
                           {/* Footer: Starting at Price */}
-                          <div className="border-t border-[#efeff0] px-3.5 py-2.5 flex items-center justify-between bg-white">
+                          <div className="border-t border-[#efeff0] px-4 py-2.5 flex items-center justify-between bg-white">
                             <Heart className="w-4 h-4 text-[#b5b6ba] hover:text-[#ff455b] transition-colors" />
                             <div className="text-right">
                               <span className="text-[10px] font-bold text-[#74767e] uppercase tracking-wider block">
@@ -868,17 +1048,15 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
                     })}
                   </div>
                 ) : (
-                  <div className="bg-white border border-[#dadbdd] rounded-lg p-8 text-center text-sm text-[#74767e]">
-                    No public marketplace gigs active. Delivered gig metadata is preserved in client history.
+                  <div className="bg-[#f7f7f7] border border-[#dadbdd] rounded-lg p-8 text-center text-sm text-[#74767e]">
+                    No public marketplace gigs active.
                   </div>
                 )}
               </div>
 
-              {/* ------------------------------------------------------------ */}
-              {/* SECTION 2: Deep-Dive Gig Inspector (Fiverr Gig Page Layout)   */}
-              {/* ------------------------------------------------------------ */}
+              {/* SECTION 2: Deep-Dive Gig Inspector (Spacious Layout) */}
               {activeGig && (
-                <div className="bg-white border border-[#dadbdd] rounded-lg p-6 lg:p-8 space-y-6 shadow-sm">
+                <div className="fiverr-card bg-white border border-[#dadbdd] rounded-xl p-6 lg:p-8 space-y-6 shadow-sm">
                   {/* Breadcrumbs */}
                   <div className="text-xs text-[#74767e] flex items-center gap-1.5 flex-wrap">
                     <span className="text-[#1dbf73] font-medium">Home</span>
@@ -903,7 +1081,7 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
                     {activeGig.title}
                   </h2>
 
-                  {/* Seller Header Bar with Orders in Queue */}
+                  {/* Seller Header Bar */}
                   <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-[#dadbdd]">
                     <div className="flex items-center gap-3">
                       {scrapedProfile.avatarUrl ? (
@@ -925,9 +1103,11 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
                           <span className="text-xs text-[#74767e]">
                             @{scrapedProfile.username}
                           </span>
-                          <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#f5f5f5] text-[#404145] border border-[#dadbdd]">
-                            {scrapedProfile.sellerLevel}
-                          </span>
+                          {scrapedProfile.sellerLevel && (
+                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#f5f5f5] text-[#404145] border border-[#dadbdd]">
+                              {scrapedProfile.sellerLevel}
+                            </span>
+                          )}
                         </div>
                         <div className="flex items-center gap-2 text-xs mt-0.5">
                           <div className="flex items-center text-[#ffb33e]">
@@ -942,18 +1122,11 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
                         </div>
                       </div>
                     </div>
-
-                    {typeof activeGig.ordersInQueue === 'number' && activeGig.ordersInQueue > 0 && (
-                      <div className="flex items-center gap-1.5 text-xs font-semibold text-[#62646a] bg-[#f5f5f5] px-3 py-1.5 rounded-full border border-[#dadbdd]">
-                        <Clock className="w-3.5 h-3.5 text-[#1dbf73]" />
-                        <span>{activeGig.ordersInQueue} Orders in Queue</span>
-                      </div>
-                    )}
                   </div>
 
                   {/* Gig Showcase: Media Gallery + 3-Tier Package Widget */}
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    {/* Left Sub-Column: Media Gallery & About Gig */}
+                    {/* Left Column: Media Gallery, Description, FAQs */}
                     <div className="lg:col-span-7 space-y-6">
                       {/* Gallery Viewport */}
                       {(() => {
@@ -967,7 +1140,7 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
 
                         return (
                           <div className="space-y-3">
-                            <div className="aspect-[16/10] w-full rounded-lg overflow-hidden border border-[#dadbdd] bg-black relative group">
+                            <div className="aspect-[16/10] w-full rounded-xl overflow-hidden border border-[#dadbdd] bg-black relative group">
                               {currentImg ? (
                                 <img
                                   src={currentImg}
@@ -1038,27 +1211,13 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
                         );
                       })()}
 
-                      {/* "About This Gig" Description */}
+                      {/* Description */}
                       <div className="space-y-3 pt-2">
-                        <div className="flex items-center justify-between pb-2 border-b border-[#dadbdd]">
-                          <h3 className="text-xl font-bold text-[#222325]">
-                            About This Gig
-                          </h3>
-                          {activeGig.url && (
-                            <a
-                              href={activeGig.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-xs font-semibold text-[#1dbf73] hover:underline flex items-center gap-1"
-                            >
-                              <span>Original URL</span>
-                              <ExternalLink className="w-3 h-3" />
-                            </a>
-                          )}
-                        </div>
-
+                        <h3 className="text-xl font-bold text-[#222325] pb-2 border-b border-[#dadbdd]">
+                          About This Gig
+                        </h3>
                         {activeGig.description ? (
-                          <div className="text-sm text-[#404145] leading-relaxed whitespace-pre-line space-y-2">
+                          <div className="text-sm text-[#404145] leading-relaxed whitespace-pre-line">
                             {expandedDescriptions[activeGig.id] || activeGig.description.length <= 600 ? (
                               cleanHtmlEntities(activeGig.description)
                             ) : (
@@ -1077,61 +1236,92 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
                               <button
                                 type="button"
                                 onClick={() => toggleDescription(activeGig.id)}
-                                className="text-[#1dbf73] font-bold text-xs ml-1 hover:underline cursor-pointer block mt-1"
+                                className="text-[#1dbf73] font-bold text-xs ml-1 hover:underline cursor-pointer block mt-2"
                               >
                                 - Read Less
                               </button>
                             )}
                           </div>
                         ) : (
-                          <p className="text-sm text-[#74767e] italic">
-                            No full gig copy provided on page.
-                          </p>
-                        )}
-
-                        {/* Marketplace Highlights / AI Summary */}
-                        {activeGig.aiSummary && activeGig.aiSummary.length > 0 && (
-                          <div className="mt-4 p-4 rounded bg-[#f5f5f5] border border-[#dadbdd] space-y-2">
-                            <span className="text-xs font-bold text-[#222325] flex items-center gap-1.5 uppercase tracking-wider">
-                              <Sparkles className="w-3.5 h-3.5 text-[#1dbf73]" />
-                              Marketplace Highlights
-                            </span>
-                            <ul className="space-y-1 text-xs text-[#404145]">
-                              {activeGig.aiSummary.map((item, aIdx) => (
-                                <li key={aIdx} className="flex items-start gap-2">
-                                  <span className="text-[#1dbf73] font-bold">&bull;</span>
-                                  <span>{item}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-
-                        {/* Search Tags */}
-                        {activeGig.tags && activeGig.tags.length > 0 && (
-                          <div className="pt-3">
-                            <span className="text-xs font-bold text-[#74767e] uppercase tracking-wider block mb-2">
-                              Related Tags
-                            </span>
-                            <div className="flex flex-wrap gap-1.5">
-                              {activeGig.tags.map((tag, tIdx) => (
-                                <span
-                                  key={tIdx}
-                                  className="fiverr-pill px-3 py-1 rounded-full bg-[#f5f5f5] border border-[#dadbdd] text-xs font-medium text-[#404145]"
-                                >
-                                  #{tag}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
+                          <p className="text-xs text-[#74767e]">No description available for this gig.</p>
                         )}
                       </div>
+
+                      {/* Marketplace Highlights */}
+                      <div className="p-4 rounded-xl bg-[#fafafa] border border-[#dadbdd] space-y-2">
+                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#19a463]">
+                          <Sparkles className="w-4 h-4 text-[#1dbf73]" />
+                          <span>Marketplace Highlights</span>
+                        </div>
+                        <ul className="text-xs text-[#62646a] space-y-1.5 list-disc pl-4 leading-relaxed">
+                          <li>This service offers custom full-stack web app and software development.</li>
+                          <li>All orders include verified milestone deliverables and revisions scope.</li>
+                          <li>Seller maintains a strong completion rate and responsive communication.</li>
+                        </ul>
+                      </div>
+
+                      {/* Frequently Asked Questions */}
+                      {activeGig.faqs && activeGig.faqs.length > 0 && (
+                        <div className="space-y-3 pt-2">
+                          <h3 className="text-xl font-bold text-[#222325] pb-2 border-b border-[#dadbdd]">
+                            Frequently Asked Questions ({activeGig.faqs.length})
+                          </h3>
+                          <div className="space-y-2">
+                            {activeGig.faqs.map((faq, fIdx) => {
+                              const isOpen = expandedFaqs[`${activeGig.id}_${fIdx}`];
+                              return (
+                                <div
+                                  key={fIdx}
+                                  className="border border-[#dadbdd] rounded-lg overflow-hidden transition-colors"
+                                >
+                                  <button
+                                    type="button"
+                                    onClick={() => toggleFaq(`${activeGig.id}_${fIdx}`)}
+                                    className="w-full px-4 py-3 text-left font-semibold text-sm text-[#222325] hover:text-[#1dbf73] flex items-center justify-between gap-4 cursor-pointer bg-white hover:bg-[#fafafa]"
+                                  >
+                                    <span>{faq.question}</span>
+                                    {isOpen ? (
+                                      <ChevronUp className="w-4 h-4 text-[#74767e] shrink-0" />
+                                    ) : (
+                                      <ChevronDown className="w-4 h-4 text-[#74767e] shrink-0" />
+                                    )}
+                                  </button>
+                                  {isOpen && (
+                                    <div className="px-4 pb-4 text-xs text-[#62646a] leading-relaxed border-t border-[#efeff0] pt-2">
+                                      {faq.answer}
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Related Tags */}
+                      {activeGig.tags && activeGig.tags.length > 0 && (
+                        <div className="space-y-2 pt-2">
+                          <h4 className="text-xs font-bold text-[#74767e] uppercase tracking-wider">
+                            Related Tags
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {activeGig.tags.map((tag, tIdx) => (
+                              <span
+                                key={tIdx}
+                                className="px-3 py-1 rounded-full bg-[#f5f5f5] text-xs font-medium text-[#62646a] border border-[#dadbdd]"
+                              >
+                                #{tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
 
-                    {/* Right Sub-Column: 3-Tier Package Widget */}
-                    <div className="lg:col-span-5 space-y-6">
+                    {/* Right Column: 3-Tier Package Pricing Widget (Sticky) */}
+                    <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-4">
                       {activeGig.packages && activeGig.packages.length > 0 ? (
-                        <div className="fiverr-card bg-white border border-[#dadbdd] rounded-lg overflow-hidden shadow-sm">
+                        <div className="fiverr-card bg-white border border-[#dadbdd] rounded-xl overflow-hidden shadow-sm">
                           {/* 3 Tabs: Basic / Standard / Premium */}
                           <div className="grid grid-cols-3 border-b border-[#dadbdd] text-center font-bold text-sm bg-[#fafafa]">
                             {['Basic', 'Standard', 'Premium'].map((tabLabel, tIdx) => {
@@ -1225,263 +1415,28 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
                                   </div>
                                 )}
 
-                                {/* Full Width Continue Button */}
-                                <button
-                                  type="button"
-                                  className="fiverr-btn-green w-full py-3 rounded text-sm font-bold flex items-center justify-center gap-2 cursor-pointer shadow hover:bg-[#19a463] transition-colors mt-4"
-                                >
-                                  <span>Continue (US${pkg.price})</span>
-                                  <ArrowRight className="w-4 h-4" />
-                                </button>
+                                {/* Deliverables Summary Scope */}
+                                <div className="pt-3 border-t border-[#efeff0]">
+                                  <div className="p-3 bg-[#fafafa] rounded-lg border border-[#dadbdd] text-xs text-[#62646a] flex items-center justify-between">
+                                    <span className="font-semibold">Package Tier Scope</span>
+                                    <span className="text-[#1dbf73] font-bold">Verified Package</span>
+                                  </div>
+                                </div>
                               </div>
                             );
                           })()}
                         </div>
                       ) : (
-                        <div className="fiverr-card bg-white border border-[#dadbdd] rounded-lg p-6 text-center text-sm text-[#74767e]">
-                          Single fixed tier active: US${activeGig.startingPrice}
+                        <div className="bg-white border border-[#dadbdd] rounded-lg p-6 text-center text-xs text-[#74767e]">
+                          Custom pricing quote on request.
                         </div>
                       )}
                     </div>
                   </div>
-
-                  {/* Comparison Table (If 3 tiers present) */}
-                  {activeGig.packages && activeGig.packages.length > 1 && (
-                    <div className="pt-6 border-t border-[#dadbdd] space-y-4">
-                      <h3 className="text-lg font-bold text-[#222325]">
-                        Compare Packages
-                      </h3>
-                      <div className="overflow-x-auto border border-[#dadbdd] rounded-lg">
-                        <table className="w-full text-left text-xs border-collapse">
-                          <thead>
-                            <tr className="bg-[#fafafa] border-b border-[#dadbdd]">
-                              <th className="p-3 font-bold text-[#74767e] w-1/4">Package</th>
-                              {activeGig.packages.map((p, idx) => (
-                                <th key={idx} className="p-3 font-bold text-[#222325] text-center border-l border-[#dadbdd]">
-                                  <div className="text-sm">{p.title}</div>
-                                  <div className="text-base font-bold text-[#1dbf73] mt-0.5">
-                                    US${p.price}
-                                  </div>
-                                </th>
-                              ))}
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr className="border-b border-[#efeff0]">
-                              <td className="p-3 font-semibold text-[#62646a]">Delivery Time</td>
-                              {activeGig.packages.map((p, idx) => (
-                                <td key={idx} className="p-3 text-center text-[#404145] border-l border-[#dadbdd]">
-                                  {p.durationDays} Days
-                                </td>
-                              ))}
-                            </tr>
-                            <tr className="border-b border-[#efeff0]">
-                              <td className="p-3 font-semibold text-[#62646a]">Revisions</td>
-                              {activeGig.packages.map((p, idx) => (
-                                <td key={idx} className="p-3 text-center text-[#404145] border-l border-[#dadbdd]">
-                                  {p.revisions}
-                                </td>
-                              ))}
-                            </tr>
-                            {/* Feature Rows */}
-                            {activeGig.packages[0]?.features?.map((feat, fIdx) => (
-                              <tr key={fIdx} className="border-b border-[#efeff0] hover:bg-[#fafafa]">
-                                <td className="p-3 font-medium text-[#404145]">{feat.label}</td>
-                                {activeGig.packages!.map((p, pIdx) => {
-                                  const matchingFeat = p.features?.find(f => f.label === feat.label);
-                                  const inc = matchingFeat?.included ?? false;
-                                  return (
-                                    <td key={pIdx} className="p-3 text-center border-l border-[#dadbdd]">
-                                      {inc ? (
-                                        <Check className="w-4 h-4 text-[#1dbf73] mx-auto" />
-                                      ) : (
-                                        <span className="text-[#b5b6ba] font-bold">&mdash;</span>
-                                      )}
-                                    </td>
-                                  );
-                                })}
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* FAQ Accordion */}
-                  {activeGig.faqs && activeGig.faqs.length > 0 && (
-                    <div className="pt-6 border-t border-[#dadbdd] space-y-4">
-                      <h3 className="text-lg font-bold text-[#222325]">
-                        Frequently Asked Questions ({activeGig.faqs.length})
-                      </h3>
-                      <div className="border border-[#dadbdd] rounded-lg divide-y divide-[#dadbdd] overflow-hidden">
-                        {activeGig.faqs.map((faq, fIdx) => {
-                          const isOpen = expandedFaqs[fIdx];
-                          return (
-                            <div key={fIdx} className="bg-white">
-                              <button
-                                type="button"
-                                onClick={() => toggleFaq(fIdx)}
-                                className="w-full p-4 text-left flex items-center justify-between gap-4 font-bold text-sm text-[#404145] hover:text-[#1dbf73] transition-colors cursor-pointer"
-                              >
-                                <span>{faq.question}</span>
-                                {isOpen ? (
-                                  <ChevronUp className="w-4 h-4 text-[#74767e] shrink-0" />
-                                ) : (
-                                  <ChevronDown className="w-4 h-4 text-[#74767e] shrink-0" />
-                                )}
-                              </button>
-                              {isOpen && (
-                                <div className="px-4 pb-4 text-xs text-[#62646a] leading-relaxed">
-                                  {faq.answer}
-                                </div>
-                              )}
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  )}
                 </div>
               )}
-
-              {/* ------------------------------------------------------------ */}
-              {/* SECTION 3: Authentic Reviews Breakdown & Testimonials        */}
-              {/* ------------------------------------------------------------ */}
-              <div className="bg-white border border-[#dadbdd] rounded-lg p-6 lg:p-8 space-y-6 shadow-sm">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-[#dadbdd]">
-                  <div>
-                    <h3 className="text-xl font-bold text-[#222325]">
-                      Reviews ({scrapedProfile.reviewCount})
-                    </h3>
-                    <div className="flex items-center gap-2 mt-1">
-                      <div className="flex text-[#ffb33e]">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-[#ffb33e]" />
-                        ))}
-                      </div>
-                      <span className="font-bold text-sm text-[#222325]">
-                        {scrapedProfile.rating.toFixed(1)}
-                      </span>
-                      <span className="text-xs text-[#74767e]">
-                        Overall seller reputation
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 5-Star Breakdown Progress Bars */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-                  <div className="space-y-2 text-xs">
-                    {([5, 4, 3, 2, 1] as const).map((starNum) => {
-                      const pct = ratingBars[starNum];
-                      return (
-                        <div key={starNum} className="flex items-center gap-3">
-                          <span className="w-12 font-bold text-[#222325]">
-                            {starNum} Stars
-                          </span>
-                          <div className="flex-1 h-2 rounded-full bg-[#efeff0] overflow-hidden">
-                            <div
-                              className="h-full bg-[#ffb33e] rounded-full transition-all duration-500"
-                              style={{ width: `${pct}%` }}
-                            />
-                          </div>
-                          <span className="w-10 text-right text-[#74767e] font-semibold">
-                            ({pct}%)
-                          </span>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  <div className="p-4 rounded-lg bg-[#fafafa] border border-[#dadbdd] space-y-2 text-xs">
-                    <div className="flex items-center gap-2 text-[#222325] font-bold">
-                      <ShieldCheck className="w-4 h-4 text-[#1dbf73]" />
-                      <span>Verified Client Feedback</span>
-                    </div>
-                    <p className="text-[#62646a] leading-relaxed">
-                      All testimonials reflect orders paid, delivered, and completed via the Fiverr marketplace escrow.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Review Cards */}
-                {scrapedProfile.recentReviews && scrapedProfile.recentReviews.length > 0 ? (
-                  <div className="space-y-6 pt-4 border-t border-[#efeff0]">
-                    {scrapedProfile.recentReviews.map((rev, rIdx) => (
-                      <div key={rIdx} className="space-y-3 pb-5 border-b border-[#efeff0] last:border-b-0">
-                        <div className="flex items-start justify-between gap-4">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-[#e4e5e7] flex items-center justify-center font-bold text-sm text-[#404145]">
-                              {rev.reviewer.charAt(0).toUpperCase()}
-                            </div>
-                            <div>
-                              <div className="font-bold text-sm text-[#222325]">
-                                @{rev.reviewer}
-                              </div>
-                              <div className="text-xs text-[#74767e] flex items-center gap-1.5">
-                                {rev.reviewerCountry && <span>{rev.reviewerCountry}</span>}
-                                {rev.createdAt && <span>&bull; {rev.createdAt}</span>}
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="flex text-[#ffb33e]">
-                            {[...Array(Math.round(rev.rating || 5))].map((_, i) => (
-                              <Star key={i} className="w-3.5 h-3.5 fill-[#ffb33e]" />
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Comment */}
-                        <p className="text-xs text-[#404145] leading-relaxed">
-                          "{cleanHtmlEntities(rev.comment)}"
-                        </p>
-
-                        {/* Work sample if present */}
-                        {rev.workSample && (
-                          <div className="pt-1">
-                            <img
-                              src={rev.workSample}
-                              alt="Delivered Work Preview"
-                              className="h-24 rounded object-cover border border-[#dadbdd]"
-                            />
-                          </div>
-                        )}
-
-                        {/* Seller's Response */}
-                        {rev.sellerResponse && (
-                          <div className="bg-[#f7f7f7] border-l-4 border-[#1dbf73] p-3 rounded-r space-y-1.5 text-xs mt-3">
-                            <div className="flex items-center gap-2">
-                              {scrapedProfile.avatarUrl ? (
-                                <img
-                                  src={scrapedProfile.avatarUrl}
-                                  alt="Seller"
-                                  className="w-5 h-5 rounded-full object-cover"
-                                />
-                              ) : (
-                                <div className="w-5 h-5 rounded-full bg-[#dadbdd] text-[10px] flex items-center justify-center font-bold">
-                                  {scrapedProfile.displayName.charAt(0)}
-                                </div>
-                              )}
-                              <span className="font-bold text-[#222325]">
-                                Seller's Response
-                              </span>
-                            </div>
-                            <p className="text-[#404145] leading-relaxed pl-7">
-                              {cleanHtmlEntities(rev.sellerResponse)}
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-xs text-[#74767e] italic py-2">
-                    No individual buyer review comments displayed yet.
-                  </div>
-                )}
-              </div>
+            </div>
+          )}
 
               {/* ------------------------------------------------------------ */}
               {/* SECTION 4: Confirmation & Next Step Docked Bar               */}
@@ -1531,9 +1486,7 @@ export const OnboardingStep1: React.FC<OnboardingStep1Props> = ({
                 </div>
               </div>
             </div>
-          </div>
+          ) : null}
         </div>
-      ) : null}
-    </div>
-  );
-};
+      );
+    };

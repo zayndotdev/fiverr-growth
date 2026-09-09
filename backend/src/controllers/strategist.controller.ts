@@ -70,7 +70,7 @@ export class StrategistController {
           : ["Web Development", "AI Automation"]
       };
 
-      const result = await strategistService.synthesizeMarketStrategy(userId, payload);
+      const result = await strategistService.synthesizeMarketStrategy(userId, payload) as any;
 
       // Merge backend result with normalized frontend blueprint keys
       const responseData = {
@@ -117,7 +117,7 @@ export class StrategistController {
 
   public async getContext(req: AuthenticatedRequest, res: Response) {
     try {
-      const userId = req.params?.userId || req.user?.userId || (req.query?.userId as string);
+      const userId = (req.params?.userId || req.user?.userId || req.query?.userId) as string;
       if (!userId) {
         return res.status(401).json({ success: false, error: "Authentication or userId required." });
       }

@@ -1,17 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   User,
   LogOut,
   CheckCircle2,
-  ExternalLink,
   ShieldCheck,
-  Compass,
   Sparkles,
   Send,
-  Bookmark,
   Copy,
   Check,
   Zap,
+  Settings,
+  LayoutDashboard,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 
@@ -19,29 +19,24 @@ interface ProfileDropdownProps {
   isOpen: boolean;
   onClose: () => void;
   onOpenAuth: () => void;
-  onNavigateTab: (tab: string) => void;
-  savedGigsCount: number;
 }
 
 export const ProfileDropdown: React.FC<ProfileDropdownProps> = ({
   isOpen,
   onClose,
   onOpenAuth,
-  onNavigateTab,
-  savedGigsCount,
 }) => {
-  const { user, userContext, logout } = useAuth();
+  const { user, logout } = useAuth();
   const [copiedId, setCopiedId] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
-  // Close when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         onClose();
       }
     };
-
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
     }
@@ -60,7 +55,12 @@ export const ProfileDropdown: React.FC<ProfileDropdownProps> = ({
     }
   };
 
-  const hasStrategy = !!userContext?.strategy;
+  const handleNavigate = (path: string) => {
+    navigate(path);
+    onClose();
+  };
+
+  const onboardingDone = user?.onboardingCompleted;
 
   return (
     <div
@@ -77,8 +77,8 @@ export const ProfileDropdown: React.FC<ProfileDropdownProps> = ({
             <div className="min-w-0 flex-1">
               <div className="text-sm font-bold text-[#222325] truncate flex items-center gap-1.5">
                 <span>{user.username}</span>
-                {hasStrategy && (
-                  <span title="Context Locked & Active">
+                {onboardingDone && (
+                  <span title="Onboarding Complete">
                     <CheckCircle2 className="w-3.5 h-3.5 text-[#1dbf73] shrink-0" />
                   </span>
                 )}
@@ -87,7 +87,7 @@ export const ProfileDropdown: React.FC<ProfileDropdownProps> = ({
             </div>
           </div>
 
-          {/* User ID Pill with 1-Click Copy */}
+          {/* User ID Pill */}
           <div className="flex items-center justify-between bg-[#f5f5f5] p-2 rounded-lg border border-[#dadbdd] text-xs">
             <span className="text-[#62646a] font-mono truncate text-[11px]">ID: {user.id}</span>
             <button
@@ -100,112 +100,85 @@ export const ProfileDropdown: React.FC<ProfileDropdownProps> = ({
             </button>
           </div>
 
-          {/* Fiverr Profile Link Status */}
-          {user.fiverr_profile_url && (
-            <div className="bg-[#1dbf73]/10 p-2.5 rounded-lg border border-[#1dbf73]/20 text-xs">
-              <div className="text-[10px] text-[#19a463] font-bold uppercase tracking-wider mb-0.5">Linked Fiverr Account</div>
-              <a
-                href={user.fiverr_profile_url}
-                target="_blank"
-                rel="noreferrer"
-                className="text-xs text-[#222325] hover:text-[#1dbf73] hover:underline flex items-center gap-1.5 font-medium truncate"
-              >
-                <span className="truncate">{user.fiverr_profile_url}</span>
-                <ExternalLink className="w-3 h-3 text-[#1dbf73] shrink-0" />
-              </a>
-            </div>
-          )}
-
-          {/* Strategy Context Status */}
+          {/* Onboarding Status */}
           <div className="bg-[#f5f5f5] p-2.5 rounded-lg border border-[#dadbdd] space-y-1">
             <div className="flex items-center justify-between text-xs">
-              <span className="text-[#62646a] font-medium">Growth Blueprint</span>
-              {hasStrategy ? (
+              <span className="text-[#62646a] font-medium">Onboarding</span>
+              {onboardingDone ? (
                 <span className="text-[#19a463] font-bold flex items-center gap-1 text-[11px]">
                   <ShieldCheck className="w-3 h-3 text-[#1dbf73]" />
-                  Active
+                  Complete
+                </span>
+              ) : user.onboardingSkipped ? (
+                <span className="text-amber-600 font-bold flex items-center gap-1 text-[11px]">
+                  <Zap className="w-3 h-3 text-amber-500" />
+                  Skipped
                 </span>
               ) : (
                 <span className="text-amber-600 font-bold flex items-center gap-1 text-[11px]">
                   <Zap className="w-3 h-3 text-amber-500" />
-                  In Progress
+                  Step {user.onboardingStep} of 3
                 </span>
               )}
             </div>
-            {hasStrategy ? (
-              <div className="text-xs text-[#222325] font-semibold truncate">
-                {userContext.strategy.profile_positioning?.recommended_title || 'AI Solutions Engineer'}
-              </div>
-            ) : (
-              <div className="text-[11px] text-[#74767e]">
-                Complete Step 1 to ground your strategy in verified market data.
-              </div>
+            {!onboardingDone && (
+              <button
+                onClick={() => handleNavigate('/onboarding')}
+                className="w-full mt-1 py-1.5 rounded text-[11px] font-bold text-[#1dbf73] bg-[#1dbf73]/10 hover:bg-[#1dbf73]/20 border border-[#1dbf73]/20 transition-colors cursor-pointer"
+              >
+                {user.onboardingSkipped ? 'Resume Onboarding' : 'Continue Onboarding'}
+              </button>
             )}
           </div>
 
-          {/* Action Navigation Options */}
+          {/* Quick Navigation */}
           <div className="space-y-1 pt-1">
             <button
-              onClick={() => {
-                onNavigateTab('strategist');
-                onClose();
-              }}
+              onClick={() => handleNavigate('/dashboard')}
               className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold text-[#404145] hover:text-[#222325] hover:bg-[#f5f5f5] border border-transparent hover:border-[#dadbdd] transition-all text-left cursor-pointer"
             >
-              <Compass className="w-4 h-4 text-[#1dbf73] shrink-0" />
-              <span>Strategy & Diagnostics</span>
+              <LayoutDashboard className="w-4 h-4 text-[#1dbf73] shrink-0" />
+              <span>Dashboard</span>
             </button>
 
             <button
-              onClick={() => {
-                onNavigateTab('gigs');
-                onClose();
-              }}
+              onClick={() => handleNavigate('/gigs')}
               className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold text-[#404145] hover:text-[#222325] hover:bg-[#f5f5f5] border border-transparent hover:border-[#dadbdd] transition-all text-left cursor-pointer"
             >
               <Sparkles className="w-4 h-4 text-[#1dbf73] shrink-0" />
-              <span>5-Tag SEO Gig Studio</span>
+              <span>Gig Studio</span>
             </button>
 
             <button
-              onClick={() => {
-                onNavigateTab('briefs');
-                onClose();
-              }}
+              onClick={() => handleNavigate('/briefs')}
               className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold text-[#404145] hover:text-[#222325] hover:bg-[#f5f5f5] border border-transparent hover:border-[#dadbdd] transition-all text-left cursor-pointer"
             >
               <Send className="w-4 h-4 text-[#1dbf73] shrink-0" />
-              <span>Live Buyer Briefs Radar</span>
+              <span>Buyer Briefs</span>
             </button>
 
+            {/* Settings */}
             <button
-              onClick={() => {
-                onNavigateTab('saved');
-                onClose();
-              }}
-              className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-semibold text-[#404145] hover:text-[#222325] hover:bg-[#f5f5f5] border border-transparent hover:border-[#dadbdd] transition-all text-left cursor-pointer"
+              onClick={() => handleNavigate('/settings')}
+              className="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold text-[#404145] hover:text-[#222325] hover:bg-[#f5f5f5] border border-transparent hover:border-[#dadbdd] transition-all text-left cursor-pointer"
             >
-              <div className="flex items-center gap-2.5">
-                <Bookmark className="w-4 h-4 text-[#1dbf73] shrink-0" />
-                <span>Saved Assets Library</span>
-              </div>
-              <span className="px-2 py-0.5 rounded-full bg-[#f5f5f5] text-[#404145] text-[10px] font-bold border border-[#dadbdd]">
-                {savedGigsCount}
-              </span>
+              <Settings className="w-4 h-4 text-[#1dbf73] shrink-0" />
+              <span>Settings</span>
             </button>
           </div>
 
-          {/* Sign Out Button */}
+          {/* Sign Out */}
           <div className="pt-2 border-t border-[#efeff0]">
             <button
               onClick={() => {
                 logout();
+                navigate('/');
                 onClose();
               }}
               className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-bold text-red-600 bg-red-50 hover:bg-red-100 border border-red-200 transition-all text-left cursor-pointer"
             >
               <LogOut className="w-4 h-4" />
-              <span>Sign Out Account</span>
+              <span>Sign Out</span>
             </button>
           </div>
         </div>
@@ -218,10 +191,9 @@ export const ProfileDropdown: React.FC<ProfileDropdownProps> = ({
             </div>
             <h4 className="text-sm font-bold text-[#222325]">Freelancer Guest Mode</h4>
             <p className="text-xs text-[#74767e] mt-0.5">
-              Sign in to save your strategy blueprint, persistent gigs, and client proposals.
+              Sign in to save your strategy, gigs, and client proposals.
             </p>
           </div>
-
           <button
             onClick={() => {
               onClose();

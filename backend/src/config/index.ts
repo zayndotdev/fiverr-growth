@@ -1,4 +1,4 @@
-﻿import dotenv from "dotenv";
+import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -14,5 +14,6 @@ export const config = {
   AI_SERVICE_URL: process.env.AI_SERVICE_URL || "http://127.0.0.1:8000",
   GROQ_API_KEY: process.env.GROQ_API_KEY || "",
   GEMINI_API_KEY: process.env.GEMINI_API_KEY || "",
-  NODE_ENV: process.env.NODE_ENV || "development"
+  NODE_ENV: process.env.NODE_ENV || "development",
+  GITHUB_TOKEN: process.env.GITHUB_TOKEN || ""
 };

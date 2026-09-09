@@ -65,8 +65,8 @@ export const BuyerBriefView: React.FC = () => {
           user_id: user?.id,
           brief_text: briefText,
           buyer_budget: budget,
-          timeline_urgency: urgency,
-          freelancer_skills: skills,
+          urgency: urgency,
+          user_skills: skills ? skills.split(',').map(s => s.trim()).filter(Boolean) : undefined,
         }),
       });
       const json = await res.json();

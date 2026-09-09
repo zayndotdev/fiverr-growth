@@ -16,6 +16,11 @@ export interface User {
   passwordHash: string;
   fiverr_profile_url?: string;
   fiverrProfile?: ScrapedFiverrProfile;
+  onboardingCompleted: boolean;
+  onboardingSkipped: boolean;
+  onboardingStep: number;
+  icpProfiles?: any[];
+  icpGeneratedAt?: string;
   createdAt: string;
 }
 
@@ -23,6 +28,7 @@ export interface UserContext {
   userId: string;
   fullName: string;
   fiverrUrl: string;
+  icpProfiles?: any[];
   experienceYears: string;
   primarySkills: string[];
   secondarySkills: string[];
@@ -83,16 +89,52 @@ class Store {
   }
 
   // --- User Auth Store ---
-  public createUser(user: Omit<User, "id" | "createdAt">): User {
+  public createUser(user: Omit<User, "id" | "createdAt" | "onboardingCompleted" | "onboardingSkipped" | "onboardingStep">): User {
     const id = `usr_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
     const newUser: User = {
       id,
       ...user,
+      onboardingCompleted: false,
+      onboardingSkipped: false,
+      onboardingStep: 1,
       createdAt: new Date().toISOString()
     };
     this.data.users.push(newUser);
     this.save();
     return newUser;
+  }
+
+  public updateOnboardingStatus(userId: string, step: number, completed: boolean, skipped: boolean): User | undefined {
+    const user = this.findUserById(userId);
+    if (user) {
+      user.onboardingStep = step;
+      user.onboardingCompleted = completed;
+      user.onboardingSkipped = skipped;
+      this.save();
+    }
+    return user;
+  }
+
+  public saveIcpProfiles(userId: string, profiles: any[]): User | undefined {
+    const user = this.findUserById(userId);
+    if (user) {
+      user.icpProfiles = profiles;
+      user.icpGeneratedAt = new Date().toISOString();
+      this.save();
+      
+      // Also update user context
+      const context = this.getUserContext(userId);
+      if (context) {
+        context.icpProfiles = profiles;
+        this.save();
+      }
+    }
+    return user;
+  }
+
+  public getIcpProfiles(userId: string): any[] | undefined {
+    const user = this.findUserById(userId);
+    return user?.icpProfiles;
   }
 
   public findUserByEmail(email: string): User | undefined {

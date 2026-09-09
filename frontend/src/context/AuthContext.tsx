@@ -1,4 +1,6 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+
+// ─── User & Context Interfaces ───────────────────────────────────────────────
 
 export interface User {
   id: string;
@@ -8,6 +10,11 @@ export interface User {
   fiverrProfile?: any;
   skills?: string[];
   created_at?: string;
+  // Onboarding state
+  onboardingCompleted: boolean;
+  onboardingSkipped: boolean;
+  onboardingStep: number;
+  icpProfiles?: any[];
 }
 
 export interface RecommendedGig {
@@ -51,6 +58,8 @@ export interface UserContextData {
   updated_at: string;
 }
 
+// ─── Auth Context Type ───────────────────────────────────────────────────────
+
 interface AuthContextType {
   user: User | null;
   token: string | null;
@@ -61,9 +70,31 @@ interface AuthContextType {
   logout: () => void;
   refreshContext: () => Promise<void>;
   updateUserContext: (context: UserContextData) => void;
+  updateOnboardingState: (updates: Partial<Pick<User, 'onboardingCompleted' | 'onboardingSkipped' | 'onboardingStep' | 'fiverrProfile' | 'icpProfiles'>>) => void;
+  isOnboardingRequired: () => boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+// ─── Normalize Backend Response ──────────────────────────────────────────────
+
+function normalizeUser(raw: any): User {
+  return {
+    id: raw.id,
+    username: raw.username,
+    email: raw.email,
+    fiverr_profile_url: raw.fiverr_profile_url || raw.fiverrUrl || undefined,
+    fiverrProfile: raw.fiverrProfile || undefined,
+    skills: raw.skills || raw.primarySkills || [],
+    created_at: raw.created_at || raw.createdAt,
+    onboardingCompleted: raw.onboardingCompleted ?? false,
+    onboardingSkipped: raw.onboardingSkipped ?? false,
+    onboardingStep: raw.onboardingStep ?? 1,
+    icpProfiles: raw.icpProfiles || undefined,
+  };
+}
+
+// ─── Auth Provider ───────────────────────────────────────────────────────────
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
@@ -78,10 +109,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     if (storedToken && storedUser) {
       try {
-        const parsedUser = JSON.parse(storedUser);
+        const parsedUser = normalizeUser(JSON.parse(storedUser));
         setToken(storedToken);
         setUser(parsedUser);
-        fetchUserContext(parsedUser.id);
+        fetchUserContext(parsedUser.id, storedToken);
       } catch (e) {
         console.error('Failed to parse stored user:', e);
         localStorage.removeItem('fg_token');
@@ -91,9 +122,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setLoading(false);
   }, []);
 
-  const fetchUserContext = async (userId: string) => {
+  const fetchUserContext = async (userId: string, authToken?: string) => {
     try {
-      const res = await fetch(`/api/v1/strategist/context/${userId}`);
+      const headers: Record<string, string> = {};
+      const tkn = authToken || token;
+      if (tkn) {
+        headers['Authorization'] = `Bearer ${tkn}`;
+      }
+      const res = await fetch(`/api/v1/strategist/context/${userId}`, { headers });
       const json = await res.json();
       if (json.success && json.data) {
         setUserContext(json.data);
@@ -104,11 +140,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const login = async (newToken: string, newUser: User) => {
+    const normalized = normalizeUser(newUser);
     setToken(newToken);
-    setUser(newUser);
+    setUser(normalized);
     localStorage.setItem('fg_token', newToken);
-    localStorage.setItem('fg_user', JSON.stringify(newUser));
-    await fetchUserContext(newUser.id);
+    localStorage.setItem('fg_user', JSON.stringify(normalized));
+    await fetchUserContext(normalized.id, newToken);
   };
 
   const register = async (newToken: string, newUser: User) => {
@@ -123,14 +160,42 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     localStorage.removeItem('fg_user');
   };
 
-  const refreshContext = async () => {
+  const refreshContext = useCallback(async () => {
     if (user?.id) {
+      // Also re-fetch user data from /auth/me to get latest onboarding state
+      try {
+        const headers: Record<string, string> = {};
+        if (token) headers['Authorization'] = `Bearer ${token}`;
+        const res = await fetch('/api/v1/auth/me', { headers });
+        const json = await res.json();
+        if (json.success && (json.data?.user || json.user)) {
+          const freshUser = normalizeUser(json.data?.user || json.user);
+          setUser(freshUser);
+          localStorage.setItem('fg_user', JSON.stringify(freshUser));
+        }
+      } catch (err) {
+        console.warn('Could not refresh user data:', err);
+      }
       await fetchUserContext(user.id);
     }
-  };
+  }, [user?.id, token]);
 
   const updateUserContext = (context: UserContextData) => {
     setUserContext(context);
+  };
+
+  const updateOnboardingState = (updates: Partial<Pick<User, 'onboardingCompleted' | 'onboardingSkipped' | 'onboardingStep' | 'fiverrProfile' | 'icpProfiles'>>) => {
+    setUser((prev) => {
+      if (!prev) return prev;
+      const updated = { ...prev, ...updates };
+      localStorage.setItem('fg_user', JSON.stringify(updated));
+      return updated;
+    });
+  };
+
+  const isOnboardingRequired = (): boolean => {
+    if (!user) return false;
+    return !user.onboardingCompleted && !user.onboardingSkipped;
   };
 
   return (
@@ -145,6 +210,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         logout,
         refreshContext,
         updateUserContext,
+        updateOnboardingState,
+        isOnboardingRequired,
       }}
     >
       {children}

@@ -31,14 +31,21 @@ export class AuthController {
         validated.fiverr_profile_url
       );
 
+      const userResponse = {
+        ...result.user,
+        onboardingCompleted: result.user.onboardingCompleted,
+        onboardingSkipped: result.user.onboardingSkipped,
+        onboardingStep: result.user.onboardingStep
+      };
+
       // Return both flat and nested data for 100% frontend and test compatibility
       return res.status(201).json({
         success: true,
         token: result.token,
-        user: result.user,
+        user: userResponse,
         data: {
           token: result.token,
-          user: result.user
+          user: userResponse
         }
       });
     } catch (err: any) {
@@ -52,14 +59,21 @@ export class AuthController {
       const identifier = validated.emailOrUsername || validated.email || validated.username || "";
       const result = await authService.login(identifier, validated.password);
 
+      const userResponse = {
+        ...result.user,
+        onboardingCompleted: result.user.onboardingCompleted,
+        onboardingSkipped: result.user.onboardingSkipped,
+        onboardingStep: result.user.onboardingStep
+      };
+
       // Return both flat and nested data
       return res.status(200).json({
         success: true,
         token: result.token,
-        user: result.user,
+        user: userResponse,
         data: {
           token: result.token,
-          user: result.user
+          user: userResponse
         }
       });
     } catch (err: any) {
@@ -78,12 +92,21 @@ export class AuthController {
       }
       const context = db.getUserContext(req.user.userId);
       const { passwordHash: _, ...safeUser } = user;
+      
+      const userResponse = {
+        ...safeUser,
+        onboardingCompleted: safeUser.onboardingCompleted,
+        onboardingSkipped: safeUser.onboardingSkipped,
+        onboardingStep: safeUser.onboardingStep,
+        icpProfiles: safeUser.icpProfiles
+      };
+
       return res.status(200).json({
         success: true,
-        user: safeUser,
+        user: userResponse,
         context: context || null,
         data: {
-          user: safeUser,
+          user: userResponse,
           context: context || null
         }
       });
