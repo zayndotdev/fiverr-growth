@@ -52,6 +52,10 @@ export interface UserContextData {
     intended_gigs: string[];
   };
   strategy: MarketStrategy;
+  primarySkills?: string[];
+  secondarySkills?: string[];
+  targetNiches?: string[];
+  icpProfiles?: any[];
   fiverrProfile?: any;
   onboardingStep?: number;
   marketStrategy?: any;

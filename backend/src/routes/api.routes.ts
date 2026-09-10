@@ -4,6 +4,8 @@ import { strategistController } from "../controllers/strategist.controller.js";
 import { apiController } from "../controllers/api.controller.js";
 import { scraperController } from "../controllers/scraper.controller.js";
 import { onboardingController } from "../controllers/onboarding.controller.js";
+import { competitorController } from "../controllers/competitor.controller.js";
+import { briefsController } from "../controllers/briefs.controller.js";
 import { requireAuth, optionalAuth } from "../middlewares/auth.middleware.js";
 
 const router = Router();
@@ -38,13 +40,23 @@ router.post("/gigs/generate", optionalAuth, (req, res) => apiController.generate
 router.get("/gigs", optionalAuth, (req, res) => apiController.getGigs(req, res));
 
 // --- Buyer Briefs Routes ---
+router.get("/briefs", optionalAuth, (req, res) => briefsController.getBriefs(req, res));
+router.post("/briefs/sync", optionalAuth, (req, res) => briefsController.syncBriefs(req, res));
+router.post("/briefs/generate-batch", optionalAuth, (req, res) => briefsController.generateBatchProposals(req, res));
+router.post("/briefs/apply", optionalAuth, (req, res) => briefsController.recordApplication(req, res));
 router.get("/briefs/live", optionalAuth, (req, res) => apiController.getLiveBriefs(req, res));
 router.post("/briefs/propose", optionalAuth, (req, res) => apiController.proposeBrief(req, res));
-router.get("/briefs", optionalAuth, (req, res) => apiController.getBriefs(req, res));
 
 // --- Market Research & Intelligence Routes ---
 router.get("/market/intelligence", optionalAuth, (req, res) => apiController.getMarketIntelligence(req, res));
 router.post("/research/niche", optionalAuth, (req, res) => apiController.researchNiche(req, res));
 router.get("/research/history", optionalAuth, (req, res) => apiController.getResearchHistory(req, res));
+
+// --- Competitor Intelligence Routes ---
+router.post("/competitors/discover", optionalAuth, (req, res) => competitorController.discoverCompetitors(req, res));
+router.post("/competitors/analyze", optionalAuth, (req, res) => competitorController.analyzeCompetitor(req, res));
+router.get("/competitors/reports", requireAuth, (req, res) => competitorController.getSavedReports(req, res));
+router.post("/competitors/reports", requireAuth, (req, res) => competitorController.saveReport(req, res));
+router.delete("/competitors/reports/:id", requireAuth, (req, res) => competitorController.deleteReport(req, res));
 
 export default router;

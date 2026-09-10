@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "FiverrGrowth — Safe Briefs Copilot",
+  "version": "1.0.0",
+  "description": "Safe-Zone Inbound Briefs Matcher & AI Proposal Copilot for Fiverr Sellers.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.fiverr.com/*",
+    "http://localhost:5000/*",
+    "http://localhost:5173/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "FiverrGrowth Safe Copilot"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.fiverr.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

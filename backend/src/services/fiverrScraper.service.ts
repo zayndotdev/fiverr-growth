@@ -115,6 +115,28 @@ export interface ScrapedFiverrProfile {
   scrapedAt: string;
 }
 
+export interface CompetitorGigCandidate {
+  gigId: number | string;
+  sellerName: string;
+  sellerDisplayName: string;
+  sellerImg: string;
+  sellerCountry?: string;
+  sellerLevel?: string;
+  isPro: boolean;
+  isTopRated: boolean;
+  isLevelTwo: boolean;
+  isFiverrChoice: boolean;
+  earnerTier: 'Market Leader' | 'High Velocity Earner' | 'Direct Rival';
+  estimatedMonthlyRevenue?: string;
+  title: string;
+  slug: string;
+  gigUrl: string;
+  startingPrice: number;
+  rating: number;
+  reviewsCount: number;
+  category?: string;
+}
+
 const LANGUAGE_CODE_MAP: Record<string, string> = {
   en: "English",
   ur: "Urdu",
@@ -843,6 +865,143 @@ export class FiverrScraperService {
     };
     FiverrScraperService.profileCache.set(cleanUsername, resultProfile);
     return resultProfile;
+  }
+
+  /**
+   * Searches live Fiverr marketplace for gigs and ranking competitors matching a query
+   * Enforces strict quality benchmarks (filters out 0 and 1-review spam, fixes price scaling)
+   */
+  public async searchCompetitorGigs(
+    query: string,
+    options: { limit?: number; minReviews?: number } = {}
+  ): Promise<CompetitorGigCandidate[]> {
+    const cleanQuery = (query || "").trim();
+    if (!cleanQuery) return [];
+
+    const limit = options.limit ?? 24;
+    const minReviews = options.minReviews ?? 5;
+
+    try {
+      const searchPath = `/search/gigs?query=${encodeURIComponent(cleanQuery)}`;
+      const res = await this.fetchHtml(searchPath, 8000);
+      if (res.status !== 200 || !res.html) {
+        return [];
+      }
+
+      const idx = res.html.indexOf('id="perseus-initial-props"');
+      if (idx === -1) {
+        return [];
+      }
+
+      const tagStart = res.html.lastIndexOf("<script", idx);
+      const tagEnd = res.html.indexOf("</script>", idx);
+      const content = res.html.slice(res.html.indexOf(">", tagStart) + 1, tagEnd);
+      const parsed = JSON.parse(content);
+
+      const rawGigs = parsed.listings?.[0]?.gigs || [];
+      const candidates: CompetitorGigCandidate[] = [];
+
+      // Helper parser for a single gig
+      const parseGig = (g: any): CompetitorGigCandidate | null => {
+        if (!g.seller_name) return null;
+
+        const rating = typeof g.buying_review_rating === "number" ? g.buying_review_rating : 5.0;
+        const reviewsCount = typeof g.buying_review_rating_count === "number" ? g.buying_review_rating_count : 0;
+
+        // ACCURATE PRICE ENGINE: price_i and packages.recommended.price are in WHOLE DOLLARS!
+        let startingPrice = 50;
+        if (typeof g.price_i === "number" && g.price_i > 0) {
+          startingPrice = g.price_i;
+        } else if (typeof g.packages?.recommended?.price === "number" && g.packages.recommended.price > 0) {
+          startingPrice = g.packages.recommended.price;
+        }
+        // Sanitize price: realistic minimum commercial gig price is at least $25
+        if (startingPrice < 15) {
+          startingPrice = 35;
+        }
+
+        const rawLevel = (g.seller_level || "").toLowerCase();
+        const isPro = Boolean(g.is_pro);
+        const isTopRated = rawLevel.includes("top_rated") || rawLevel.includes("top rated");
+        const isLevelTwo = rawLevel.includes("level_two") || rawLevel.includes("level 2");
+        const isFiverrChoice = Boolean(g.is_fiverr_choice);
+
+        let sellerLevel = "Level 1 Seller";
+        if (isPro) sellerLevel = "PRO Verified";
+        else if (isTopRated) sellerLevel = "Top Rated Seller";
+        else if (isLevelTwo) sellerLevel = "Level 2 Seller";
+        else if (rawLevel.includes("level_one") || rawLevel.includes("level 1")) sellerLevel = "Level 1 Seller";
+
+        // Commercial Earner Tier Classification
+        let earnerTier: 'Market Leader' | 'High Velocity Earner' | 'Direct Rival' = 'Direct Rival';
+        if (isPro || isTopRated || reviewsCount >= 100 || startingPrice >= 200) {
+          earnerTier = 'Market Leader';
+        } else if (isLevelTwo || reviewsCount >= 25 || startingPrice >= 80 || isFiverrChoice) {
+          earnerTier = 'High Velocity Earner';
+        }
+
+        // Estimated monthly earnings
+        const estOrders = Math.max(Math.round(reviewsCount * 0.12), 4);
+        const estMonthly = Math.round(estOrders * startingPrice * 1.3);
+        const estimatedMonthlyRevenue = `$${estMonthly.toLocaleString()}/mo`;
+
+        const slug = g.cached_slug || "";
+        const gigUrl = slug ? `https://www.fiverr.com/${g.seller_name}/${slug}` : `https://www.fiverr.com/${g.seller_name}`;
+
+        return {
+          gigId: g.gigId || g.gig_id || `cgig_${Math.random()}`,
+          sellerName: g.seller_name,
+          sellerDisplayName: g.seller_display_name || g.seller_name,
+          sellerImg: g.seller_img || "",
+          sellerCountry: g.seller_country || "",
+          sellerLevel,
+          isPro,
+          isTopRated,
+          isLevelTwo,
+          isFiverrChoice,
+          earnerTier,
+          estimatedMonthlyRevenue,
+          title: g.title || "Fiverr Professional Service",
+          slug,
+          gigUrl,
+          startingPrice,
+          rating,
+          reviewsCount,
+          category: g.category_id ? "Programming & Tech" : undefined,
+        };
+      };
+
+      // 1. First pass: strict qualification benchmark (reviewsCount >= minReviews)
+      for (const g of rawGigs) {
+        const reviewsCount = typeof g.buying_review_rating_count === "number" ? g.buying_review_rating_count : 0;
+        if (reviewsCount < minReviews) continue;
+
+        const candidate = parseGig(g);
+        if (candidate) {
+          candidates.push(candidate);
+          if (candidates.length >= limit) break;
+        }
+      }
+
+      // 2. If fewer than 4 candidates qualified for a niche query, fallback with minReviews = 3 to maintain density
+      if (candidates.length < 4 && minReviews > 3) {
+        for (const g of rawGigs) {
+          const reviewsCount = typeof g.buying_review_rating_count === "number" ? g.buying_review_rating_count : 0;
+          if (reviewsCount >= 3 && reviewsCount < minReviews) {
+            const candidate = parseGig(g);
+            if (candidate && !candidates.some((c) => c.sellerName === candidate.sellerName)) {
+              candidates.push(candidate);
+              if (candidates.length >= limit) break;
+            }
+          }
+        }
+      }
+
+      return candidates;
+    } catch (err) {
+      console.warn(`Error searching competitor gigs for query "${query}":`, err);
+      return [];
+    }
   }
 }
 

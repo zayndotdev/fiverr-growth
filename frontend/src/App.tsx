@@ -11,6 +11,8 @@ import { GigGeneratorView } from './components/modules/GigGeneratorView';
 import { BuyerBriefView } from './components/modules/BuyerBriefView';
 import { MarketResearchView } from './components/modules/MarketResearchView';
 import { SavedGigsView } from './components/modules/SavedGigsView';
+import { SellerDashboardView } from './components/dashboard/SellerDashboardView';
+import { CompetitorsView } from './components/competitors/CompetitorsView';
 import { SettingsPage } from './components/settings/SettingsPage';
 import { AuthModal } from './components/auth/AuthModal';
 import { ProtectedRoute, OnboardingGuard } from './components/guards/RouteGuards';
@@ -66,68 +68,6 @@ const LandingRedirect: React.FC<{ onOpenAuth: () => void }> = ({ onOpenAuth }) =
         >
           Get Started — It's Free
         </button>
-      </div>
-    </div>
-  );
-};
-
-// ─── Dashboard Page (replaces the old strategist default) ───────────────────
-
-const DashboardPage: React.FC = () => {
-  const { user, userContext } = useAuth();
-
-  return (
-    <div className="space-y-6">
-      {/* Onboarding skipped banner */}
-      {user && !user.onboardingCompleted && user.onboardingSkipped && (
-        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="text-amber-600 text-lg">⚠️</span>
-            <div>
-              <p className="text-sm font-semibold text-amber-800">Onboarding Incomplete</p>
-              <p className="text-xs text-amber-700">Complete your onboarding for personalized recommendations.</p>
-            </div>
-          </div>
-          <a
-            href="/onboarding"
-            className="fiverr-btn-green px-4 py-1.5 rounded text-xs font-bold cursor-pointer"
-          >
-            Complete Now
-          </a>
-        </div>
-      )}
-
-      {/* Welcome card */}
-      <div className="bg-white border border-[#dadbdd] rounded-xl p-6 shadow-xs">
-        <h2 className="text-xl font-bold text-[#222325]">
-          Welcome{user ? `, ${user.username}` : ''}
-          <span className="text-[#1dbf73]">.</span>
-        </h2>
-        <p className="text-sm text-[#74767e] mt-1">
-          {userContext?.strategy
-            ? `Your growth strategy is active. Use the tools below to generate gigs, find briefs, and research markets.`
-            : `Explore the platform tools below to grow your Fiverr business.`}
-        </p>
-      </div>
-
-      {/* Quick navigation grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {[
-          { label: 'Gig Studio', desc: 'Generate SEO-optimized gig packages', href: '/gigs', icon: '✨' },
-          { label: 'Buyer Briefs', desc: 'Match with live client opportunities', href: '/briefs', icon: '📨' },
-          { label: 'Market Research', desc: 'Analyze niches and competitors', href: '/research', icon: '📊' },
-          { label: 'Saved Library', desc: 'View your saved gigs and proposals', href: '/saved', icon: '📁' },
-        ].map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            className="bg-white border border-[#dadbdd] rounded-lg p-4 hover:border-[#1dbf73] hover:shadow-md transition-all group"
-          >
-            <div className="text-2xl mb-2">{item.icon}</div>
-            <h3 className="text-sm font-bold text-[#222325] group-hover:text-[#1dbf73]">{item.label}</h3>
-            <p className="text-xs text-[#74767e] mt-0.5">{item.desc}</p>
-          </a>
-        ))}
       </div>
     </div>
   );
@@ -192,7 +132,17 @@ const AppContent: React.FC = () => {
               element={
                 <ProtectedRoute>
                   <OnboardingGuard>
-                    <DashboardPage />
+                    <SellerDashboardView />
+                  </OnboardingGuard>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/competitors"
+              element={
+                <ProtectedRoute>
+                  <OnboardingGuard>
+                    <CompetitorsView />
                   </OnboardingGuard>
                 </ProtectedRoute>
               }

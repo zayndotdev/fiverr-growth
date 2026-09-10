@@ -50,12 +50,96 @@ export interface UserContext {
   updatedAt: string;
 }
 
+export interface BuyerBrief {
+  id: string;
+  fiverrBriefId?: string;
+  userId?: string;
+  clientTitle: string;
+  description: string;
+  budget: string;
+  currency?: string;
+  urgencyDays?: number;
+  urgencyText?: string;
+  skills: string[];
+  clientCountry?: string;
+  source: 'fiverr_extension' | 'live_feed' | 'manual';
+  status: 'new' | 'reviewed' | 'applied' | 'dismissed';
+  matchScore?: number;
+  matchedGigId?: string | number;
+  matchedGigTitle?: string;
+  appliedProposal?: {
+    pitchText: string;
+    targetGigId?: string | number;
+    targetGigTitle?: string;
+    offeredPrice: number;
+    deliveryDays: number;
+    appliedAt: string;
+    safetyGapSeconds?: number;
+  };
+  createdAt: string;
+}
+
+export interface CompetitorReport {
+  id: string;
+  userId: string;
+  competitorUsername: string;
+  competitorProfile: ScrapedFiverrProfile;
+  metricsComparison: {
+    userPriceFloor: number;
+    userPriceCeiling: number;
+    competitorPriceFloor: number;
+    competitorPriceCeiling: number;
+    userRating: number;
+    competitorRating: number;
+    userReviewsCount: number;
+    competitorReviewsCount: number;
+    userOrdersInQueue: number;
+    competitorOrdersInQueue: number;
+    estimatedRevenueGapMultiplier: number;
+    missingHighVolumeTags: string[];
+    commonSkills: string[];
+    uniqueCompetitorSkills: string[];
+  };
+  gapAnalysis: {
+    executiveSummary: string;
+    whyCompetitorMakesMore: {
+      pricingStrategy: string;
+      packagingLeverage: string;
+      positioningAndHooks: string;
+    };
+    deliverablesComparison: {
+      userStrengths: string[];
+      competitorStrengths: string[];
+      criticalMissingFeatures: string[];
+    };
+    seoAndSearchGap: {
+      tagsAnalysis: string;
+      rankingAngles: string[];
+    };
+    actionableWinPlan: {
+      stepNumber: number;
+      title: string;
+      category: 'title' | 'pricing' | 'packages' | 'positioning';
+      action: string;
+      expectedImpact: string;
+    }[];
+    recommendedPricing: {
+      basic: number;
+      standard: number;
+      premium: number;
+      rationale: string;
+    };
+  };
+  createdAt: string;
+}
+
 interface DatabaseSchema {
   users: User[];
   userContexts: Record<string, UserContext>;
   gigs: any[];
   briefs: any[];
   researchHistory: any[];
+  competitorReports?: Record<string, CompetitorReport[]>;
 }
 
 class Store {
@@ -73,13 +157,14 @@ class Store {
           userContexts: raw.userContexts || {},
           gigs: raw.gigs || [],
           briefs: raw.briefs || [],
-          researchHistory: raw.researchHistory || []
+          researchHistory: raw.researchHistory || [],
+          competitorReports: raw.competitorReports || {}
         };
       } catch {
-        this.data = { users: [], userContexts: {}, gigs: [], briefs: [], researchHistory: [] };
+        this.data = { users: [], userContexts: {}, gigs: [], briefs: [], researchHistory: [], competitorReports: {} };
       }
     } else {
-      this.data = { users: [], userContexts: {}, gigs: [], briefs: [], researchHistory: [] };
+      this.data = { users: [], userContexts: {}, gigs: [], briefs: [], researchHistory: [], competitorReports: {} };
       this.save();
     }
   }
@@ -225,16 +310,113 @@ class Store {
   }
 
   // --- Briefs Store ---
-  public saveBrief(brief: any) {
-    const item = { id: `brief_${Date.now()}`, ...brief, createdAt: new Date().toISOString() };
+  public saveBrief(brief: any): BuyerBrief {
+    const item: BuyerBrief = {
+      id: `brief_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+      clientTitle: brief.clientTitle || brief.title || 'Client Project Brief',
+      description: brief.description || '',
+      budget: brief.budget || 'Flexible',
+      currency: brief.currency || 'USD',
+      urgencyDays: brief.urgencyDays || 2,
+      urgencyText: brief.urgencyText || '48 Hours',
+      skills: Array.isArray(brief.skills) ? brief.skills : [],
+      clientCountry: brief.clientCountry || 'United States',
+      source: brief.source || 'manual',
+      status: brief.status || 'new',
+      matchScore: brief.matchScore,
+      matchedGigId: brief.matchedGigId,
+      matchedGigTitle: brief.matchedGigTitle,
+      appliedProposal: brief.appliedProposal,
+      userId: brief.userId || 'anonymous',
+      createdAt: new Date().toISOString(),
+      ...brief,
+    };
     this.data.briefs.unshift(item);
     this.save();
     return item;
   }
 
-  public getBriefs(userId?: string) {
+  public syncBriefs(userId: string | undefined, incomingBriefs: any[]): BuyerBrief[] {
+    if (!Array.isArray(this.data.briefs)) {
+      this.data.briefs = [];
+    }
+
+    const updatedList: BuyerBrief[] = [];
+
+    for (const b of incomingBriefs) {
+      const briefId = b.fiverrBriefId || b.id;
+      const existingIdx = this.data.briefs.findIndex(
+        (existing: BuyerBrief) =>
+          (briefId && (existing.fiverrBriefId === briefId || existing.id === briefId)) ||
+          (b.clientTitle && existing.clientTitle?.toLowerCase().trim() === b.clientTitle?.toLowerCase().trim())
+      );
+
+      if (existingIdx !== -1) {
+        const existing = this.data.briefs[existingIdx];
+        const merged: BuyerBrief = {
+          ...existing,
+          ...b,
+          userId: userId || existing.userId || 'anonymous',
+          status: existing.status === 'applied' ? 'applied' : (b.status || existing.status || 'new'),
+          appliedProposal: existing.appliedProposal || b.appliedProposal,
+        };
+        this.data.briefs[existingIdx] = merged;
+        updatedList.push(merged);
+      } else {
+        const newBrief: BuyerBrief = {
+          id: `brief_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+          fiverrBriefId: briefId || undefined,
+          userId: userId || 'anonymous',
+          clientTitle: b.clientTitle || b.title || 'Client Brief',
+          description: b.description || '',
+          budget: b.budget || 'Flexible',
+          currency: b.currency || 'USD',
+          urgencyDays: b.urgencyDays || 2,
+          urgencyText: b.urgencyText || '48 Hours',
+          skills: Array.isArray(b.skills) ? b.skills : [],
+          clientCountry: b.clientCountry || 'United States',
+          source: b.source || 'fiverr_extension',
+          status: 'new',
+          matchScore: b.matchScore,
+          matchedGigId: b.matchedGigId,
+          matchedGigTitle: b.matchedGigTitle,
+          createdAt: new Date().toISOString(),
+        };
+        this.data.briefs.unshift(newBrief);
+        updatedList.push(newBrief);
+      }
+    }
+
+    this.save();
+    return updatedList;
+  }
+
+  public updateBriefApplication(
+    briefId: string,
+    application: {
+      pitchText: string;
+      targetGigId?: string | number;
+      targetGigTitle?: string;
+      offeredPrice: number;
+      deliveryDays: number;
+      safetyGapSeconds?: number;
+    }
+  ): BuyerBrief | null {
+    const brief = this.data.briefs.find((b: BuyerBrief) => b.id === briefId || b.fiverrBriefId === briefId);
+    if (!brief) return null;
+
+    brief.status = 'applied';
+    brief.appliedProposal = {
+      ...application,
+      appliedAt: new Date().toISOString(),
+    };
+    this.save();
+    return brief;
+  }
+
+  public getBriefs(userId?: string): BuyerBrief[] {
     if (userId) {
-      return this.data.briefs.filter(b => b.userId === userId);
+      return this.data.briefs.filter((b: BuyerBrief) => b.userId === userId || b.userId === 'anonymous');
     }
     return this.data.briefs;
   }
@@ -252,6 +434,43 @@ class Store {
       return this.data.researchHistory.filter(r => r.userId === userId);
     }
     return this.data.researchHistory;
+  }
+
+  // --- Competitor Reports Store ---
+  public saveCompetitorReport(userId: string, report: Omit<CompetitorReport, "id" | "createdAt">): CompetitorReport {
+    if (!this.data.competitorReports) {
+      this.data.competitorReports = {};
+    }
+    if (!this.data.competitorReports[userId]) {
+      this.data.competitorReports[userId] = [];
+    }
+
+    const item: CompetitorReport = {
+      id: `crep_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+      createdAt: new Date().toISOString(),
+      ...report
+    };
+
+    this.data.competitorReports[userId].unshift(item);
+    this.save();
+    return item;
+  }
+
+  public getCompetitorReports(userId: string): CompetitorReport[] {
+    if (!this.data.competitorReports) {
+      this.data.competitorReports = {};
+    }
+    return this.data.competitorReports[userId] || [];
+  }
+
+  public deleteCompetitorReport(userId: string, reportId: string): boolean {
+    if (!this.data.competitorReports || !this.data.competitorReports[userId]) {
+      return false;
+    }
+    const beforeCount = this.data.competitorReports[userId].length;
+    this.data.competitorReports[userId] = this.data.competitorReports[userId].filter(r => r.id !== reportId);
+    this.save();
+    return this.data.competitorReports[userId].length < beforeCount;
   }
 }
 

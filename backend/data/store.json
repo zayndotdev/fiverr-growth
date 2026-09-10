@@ -12179,6 +12179,124 @@
   ],
   "briefs": [
     {
+      "id": "brief_1789075610140_rvlq",
+      "fiverrBriefId": "fvr_ext_test_01",
+      "userId": "anonymous",
+      "clientTitle": "Build an AI voice agent with VAPI or Retell for dental clinic",
+      "description": "Need an automated voice agent that answers calls after hours, checks dental patient appointments in our calendar, and records voicemails.",
+      "budget": "Flexible",
+      "currency": "USD",
+      "urgencyDays": 2,
+      "urgencyText": "3 Days",
+      "skills": [
+        "Voice AI",
+        "VAPI",
+        "Retell",
+        "Python",
+        "FastAPI"
+      ],
+      "clientCountry": "United States",
+      "source": "fiverr_extension",
+      "status": "new",
+      "matchScore": 80,
+      "matchedGigTitle": "Custom Full Stack & AI Services",
+      "createdAt": "2026-09-10T21:26:50.140Z"
+    },
+    {
+      "id": "brief_1789075559938_ngi6",
+      "fiverrBriefId": "fvr_brf_605921",
+      "userId": "usr_1788898190068_awzqs",
+      "clientTitle": "Flutter developer needed for cross-platform booking application",
+      "description": "We need a clean Flutter mobile app (iOS & Android) with clean state management (Bloc or Riverpod) that allows users to browse service providers, book appointment slots, and receive push notifications.",
+      "budget": "$380",
+      "currency": "USD",
+      "urgencyDays": 5,
+      "urgencyText": "5 Days",
+      "skills": [
+        "Flutter",
+        "Mobile App",
+        "Firebase",
+        "State Management"
+      ],
+      "clientCountry": "Australia",
+      "source": "live_feed",
+      "status": "new",
+      "matchScore": 86,
+      "matchedGigTitle": "Cross-platform mobile application development in Flutter",
+      "createdAt": "2026-09-10T21:25:59.938Z"
+    },
+    {
+      "id": "brief_1789075559938_3aet",
+      "fiverrBriefId": "fvr_brf_716254",
+      "userId": "usr_1788898190068_awzqs",
+      "clientTitle": "Fix REST API authentication bug and build web scraping pipeline",
+      "description": "Need a backend developer to resolve an existing FastAPI endpoint that fails during concurrent token refreshes, and create a daily automated scraper that extracts e-commerce product price changes into Google Sheets.",
+      "budget": "$150",
+      "currency": "USD",
+      "urgencyDays": 1,
+      "urgencyText": "24 Hours",
+      "skills": [
+        "Python",
+        "FastAPI",
+        "Web Scraping",
+        "Bug Fix"
+      ],
+      "clientCountry": "Canada",
+      "source": "live_feed",
+      "status": "new",
+      "matchScore": 89,
+      "matchedGigTitle": "Custom backend API & automated web data pipeline",
+      "createdAt": "2026-09-10T21:25:59.938Z"
+    },
+    {
+      "id": "brief_1789075559938_dbd4",
+      "fiverrBriefId": "fvr_brf_817290",
+      "userId": "usr_1788898190068_awzqs",
+      "clientTitle": "Full stack React / Next.js developer to build MVP client dashboard",
+      "description": "We have Figma designs ready for a 4-page SaaS portal with role-based auth (JWT), responsive tables, Stripe billing subscription integration, and PostgreSQL backend. Looking for a full stack specialist who delivers production code.",
+      "budget": "$450",
+      "currency": "USD",
+      "urgencyDays": 4,
+      "urgencyText": "4 Days",
+      "skills": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Stripe API"
+      ],
+      "clientCountry": "United Kingdom",
+      "source": "live_feed",
+      "status": "new",
+      "matchScore": 94,
+      "matchedGigTitle": "Build your custom full stack web app or website in any technology",
+      "createdAt": "2026-09-10T21:25:59.938Z"
+    },
+    {
+      "id": "brief_1789075559938_st5z",
+      "fiverrBriefId": "fvr_brf_982104",
+      "userId": "usr_1788898190068_awzqs",
+      "clientTitle": "Need custom AI Agent & Chatbot connected to WhatsApp and CRM",
+      "description": "Looking for an experienced AI engineer to build an autonomous customer support bot. Needs to connect with OpenAI or Claude, query our internal product catalog, and schedule appointments directly into our CRM via webhooks. Must have clean error handling and documentation.",
+      "budget": "$250",
+      "currency": "USD",
+      "urgencyDays": 2,
+      "urgencyText": "48 Hours",
+      "skills": [
+        "AI Agent",
+        "OpenAI",
+        "Python",
+        "CRM Integration",
+        "FastAPI"
+      ],
+      "clientCountry": "United States",
+      "source": "live_feed",
+      "status": "new",
+      "matchScore": 98,
+      "matchedGigTitle": "Build custom AI agents, chatbots & voice automation",
+      "createdAt": "2026-09-10T21:25:59.938Z"
+    },
+    {
       "id": "brief_1788987956025",
       "brief_text": "Need a developer to build an automated AI customer chatbot and connect it to our Shopify store.",
       "buyer_budget": "$350",
@@ -12195,7 +12313,16 @@
       "confidence_score": 0.94,
       "key_selling_hook": "Technical specificity and zero-downtime execution methodology.",
       "userId": "usr_1788987953117_gskov",
-      "createdAt": "2026-09-09T21:05:56.025Z"
+      "createdAt": "2026-09-09T21:05:56.025Z",
+      "status": "applied",
+      "appliedProposal": {
+        "pitchText": "I reviewed your brief regarding customer support bots...",
+        "targetGigTitle": "Build custom AI agents, chatbots & voice automation",
+        "offeredPrice": 150,
+        "deliveryDays": 2,
+        "safetyGapSeconds": 25,
+        "appliedAt": "2026-09-10T21:24:01.818Z"
+      }
     },
     {
       "id": "brief_1788856667669",
@@ -13035,5 +13162,6 @@
       "overall_niche_score": 88,
       "createdAt": "2026-09-07T21:06:49.569Z"
     }
-  ]
+  ],
+  "competitorReports": {}
 }
