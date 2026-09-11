@@ -1,9 +1,16 @@
 import { config } from '../config/index.js';
+import { logger } from '../utils/logger.js';
 
 const GEMINI_API_KEY = config.GEMINI_API_KEY || process.env.GEMINI_API_KEY || '';
 
 export class IcpGeneratorService {
   async generateIcpsFromProfile(fiverrProfile: any): Promise<any[]> {
+    logger.agentLog(
+      'AGENT_ICP',
+      'Gemini ICP Strategist',
+      'INFO',
+      `Deriving Ideal Customer Profiles from profile @${fiverrProfile.username || 'user'}`
+    );
     // a. Preprocess the scraped profile data
     const substantiveReviews = fiverrProfile.recentReviews
       ? fiverrProfile.recentReviews.filter((r: any) => r.comment && r.comment.split(' ').length > 15).slice(0, 20)
@@ -152,10 +159,23 @@ Return a JSON object with this exact structure:
         return icp;
       });
 
-      return icps.slice(0, 4);
+      const finalIcps = icps.slice(0, 4);
+      logger.agentLog(
+        'AGENT_ICP',
+        'Gemini ICP Strategist',
+        'SUCCESS',
+        `Generated ${finalIcps.length} data-grounded ICPs for @${fiverrProfile.username || 'user'}`
+      );
+      return finalIcps;
 
     } catch (e) {
-      console.error("Gemini ICP generation failed, using fallback:", e);
+      logger.agentLog(
+        'AGENT_ICP',
+        'Gemini ICP Strategist',
+        'WARN',
+        `Gemini ICP generation failed, using heuristic engine`,
+        e
+      );
       return this.generateFallbackIcps(fiverrProfile, minPrice);
     }
   }

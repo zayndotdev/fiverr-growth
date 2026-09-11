@@ -1,4 +1,5 @@
 import https from "https";
+import { logger } from "../utils/logger.js";
 
 export interface FiverrLanguage {
   language: string;
@@ -491,6 +492,8 @@ export class FiverrScraperService {
       throw new Error("Invalid Fiverr username or profile URL provided.");
     }
 
+    logger.agentLog("AGENT_SCRAPER", "Fiverr Scraper Agent", "INFO", `Scraping live profile @${cleanUsername}`);
+
     const { status, html } = await this.fetchHtml(`/${encodeURIComponent(cleanUsername)}`, 12000);
 
     if (status === 404) {
@@ -864,6 +867,14 @@ export class FiverrScraperService {
       scrapedAt: new Date().toISOString(),
     };
     FiverrScraperService.profileCache.set(cleanUsername, resultProfile);
+
+    logger.agentLog(
+      "AGENT_SCRAPER",
+      "Fiverr Scraper Agent",
+      "SUCCESS",
+      `Successfully scraped @${cleanUsername}: ${gigs.length} gigs, ${skills.length} skills, ${reviewCount} reviews (Rating: ${ratingScore})`
+    );
+
     return resultProfile;
   }
 
@@ -880,6 +891,13 @@ export class FiverrScraperService {
 
     const limit = options.limit ?? 24;
     const minReviews = options.minReviews ?? 5;
+
+    logger.agentLog(
+      "AGENT_SCRAPER",
+      "Fiverr Competitor Radar",
+      "INFO",
+      `Searching live Fiverr marketplace for competitors in niche "${cleanQuery}" (Min Reviews: ${minReviews})`
+    );
 
     try {
       const searchPath = `/search/gigs?query=${encodeURIComponent(cleanQuery)}`;
@@ -997,8 +1015,17 @@ export class FiverrScraperService {
         }
       }
 
+      logger.agentLog(
+        "AGENT_SCRAPER",
+        "Fiverr Competitor Radar",
+        "SUCCESS",
+        `Discovered ${candidates.length} validated high-earner competitors for "${cleanQuery}"`,
+        { query: cleanQuery, count: candidates.length }
+      );
+
       return candidates;
     } catch (err) {
+      logger.agentLog("AGENT_SCRAPER", "Fiverr Competitor Radar", "WARN", `Live marketplace search failed for "${query}"`, err);
       console.warn(`Error searching competitor gigs for query "${query}":`, err);
       return [];
     }

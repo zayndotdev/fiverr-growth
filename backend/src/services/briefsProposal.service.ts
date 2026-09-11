@@ -1,5 +1,6 @@
 import { config } from '../config/index.js';
 import { BuyerBrief } from '../db/store.js';
+import { logger } from '../utils/logger.js';
 
 const GEMINI_API_KEY = config.GEMINI_API_KEY || process.env.GEMINI_API_KEY || '';
 
@@ -36,6 +37,13 @@ export class BriefsProposalService {
   ): Promise<GeneratedProposalItem[]> {
     const tone = strategy.tone || 'consultative';
     const safetyGap = strategy.safetyGapSeconds || 25;
+
+    logger.agentLog(
+      'AGENT_BRIEFS',
+      'Buyer Briefs Closer',
+      'INFO',
+      `Evaluating ${selectedBriefs.length} briefs with tone: "${tone}", safety gap: ${safetyGap}s`
+    );
 
     const results: GeneratedProposalItem[] = [];
 
@@ -77,6 +85,14 @@ export class BriefsProposalService {
 
       results.push(proposalItem);
     }
+
+    logger.agentLog(
+      'AGENT_BRIEFS',
+      'Buyer Briefs Closer',
+      'SUCCESS',
+      `Synthesized ${results.length} conversion-engineered proposals (Matched gigs: ${results.filter(r => r.matchedGigTitle).length})`,
+      { count: results.length }
+    );
 
     return results;
   }

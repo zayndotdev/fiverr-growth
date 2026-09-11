@@ -6,6 +6,9 @@ import { scraperController } from "../controllers/scraper.controller.js";
 import { onboardingController } from "../controllers/onboarding.controller.js";
 import { competitorController } from "../controllers/competitor.controller.js";
 import { briefsController } from "../controllers/briefs.controller.js";
+import { gigStudioController } from "../controllers/gigStudio.controller.js";
+import { gigImageAgentController } from "../controllers/gigImageAgent.controller.js";
+import { systemController } from "../controllers/system.controller.js";
 import { requireAuth, optionalAuth } from "../middlewares/auth.middleware.js";
 
 const router = Router();
@@ -35,9 +38,20 @@ router.get("/user/context", requireAuth, (req, res) => strategistController.getC
 router.get("/strategist/context/:userId", optionalAuth, (req, res) => strategistController.getContext(req, res));
 router.put("/user/context", requireAuth, (req, res) => strategistController.updateContext(req, res));
 
-// --- Gig Generator Routes ---
+// --- Gig Generator & Studio Routes ---
 router.post("/gigs/generate", optionalAuth, (req, res) => apiController.generateGig(req, res));
 router.get("/gigs", optionalAuth, (req, res) => apiController.getGigs(req, res));
+router.post("/gigs/interrogate-start", optionalAuth, (req, res) => gigStudioController.startInterrogation(req, res));
+router.post("/gigs/interrogate-turn", optionalAuth, (req, res) => gigStudioController.nextInterrogationTurn(req, res));
+router.post("/gigs/synthesize-studio", optionalAuth, (req, res) => gigStudioController.synthesizeGigStudio(req, res));
+router.post("/gigs/generate-artwork", optionalAuth, (req, res) => gigStudioController.generateArtwork(req, res));
+router.post("/gigs/regenerate-description", optionalAuth, (req, res) => gigStudioController.regenerateDescription(req, res));
+
+// --- Autonomous Gig Visual Design Agent Routes ---
+router.post("/gigs/image-agent/generate", optionalAuth, (req, res) => gigImageAgentController.generateImage(req, res));
+router.post("/gigs/image-agent/variations", optionalAuth, (req, res) => gigImageAgentController.getVariations(req, res));
+router.get("/gigs/image-agent/status", optionalAuth, (req, res) => gigImageAgentController.getStatus(req, res));
+router.get("/gigs/image-agent/knowledge", optionalAuth, (req, res) => gigImageAgentController.getKnowledge(req, res));
 
 // --- Buyer Briefs Routes ---
 router.get("/briefs", optionalAuth, (req, res) => briefsController.getBriefs(req, res));
@@ -58,5 +72,10 @@ router.post("/competitors/analyze", optionalAuth, (req, res) => competitorContro
 router.get("/competitors/reports", requireAuth, (req, res) => competitorController.getSavedReports(req, res));
 router.post("/competitors/reports", requireAuth, (req, res) => competitorController.saveReport(req, res));
 router.delete("/competitors/reports/:id", requireAuth, (req, res) => competitorController.deleteReport(req, res));
+
+// --- System & Live Agent Activity Logger Routes ---
+router.get("/system/logs", optionalAuth, (req, res) => systemController.getLogs(req, res));
+router.get("/system/agent-health", optionalAuth, (req, res) => systemController.getAgentHealth(req, res));
+router.delete("/system/logs", optionalAuth, (req, res) => systemController.clearLogs(req, res));
 
 export default router;

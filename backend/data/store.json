@@ -92,29 +92,29 @@
       "username": "tasaquqe",
       "passwordHash": "$2b$10$3Iop5R74fad3xo8/dIhwoep1yTN67xU4RvQPgiRf2MaC0Jh7pdJw6",
       "createdAt": "2026-09-08T20:09:50.068Z",
-      "fiverr_profile_url": "https://www.fiverr.com/dev_zaynee",
+      "fiverr_profile_url": "https://www.fiverr.com/tasaduqe_codes",
       "fiverrProfile": {
-        "username": "dev_zaynee",
-        "displayName": "Zayn Raza",
-        "profileUrl": "https://www.fiverr.com/dev_zaynee",
-        "avatarUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/7adf4016a19046ae4849caa67c830a1b-1751971225688/45f96031-5f04-4578-b65d-a39d9cb3ece2.jpg",
+        "username": "tasaduqe_codes",
+        "displayName": "Tasaduqe Fatima",
+        "profileUrl": "https://www.fiverr.com/tasaduqe_codes",
+        "avatarUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/ff9220b4b24ddb3a9cda3cb7dd162243-1783884175549/a5a9f3df-b573-4a18-902d-8e32769e5fff.png",
         "profileCoverUrl": "",
         "isAgency": false,
-        "tagline": "Full Stack Agency, AI Agents, Web and Mobile Apps",
-        "description": "Businesses hire us when they need something built right — \nwhether that's a website, a mobile app, an AI chatbot that \nhandles their customers, or a voice agent that answers their \ncalls 24/7.\n\nWe handle the full stack. React, Next.js, Node.js, Python, \nFastAPI, Flutter, LangChain, LangGraph, VAPI, TypeScript, \nMongoDB. From a simple landing page to a complex SaaS \nplatform or a multi-agent AI system — we deliver \nproduction-ready, clean code.\n\n24+ projects completed. 100% on-time delivery. \nMessage us — we respond instantly.",
+        "tagline": "Full Stack Developer Web, and AI Chatbot Solutions",
+        "description": "Most businesses lose customers to something simple — a slow website, no chatbot, a lead that never got a reply.\n\nI'm a full stack developer working with businesses in Pakistan and beyond, fixing exactly that — building websites, mobile apps, and AI chatbots that keep working even when you're not around to.\n\nI care about getting it right the first time. Clean code, clear communication, and honest timelines — no surprises, no disappearing after payment.\n\nI reply fast and deliver on time. Message me and let's talk about what your business actually needs.",
         "country": "Pakistan",
         "countryCode": "PK",
-        "memberSince": "May 2023",
-        "joinedAtTimestamp": 1683821061,
-        "responseTimeHours": 0,
-        "responseTimeText": "< 1 hour",
-        "lastDeliveryText": "Feb 2025",
+        "memberSince": "Jul 2026",
+        "joinedAtTimestamp": 1783881453,
+        "responseTimeHours": 1,
+        "responseTimeText": "1 hour",
+        "lastDeliveryText": "Recently",
         "sellerLevel": "New Seller",
         "isPro": false,
         "isVerified": false,
         "isHighlyResponsive": false,
-        "rating": 4.6,
-        "reviewCount": 15,
+        "rating": 5,
+        "reviewCount": 0,
         "languages": [
           {
             "language": "English",
@@ -125,21 +125,16 @@
             "language": "Urdu",
             "code": "UR",
             "level": "Native / Bilingual"
-          },
-          {
-            "language": "Hindi",
-            "code": "HI",
-            "level": "Fluent"
           }
         ],
         "skills": [
           {
-            "name": "Chatbot development",
+            "name": "Website development",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Software automation",
+            "name": "Chatbot development",
             "level": "PRO",
             "verified": false
           },
@@ -149,37 +144,37 @@
             "verified": false
           },
           {
-            "name": "Rest API",
+            "name": "Full Stack Web Applications",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "React",
+            "name": "AI Integrations",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "E-commerce development",
+            "name": "ChatGPT",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Flutter",
+            "name": "Google Gemini",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Next.js",
+            "name": "LangChain",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "TypeScript",
+            "name": "JavaScript",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Node.js",
+            "name": "PHP",
             "level": "PRO",
             "verified": false
           },
@@ -189,37 +184,57 @@
             "verified": false
           },
           {
-            "name": "OpenAI",
+            "name": "TypeScript",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "HTML & CSS",
+            "name": "React",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Debugging",
+            "name": "Ai Chatbot",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Performance",
+            "name": "Ai Website",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Security",
+            "name": "Custom Chatbot",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Design",
+            "name": "Ai Website Developer",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "AngularJS",
+            "name": "Web Performance Optimization",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "API & Web Security",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "UI/UX & Responsive Design",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Databases & SQL",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Automated Testing",
             "level": "PRO",
             "verified": false
           },
@@ -229,47 +244,62 @@
             "verified": false
           },
           {
-            "name": "JQuery",
+            "name": "jQuery",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "React.Js",
+            "name": "Next.js",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Vue.Js",
+            "name": "React.js",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Django",
+            "name": "Tailwind CSS",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Express.Js",
+            "name": "Express.js",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Laravel",
+            "name": "FastAPI",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Web App Development",
+            "name": "NestJS",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Web App Developer",
+            "name": "Node.js",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "React Node Developer",
+            "name": "Lovable.dev",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Claude AI",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Cursor IDE",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Replit",
             "level": "PRO",
             "verified": false
           },
@@ -279,85 +309,214 @@
             "verified": false
           },
           {
-            "name": "Custom Web Developer",
+            "name": "Front End Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Back End Developer",
             "level": "PRO",
             "verified": false
           }
         ],
         "education": [
           {
-            "degree": "bachelor in information technology",
-            "school": "Bahauddin Zakariya University,Multan",
+            "degree": "computer science",
+            "school": "Bahauddin Zakariya University, Multan",
             "degreeTitle": "BSC",
-            "toYear": 2024,
+            "toYear": 2026,
             "countryCode": "PK"
           }
         ],
-        "certifications": [
-          {
-            "name": "Web Design",
-            "from": "freecodecamp",
-            "year": 2023
-          },
-          {
-            "name": "Object Oriented Programming",
-            "from": "coursera",
-            "year": 2024
-          }
-        ],
+        "certifications": [],
         "gigs": [
           {
-            "id": 316571551,
-            "title": "build your custom full stack web app or website in any technology",
-            "slug": "be-your-front-end-web-developer-in-html-css-javascript",
-            "url": "https://www.fiverr.com/dev_zaynee/be-your-front-end-web-developer-in-html-css-javascript",
-            "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
+            "id": 497889743,
+            "title": "develop a custom ai chatbot or intelligent ai agent for your business",
+            "slug": "develop-a-custom-ai-chatbot-or-intelligent-ai-agent-for-website",
+            "url": "https://www.fiverr.com/tasaduqe_codes/develop-a-custom-ai-chatbot-or-intelligent-ai-agent-for-website",
+            "imageUrl": "https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto/gigs/497889743/original/40ada2da6f0c6506c608dd7dcf930341f5816bc4.png",
             "gallery": [
-              "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/316571551/original/2d6c689ee919f48d73ca00488c8776b3645b09c7/be-your-front-end-web-developer-in-html-css-javascript.png",
-              "https://fiverr-res.cloudinary.com/image/upload/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png"
+              "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/497889743/original/40ada2da6f0c6506c608dd7dcf930341f5816bc4/develop-a-custom-ai-chatbot-or-intelligent-ai-agent-for-website.png"
             ],
-            "startingPrice": "$75",
+            "startingPrice": "$90",
             "rating": 5,
-            "reviewCount": 15,
+            "reviewCount": 0,
+            "ordersInQueue": 0,
+            "category": "Programming & Tech",
+            "subCategory": "AI Development",
+            "nestedCategory": "AI Integrations",
+            "description": "Your business is losing leads while you sleep . High-value prospects visit your site at 2 AM, looking for answers, but leave frustrated when nobody replies. A human support team can only work so many hours before costs skyrocket. That's the problem I solve. I build intelligent AI chatbots and automated web agents that work around the clock engaging visitors, capturing leads, and answering complex queries instantly so you never miss an opportunity. WHAT I BUILD: Custom AI chatbots trained specifically on your business data Proactive AI agents capable of capturing and qualifying leads Automated customer support bots that resolve issues 24/7 Intelligent web assistants that book appointments directly Workflow automations connecting your chatbot to your CRM EVERY AI SOLUTION INCLUDES: Accurate context matching no hallucinated or random answers Seamless visual integration tailored to your existing website Secure conversation handling and lead data storage Free consultation to map your workflow before we start On-time delivery and clean deployment I reply quickly. Message me before ordering, and let's map out an AI agent that works for you even when you're offline.",
+            "descriptionHtml": "<p><strong>Your business is losing leads while you sleep</strong>. High-value prospects visit your site at 2 AM, looking for answers, but leave frustrated when nobody replies. A human support team can only work so many hours before costs skyrocket.</p><p><br></p><p><strong>That's the problem I solve. <u>I build intelligent AI chatbots and automated web agents</u></strong> that work around the clock engaging visitors, capturing leads, and answering complex queries instantly so you never miss an opportunity.</p><p><br></p><p><strong>WHAT I BUILD:</strong></p><ul><li>Custom AI chatbots trained specifically on your business data</li><li>Proactive AI agents capable of capturing and qualifying leads</li><li>Automated customer support bots that resolve issues 24/7</li><li>Intelligent web assistants that book appointments directly</li><li>Workflow automations connecting your chatbot to your CRM</li></ul><p><br></p><p><br></p><p><strong>EVERY AI SOLUTION INCLUDES:</strong></p><ul><li>Accurate context matching no hallucinated or random answers</li><li>Seamless visual integration tailored to your existing website</li><li>Secure conversation handling and lead data storage</li><li>Free consultation to map your workflow before we start</li><li>On-time delivery and clean deployment</li></ul><p><br></p><p><strong>I reply quickly. Message me before ordering, and let's map out an AI agent that works for you even when you're offline.</strong></p>",
+            "faqs": [],
+            "tags": [
+              "ai chatbot",
+              "ai website",
+              "custom chatbot",
+              "ai website developer"
+            ],
+            "packages": [
+              {
+                "id": 1,
+                "title": "Custom FAQ Bot",
+                "description": "Custom FAQ AI chatbot trained on your business documents. Smooth web integration.",
+                "price": 90,
+                "durationDays": 4,
+                "revisions": 3,
+                "features": [
+                  {
+                    "label": "Integration of an AI model to existing app",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "title": "Lead Gen AI Agent",
+                "description": "Intelligent AI agent with memory, built to qualify leads, book calls, and sync to CRM.",
+                "price": 250,
+                "durationDays": 7,
+                "revisions": 5,
+                "features": [
+                  {
+                    "label": "Integration of an AI model to existing app",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Database integration",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Advanced Enterprise Bot",
+                "description": "Advanced enterprise AI system with external API integrations, custom logic, and full handoff.",
+                "price": 600,
+                "durationDays": 14,
+                "revisions": "Unlimited",
+                "features": [
+                  {
+                    "label": "Integration of an AI model to existing app",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Database integration",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              }
+            ],
+            "metadata": [
+              {
+                "type": "ai_engine",
+                "value": [
+                  "chatgpt",
+                  "gemini",
+                  "langchain"
+                ]
+              },
+              {
+                "type": "programming_language",
+                "value": [
+                  "javascript",
+                  "php",
+                  "python",
+                  "typescript",
+                  "react"
+                ]
+              }
+            ],
+            "aiSummary": [
+              "This service offers custom AI chatbots that engage visitors 24/7.",
+              "Clients value reliable automation and lead capture efficiency.",
+              "This freelancer has a high rating and numerous positive reviews.",
+              "Additional services include workflow automation and seamless integration.",
+              "AI solutions are tailored, secure, and delivered on time for business growth."
+            ]
+          },
+          {
+            "id": 498050909,
+            "title": "build a custom website, full stack development, front end and back end",
+            "slug": "build-a-custom-website-full-stack-development-front-end-and-back-end",
+            "url": "https://www.fiverr.com/tasaduqe_codes/build-a-custom-website-full-stack-development-front-end-and-back-end",
+            "imageUrl": "https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto/gigs/498050909/original/74da77779b415d5c6b2d30051091cf07c23e28aa.png",
+            "gallery": [
+              "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/498050909/original/74da77779b415d5c6b2d30051091cf07c23e28aa/build-a-custom-website-full-stack-development-front-end-and-back-end.png"
+            ],
+            "startingPrice": "$55",
+            "rating": 5,
+            "reviewCount": 0,
             "ordersInQueue": 0,
             "category": "Programming & Tech",
             "subCategory": "Software Development",
             "nestedCategory": "Full Stack Web Applications",
-            "description": "You need something built. We build it full stack, any&nbsp;technology, any scale. Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything WHAT WE BUILD: - Business websites and landing pages - SaaS platforms and startup MVPs - E-commerce with payment integration - Admin dashboards with role-based access - Booking systems and customer portals - REST APIs and third-party integrations ANY TECHNOLOGY: Frontend React, Next.js, Vue.js, Tailwind, TypeScript Backend Node.js, Python, FastAPI, Django, PHP, Laravel Database MongoDB, PostgreSQL, MySQL, Firebase Other JWT Auth, Stripe, AWS, Docker, GraphQL EVERY PROJECT INCLUDES: - Clean, documented, scalable code - Fully responsive on all devices - SEO-friendly structure - Free consultation before we start - 100% on-time delivery - Post-delivery support 24+ projects completed. 100% on-time delivery. Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.",
-            "descriptionHtml": "<p><strong>You need something built. We build it full stack, any&nbsp;technology, any scale.</strong></p><p><br></p><p>Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything</p><p><br></p><p><strong>WHAT WE BUILD:</strong></p><p>- Business websites and landing pages</p><p>- SaaS platforms and startup MVPs</p><p>- E-commerce with payment integration</p><p>- Admin dashboards with role-based access</p><p>- Booking systems and customer portals</p><p>- REST APIs and third-party integrations</p><p><br></p><p><strong>ANY TECHNOLOGY:</strong></p><p><br></p><ul><li>Frontend React, Next.js, Vue.js, Tailwind, TypeScript</li><li>Backend Node.js, Python, FastAPI, Django, PHP, Laravel</li><li>Database MongoDB, PostgreSQL, MySQL, Firebase</li><li>Other JWT Auth, Stripe, AWS, Docker, GraphQL</li></ul><p><br></p><p><strong>EVERY PROJECT INCLUDES:</strong></p><p><br></p><p>- Clean, documented, scalable code</p><p>- Fully responsive on all devices</p><p>- SEO-friendly structure</p><p>- Free consultation before we start</p><p>- 100% on-time delivery</p><p>- Post-delivery support</p><p><br></p><p><strong>24+ projects completed. 100% on-time delivery.</strong></p><p><br></p><p>Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.</p>",
+            "description": "A weak website is often the only reason a customer chooses your competitor instead of you. A human salesperson can only talk to one customer at a time your website talks to hundreds, every day, if it's built right. That's the problem I solve. I build custom websites and full stack web applications from the ground up clean front end, solid back end, and a site that actually performs. WHAT I BUILD: Custom business and company websites Full stack web applications with front end and back end Landing pages and portfolio sites E-commerce stores with payment integration Admin dashboards and booking systems EVERY PROJECT INCLUDES: Clean, modern design no generic templates Fully responsive on mobile, tablet, desktop Fast loading and SEO-friendly structure Free consultation before we start On-time delivery, every time MY STACK: React Next.js Node.js REST API MongoDB JavaScript HTML/CSS Tailwind CSS and the list goes on.... I reply instantly. Message me before ordering and let's talk about what your website needs to do for your business.",
+            "descriptionHtml": "<p>A weak website is often the only reason a customer chooses your competitor instead of you. A human salesperson can only talk to one customer at a time <strong>your website talks to hundreds, every day, <u>if it's built right.</u></strong></p><p><br></p><p><strong><em>That's the problem I solve.</em></strong> I build custom websites and full stack web applications from the ground up clean front end, solid back end, and a site that actually performs.</p><p><br></p><p><br></p><p><strong>WHAT I BUILD:</strong></p><p><br></p><ul><li>Custom business and company websites</li><li>Full stack web applications with front end and back end</li><li>Landing pages and portfolio sites</li><li>E-commerce stores with payment integration</li><li>Admin dashboards and booking systems</li></ul><p><br></p><p><br></p><p><strong>EVERY PROJECT INCLUDES:</strong></p><p><br></p><ul><li>Clean, modern design no generic templates</li><li>Fully responsive on mobile, tablet, desktop</li><li>Fast loading and SEO-friendly structure</li><li>Free consultation before we start</li><li>On-time delivery, every time</li></ul><p><br></p><p><br></p><p><strong>MY STACK:</strong></p><ol><li>React</li><li>Next.js</li><li>Node.js</li><li>REST API</li><li>MongoDB</li><li>JavaScript</li><li>HTML/CSS</li><li>Tailwind CSS</li><li><strong><u>and the list goes on....</u></strong></li></ol><p><br></p><p><strong>I reply instantly. </strong>Message me before ordering and let's talk about what your website needs to do for your business.</p>",
             "faqs": [
               {
-                "question": "I'm not technical — how do I know what I need?",
-                "answer": "Just tell us what your website needs to do. We recommend the right approach, explain everything in plain English, and handle all technical decisions. No tech knowledge needed at all."
+                "question": "I'm not technical — how do I know what to order?",
+                "answer": "Just tell me what your business does and what you want visitors to be able to do. I'll recommend the right package and explain everything in plain language — no tech knowledge needed on your end."
               },
               {
-                "question": "Can you work with my existing website or code?",
-                "answer": "Yes. We can extend, fix, or rebuild existing projects in any technology. Share your codebase or describe the issue — we'll review it honestly and tell you exactly what we can do before you order."
+                "question": " Can you work with my existing website or codebase?",
+                "answer": "Yes. I can extend, fix, or rebuild existing projects in most technologies. Share your codebase or describe the issue and I'll review it honestly before starting."
               },
               {
-                "question": "Do I own the code after delivery?",
-                "answer": "100% yes. Full source code ownership on every package. Clean, documented code you can modify, deploy, or hand to any developer. No proprietary systems or recurring fees for code we built for you."
-              },
-              {
-                "question": "What if I need changes after delivery?",
-                "answer": "Every package includes revisions — 3 Basic, 7 Standard, unlimited Premium. After that we offer maintenance at fair rates. Most clients come back for Phase 2. We're here long term if you need us."
+                "question": "Will I own the code after delivery?",
+                "answer": "100% yes. Full source code ownership on every package. Clean, documented code you or any developer can modify, extend, or maintain independently."
               }
             ],
             "tags": [
-              "web app development",
-              "web app developer",
-              "react node developer",
+              "ai website",
               "full stack developer",
-              "custom web developer"
+              "website development",
+              "front end developer",
+              "back end developer"
             ],
             "packages": [
               {
                 "id": 1,
                 "title": "Starter Website",
-                "description": "1-page responsive website, frontend only, any technology, clean code, mobile optimized.",
-                "price": 75,
+                "description": "1-page responsive website, front end only, clean design, mobile optimized.",
+                "price": 55,
                 "durationDays": 3,
-                "revisions": 3,
+                "revisions": 2,
                 "features": [
                   {
                     "label": "Number of pages",
@@ -366,11 +525,6 @@
                   },
                   {
                     "label": "Design customization",
-                    "included": true,
-                    "value": 0
-                  },
-                  {
-                    "label": "Content upload",
                     "included": true,
                     "value": 0
                   },
@@ -393,16 +547,16 @@
               },
               {
                 "id": 2,
-                "title": "Full Stack Web App",
-                "description": "Multi-page web app with backend, database, REST API & user auth. Any stack.",
-                "price": 225,
-                "durationDays": 7,
-                "revisions": 7,
+                "title": "Full Stack Website",
+                "description": "Multi-page full stack site with front end and back end, database, REST API.",
+                "price": 170,
+                "durationDays": 6,
+                "revisions": 5,
                 "features": [
                   {
                     "label": "Number of pages",
                     "included": true,
-                    "value": 3
+                    "value": 5
                   },
                   {
                     "label": "Design customization",
@@ -433,9 +587,9 @@
               },
               {
                 "id": 3,
-                "title": "Enterprise System",
-                "description": "Full system: admin dashboard, multi-role access, payments, APIs & deployment.",
-                "price": 550,
+                "title": "Custom Web Application",
+                "description": "Full custom web application, unlimited pages, admin dashboard, deployment.",
+                "price": 400,
                 "durationDays": 14,
                 "revisions": "Unlimited",
                 "features": [
@@ -476,111 +630,60 @@
               {
                 "type": "programming_language",
                 "value": [
-                  "HTML & CSS"
+                  "javascript"
                 ]
               },
               {
                 "type": "expertise",
                 "value": [
-                  "Debugging",
-                  "Performance",
-                  "Security",
-                  "Design"
+                  "performance",
+                  "security",
+                  "design",
+                  "databases",
+                  "testing_procedures"
                 ]
               },
               {
                 "type": "frontend_framework",
                 "value": [
-                  "AngularJS",
-                  "Bootstrap",
-                  "jQuery",
-                  "React.js",
-                  "Vue.js"
+                  "bootstrap",
+                  "jquery",
+                  "next_js",
+                  "react_js",
+                  "tailwind_css"
                 ]
               },
               {
                 "type": "backend_framework",
                 "value": [
-                  "Django",
-                  "Express.js",
-                  "Laravel",
-                  "Next.js",
-                  "Node.js"
+                  "express_js",
+                  "fastapi",
+                  "nestjs",
+                  "next_js",
+                  "node_js"
+                ]
+              },
+              {
+                "type": "low_no_code_builders",
+                "value": [
+                  "lovable",
+                  "claude",
+                  "cursor",
+                  "replit"
                 ]
               }
             ],
             "aiSummary": [
-              "This service offers custom full stack web app development in any technology.",
-              "Clients value high-quality, scalable code and on-time delivery.",
-              "The agency has completed over 24 projects with a 4.6 rating.",
-              "Work includes websites, SaaS, e-commerce, APIs, and dashboards.",
-              "Reviews highlight professionalism, responsiveness, and rapid results."
+              "This service offers custom website development with full stack capabilities.",
+              "Clients value responsive, fast-loading, and SEO-friendly designs.",
+              "This freelancer has a strong track record of on-time project delivery.",
+              "Additional services include e-commerce, dashboards, and booking systems.",
+              "The team uses React, Next.js, Node.js, and MongoDB for robust solutions."
             ]
           }
         ],
-        "recentReviews": [
-          {
-            "id": "67b4bfce1767fc5bb8acf437",
-            "reviewer": "davidfelix_",
-            "reviewerCountry": "United Kingdom",
-            "reviewerCountryCode": "GB",
-            "rating": 5,
-            "comment": "I can confidently say that the final result exceeded my expectations. From the outset, Zayn demonstrated a high level of professionalism and expertise in their field, delivering high-quality work that was both efficient and insightful.",
-            "createdAt": "2025-02-18T17:46:40",
-            "workSample": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
-            "orderDuration": "8 days",
-            "priceRange": "Up to $50",
-            "sellerResponse": "Thanks\nmy pleasure\n"
-          },
-          {
-            "id": "67aa6746d7a07b18e01c9b87",
-            "reviewer": "davidfelix_",
-            "reviewerCountry": "United Kingdom",
-            "reviewerCountryCode": "GB",
-            "rating": 3.7,
-            "comment": "Zayn Raza's work in software development was generally satisfactory, While collaborating with Zayn was relatively smooth.",
-            "createdAt": "2025-02-10T21:14:23",
-            "orderDuration": "5 days",
-            "priceRange": "$50-$100"
-          },
-          {
-            "id": "66762814b9aaef325b08ba96",
-            "reviewer": "deborahkcole",
-            "reviewerCountry": "United States",
-            "reviewerCountryCode": "US",
-            "rating": 5,
-            "comment": "Zayn is skilled  and delivers professional quality work rapidly. Outstanding results & he was easy and delightful to work with + very responsive to my tweak requests. ",
-            "createdAt": "2024-06-22T03:39",
-            "orderDuration": "2 days",
-            "priceRange": "Up to $50",
-            "sellerResponse": "Thank You!"
-          },
-          {
-            "id": "6673b10ac7c17c43897f0129",
-            "reviewer": "deborahkcole",
-            "reviewerCountry": "United States",
-            "reviewerCountryCode": "US",
-            "rating": 5,
-            "comment": "Absolutely outstanding work. Very professional, excellent communication, rapid delivery & A+ results. Will definitely hire again",
-            "createdAt": "2024-06-20T05:02:10",
-            "orderDuration": "3 days",
-            "priceRange": "Up to $50",
-            "sellerResponse": "Thank you."
-          },
-          {
-            "id": "6661b154ce04e166f6ecb56e",
-            "reviewer": "carlos_galvis",
-            "reviewerCountry": "Bolivia",
-            "reviewerCountryCode": "BO",
-            "rating": 1,
-            "comment": "I have been very disappointed with Zayn's lack of professionalism, he lied for several weeks, even though his final delivery was made a couple of weeks ago, with many missing features that apparently, he does not know how to solve and instead of investigating he decided to give up after losing time.",
-            "createdAt": "2024-06-06T14:18:27",
-            "orderDuration": "5 weeks",
-            "priceRange": "$50-$100",
-            "sellerResponse": "The requirements were unclear, he was aiming for something that seemed nearly impossible. I wanted my potential clients to see my other reviews to get a clear picture."
-          }
-        ],
-        "scrapedAt": "2026-09-09T21:22:23.265Z"
+        "recentReviews": [],
+        "scrapedAt": "2026-09-11T20:20:51.692Z"
       },
       "icpProfiles": [
         {
@@ -615,8 +718,8 @@
               "Standard Gig Deliverable"
             ],
             "budgetRange": {
-              "min": 75,
-              "max": 225,
+              "min": 55,
+              "max": 165,
               "currency": "USD"
             },
             "preferredPricingModel": "fixed_price"
@@ -690,8 +793,8 @@
               "White-label services"
             ],
             "budgetRange": {
-              "min": 225,
-              "max": 750,
+              "min": 165,
+              "max": 550,
               "currency": "USD"
             },
             "preferredPricingModel": "milestone_based"
@@ -735,7 +838,7 @@
           }
         }
       ],
-      "icpGeneratedAt": "2026-09-09T21:24:14.370Z",
+      "icpGeneratedAt": "2026-09-11T20:21:13.250Z",
       "onboardingStep": 3,
       "onboardingCompleted": true,
       "onboardingSkipped": false
@@ -5192,6 +5295,708 @@
         ],
         "scrapedAt": "2026-09-09T21:24:40.104Z"
       }
+    },
+    {
+      "id": "usr_1789160218090_bwsip",
+      "email": "tester_1789160217796@example.com",
+      "username": "tester_mtxfsres",
+      "passwordHash": "$2b$10$Lw7GTBwNovlZBotNHmiVyO01iAkH2LN5mij6tMn7/ZY9tU1ktnl2.",
+      "fiverr_profile_url": "https://www.fiverr.com/tester_mtxfsres",
+      "onboardingCompleted": false,
+      "onboardingSkipped": false,
+      "onboardingStep": 3,
+      "createdAt": "2026-09-11T20:56:58.090Z",
+      "fiverrProfile": {
+        "username": "tester_mtxfsres",
+        "displayName": "Alex Rivers",
+        "profileUrl": "https://www.fiverr.com/tester_mtxfsres",
+        "avatarUrl": "https://images.fiverr.com/mock.jpg",
+        "tagline": "Senior Full Stack & AI Automation Architect",
+        "description": "Expert Next.js, Python, and OpenAI developer with 8+ years building enterprise SaaS and chatbots.",
+        "country": "United States",
+        "rating": 5,
+        "reviewCount": 42,
+        "sellerLevel": "LEVEL_2",
+        "skills": [
+          {
+            "name": "React",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Next.js",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Python",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "OpenAI",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Tailwind CSS",
+            "level": "EXPERT",
+            "verified": true
+          }
+        ],
+        "gigs": [
+          {
+            "id": "gig_1",
+            "title": "I will build custom AI agents, chatbots, and automation systems",
+            "startingPrice": 75,
+            "packages": [
+              {
+                "name": "Basic",
+                "price": 75,
+                "deliveryDays": 2
+              },
+              {
+                "name": "Standard",
+                "price": 175,
+                "deliveryDays": 4
+              },
+              {
+                "name": "Premium",
+                "price": 350,
+                "deliveryDays": 7
+              }
+            ]
+          }
+        ],
+        "recentReviews": [
+          {
+            "reviewer": "TechFounder",
+            "comment": "Alex built an unbelievable AI agent for our customer support. Absolutely top tier quality and 24h turnaround!"
+          }
+        ]
+      },
+      "icpProfiles": [
+        {
+          "icpId": "icp_fallback_1",
+          "personaName": "The Core Volume Buyer",
+          "priority": "primary",
+          "confidenceScore": 0.8,
+          "targetFirmographics": {
+            "industries": [
+              "General Business",
+              "E-commerce"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK",
+              "Canada"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Manager",
+              "Owner"
+            ],
+            "seniorityLevel": "Director",
+            "technicalLiteracy": "semi_technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Standard Gig Deliverable"
+            ],
+            "budgetRange": {
+              "min": 75,
+              "max": 225,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "fixed_price"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Lack of time",
+              "Need quick execution"
+            ],
+            "buyingTriggerEvents": [
+              "New project launch"
+            ],
+            "desiredOutcomes": [
+              "Fast delivery",
+              "High quality"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "asynchronous_autonomous",
+            "preferredChannels": [
+              "Fiverr Chat"
+            ],
+            "updateCadence": "upon_completion"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Can we do a call?",
+              "Unlimited revisions"
+            ],
+            "disqualifyingFactors": [
+              "Unclear requirements"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "expert",
+              "fast delivery"
+            ],
+            "recommendedPitchHook": "I can deliver this quickly and accurately."
+          }
+        },
+        {
+          "icpId": "icp_fallback_2",
+          "personaName": "The Premium Agency Partner",
+          "priority": "secondary",
+          "confidenceScore": 0.7,
+          "targetFirmographics": {
+            "industries": [
+              "Marketing Agency",
+              "Development Agency"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Project Manager",
+              "Agency Owner"
+            ],
+            "seniorityLevel": "C-Level",
+            "technicalLiteracy": "technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Complex Projects",
+              "White-label services"
+            ],
+            "budgetRange": {
+              "min": 225,
+              "max": 750,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "milestone_based"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Overflow work",
+              "Need reliable partners"
+            ],
+            "buyingTriggerEvents": [
+              "Winning a large client"
+            ],
+            "desiredOutcomes": [
+              "Seamless integration",
+              "Client satisfaction"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "structured",
+            "preferredChannels": [
+              "Fiverr Chat",
+              "Zoom"
+            ],
+            "updateCadence": "weekly"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Cheap price",
+              "Micro-management"
+            ],
+            "disqualifyingFactors": [
+              "Low budget"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "white label",
+              "reliable partner"
+            ],
+            "recommendedPitchHook": "I can be your reliable backend partner."
+          }
+        }
+      ],
+      "icpGeneratedAt": "2026-09-11T20:56:59.239Z"
+    },
+    {
+      "id": "usr_1789160327895_zrwt2",
+      "email": "tester_1789160327556@example.com",
+      "username": "tester_mtxfv43o",
+      "passwordHash": "$2b$10$d5jn2.ZFoGYFjGbMWDYIN.J0zQoy3GZqNP4BBJbcz4MF2sYyyiUO.",
+      "fiverr_profile_url": "https://www.fiverr.com/tester_mtxfv43o",
+      "onboardingCompleted": false,
+      "onboardingSkipped": false,
+      "onboardingStep": 3,
+      "createdAt": "2026-09-11T20:58:47.895Z",
+      "fiverrProfile": {
+        "username": "tester_mtxfv43o",
+        "displayName": "Alex Rivers",
+        "profileUrl": "https://www.fiverr.com/tester_mtxfv43o",
+        "avatarUrl": "https://images.fiverr.com/mock.jpg",
+        "tagline": "Senior Full Stack & AI Automation Architect",
+        "description": "Expert Next.js, Python, and OpenAI developer with 8+ years building enterprise SaaS and chatbots.",
+        "country": "United States",
+        "rating": 5,
+        "reviewCount": 42,
+        "sellerLevel": "LEVEL_2",
+        "skills": [
+          {
+            "name": "React",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Next.js",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Python",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "OpenAI",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Tailwind CSS",
+            "level": "EXPERT",
+            "verified": true
+          }
+        ],
+        "gigs": [
+          {
+            "id": "gig_1",
+            "title": "I will build custom AI agents, chatbots, and automation systems",
+            "startingPrice": 75,
+            "packages": [
+              {
+                "name": "Basic",
+                "price": 75,
+                "deliveryDays": 2
+              },
+              {
+                "name": "Standard",
+                "price": 175,
+                "deliveryDays": 4
+              },
+              {
+                "name": "Premium",
+                "price": 350,
+                "deliveryDays": 7
+              }
+            ]
+          }
+        ],
+        "recentReviews": [
+          {
+            "reviewer": "TechFounder",
+            "comment": "Alex built an unbelievable AI agent for our customer support. Absolutely top tier quality and 24h turnaround!"
+          }
+        ]
+      },
+      "icpProfiles": [
+        {
+          "icpId": "icp_fallback_1",
+          "personaName": "The Core Volume Buyer",
+          "priority": "primary",
+          "confidenceScore": 0.8,
+          "targetFirmographics": {
+            "industries": [
+              "General Business",
+              "E-commerce"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK",
+              "Canada"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Manager",
+              "Owner"
+            ],
+            "seniorityLevel": "Director",
+            "technicalLiteracy": "semi_technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Standard Gig Deliverable"
+            ],
+            "budgetRange": {
+              "min": 75,
+              "max": 225,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "fixed_price"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Lack of time",
+              "Need quick execution"
+            ],
+            "buyingTriggerEvents": [
+              "New project launch"
+            ],
+            "desiredOutcomes": [
+              "Fast delivery",
+              "High quality"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "asynchronous_autonomous",
+            "preferredChannels": [
+              "Fiverr Chat"
+            ],
+            "updateCadence": "upon_completion"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Can we do a call?",
+              "Unlimited revisions"
+            ],
+            "disqualifyingFactors": [
+              "Unclear requirements"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "expert",
+              "fast delivery"
+            ],
+            "recommendedPitchHook": "I can deliver this quickly and accurately."
+          }
+        },
+        {
+          "icpId": "icp_fallback_2",
+          "personaName": "The Premium Agency Partner",
+          "priority": "secondary",
+          "confidenceScore": 0.7,
+          "targetFirmographics": {
+            "industries": [
+              "Marketing Agency",
+              "Development Agency"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Project Manager",
+              "Agency Owner"
+            ],
+            "seniorityLevel": "C-Level",
+            "technicalLiteracy": "technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Complex Projects",
+              "White-label services"
+            ],
+            "budgetRange": {
+              "min": 225,
+              "max": 750,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "milestone_based"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Overflow work",
+              "Need reliable partners"
+            ],
+            "buyingTriggerEvents": [
+              "Winning a large client"
+            ],
+            "desiredOutcomes": [
+              "Seamless integration",
+              "Client satisfaction"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "structured",
+            "preferredChannels": [
+              "Fiverr Chat",
+              "Zoom"
+            ],
+            "updateCadence": "weekly"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Cheap price",
+              "Micro-management"
+            ],
+            "disqualifyingFactors": [
+              "Low budget"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "white label",
+              "reliable partner"
+            ],
+            "recommendedPitchHook": "I can be your reliable backend partner."
+          }
+        }
+      ],
+      "icpGeneratedAt": "2026-09-11T20:58:48.977Z"
+    },
+    {
+      "id": "usr_1789160397914_5s3u3",
+      "email": "tester_1789160397453@example.com",
+      "username": "tester_mtxfwm19",
+      "passwordHash": "$2b$10$BskNCsqQR3EEkcZlveHS9upNGAp5sBoAyFSTIm8vZOxABqZZwSHM6",
+      "fiverr_profile_url": "https://www.fiverr.com/tester_mtxfwm19",
+      "onboardingCompleted": false,
+      "onboardingSkipped": false,
+      "onboardingStep": 3,
+      "createdAt": "2026-09-11T20:59:57.914Z",
+      "fiverrProfile": {
+        "username": "tester_mtxfwm19",
+        "displayName": "Alex Rivers",
+        "profileUrl": "https://www.fiverr.com/tester_mtxfwm19",
+        "avatarUrl": "https://images.fiverr.com/mock.jpg",
+        "tagline": "Senior Full Stack & AI Automation Architect",
+        "description": "Expert Next.js, Python, and OpenAI developer with 8+ years building enterprise SaaS and chatbots.",
+        "country": "United States",
+        "rating": 5,
+        "reviewCount": 42,
+        "sellerLevel": "LEVEL_2",
+        "skills": [
+          {
+            "name": "React",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Next.js",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Python",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "OpenAI",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Tailwind CSS",
+            "level": "EXPERT",
+            "verified": true
+          }
+        ],
+        "gigs": [
+          {
+            "id": "gig_1",
+            "title": "I will build custom AI agents, chatbots, and automation systems",
+            "startingPrice": 75,
+            "packages": [
+              {
+                "name": "Basic",
+                "price": 75,
+                "deliveryDays": 2
+              },
+              {
+                "name": "Standard",
+                "price": 175,
+                "deliveryDays": 4
+              },
+              {
+                "name": "Premium",
+                "price": 350,
+                "deliveryDays": 7
+              }
+            ]
+          }
+        ],
+        "recentReviews": [
+          {
+            "reviewer": "TechFounder",
+            "comment": "Alex built an unbelievable AI agent for our customer support. Absolutely top tier quality and 24h turnaround!"
+          }
+        ]
+      },
+      "icpProfiles": [
+        {
+          "icpId": "icp_fallback_1",
+          "personaName": "The Core Volume Buyer",
+          "priority": "primary",
+          "confidenceScore": 0.8,
+          "targetFirmographics": {
+            "industries": [
+              "General Business",
+              "E-commerce"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK",
+              "Canada"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Manager",
+              "Owner"
+            ],
+            "seniorityLevel": "Director",
+            "technicalLiteracy": "semi_technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Standard Gig Deliverable"
+            ],
+            "budgetRange": {
+              "min": 75,
+              "max": 225,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "fixed_price"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Lack of time",
+              "Need quick execution"
+            ],
+            "buyingTriggerEvents": [
+              "New project launch"
+            ],
+            "desiredOutcomes": [
+              "Fast delivery",
+              "High quality"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "asynchronous_autonomous",
+            "preferredChannels": [
+              "Fiverr Chat"
+            ],
+            "updateCadence": "upon_completion"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Can we do a call?",
+              "Unlimited revisions"
+            ],
+            "disqualifyingFactors": [
+              "Unclear requirements"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "expert",
+              "fast delivery"
+            ],
+            "recommendedPitchHook": "I can deliver this quickly and accurately."
+          }
+        },
+        {
+          "icpId": "icp_fallback_2",
+          "personaName": "The Premium Agency Partner",
+          "priority": "secondary",
+          "confidenceScore": 0.7,
+          "targetFirmographics": {
+            "industries": [
+              "Marketing Agency",
+              "Development Agency"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Project Manager",
+              "Agency Owner"
+            ],
+            "seniorityLevel": "C-Level",
+            "technicalLiteracy": "technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Complex Projects",
+              "White-label services"
+            ],
+            "budgetRange": {
+              "min": 225,
+              "max": 750,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "milestone_based"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Overflow work",
+              "Need reliable partners"
+            ],
+            "buyingTriggerEvents": [
+              "Winning a large client"
+            ],
+            "desiredOutcomes": [
+              "Seamless integration",
+              "Client satisfaction"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "structured",
+            "preferredChannels": [
+              "Fiverr Chat",
+              "Zoom"
+            ],
+            "updateCadence": "weekly"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Cheap price",
+              "Micro-management"
+            ],
+            "disqualifyingFactors": [
+              "Low budget"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "white label",
+              "reliable partner"
+            ],
+            "recommendedPitchHook": "I can be your reliable backend partner."
+          }
+        }
+      ],
+      "icpGeneratedAt": "2026-09-11T20:59:58.977Z"
     }
   ],
   "userContexts": {
@@ -7622,44 +8427,53 @@
     },
     "usr_1788898190068_awzqs": {
       "userId": "usr_1788898190068_awzqs",
-      "fullName": "Zayn Raza",
-      "fiverrUrl": "https://www.fiverr.com/dev_zaynee",
+      "fullName": "Tasaduqe Fatima",
+      "fiverrUrl": "https://www.fiverr.com/tasaduqe_codes",
       "experienceYears": "",
       "primarySkills": [
+        "Website development",
         "Chatbot development",
-        "Software automation",
         "AI developer",
-        "Rest API",
-        "React",
-        "E-commerce development",
-        "Flutter",
-        "Next.js",
-        "TypeScript",
-        "Node.js",
+        "Full Stack Web Applications",
+        "AI Integrations",
+        "ChatGPT",
+        "Google Gemini",
+        "LangChain",
+        "JavaScript",
+        "PHP",
         "Python",
-        "OpenAI",
-        "HTML & CSS",
-        "Debugging",
-        "Performance",
-        "Security",
-        "Design",
-        "AngularJS",
+        "TypeScript",
+        "React",
+        "Ai Chatbot",
+        "Ai Website",
+        "Custom Chatbot",
+        "Ai Website Developer",
+        "Web Performance Optimization",
+        "API & Web Security",
+        "UI/UX & Responsive Design",
+        "Databases & SQL",
+        "Automated Testing",
         "Bootstrap",
-        "JQuery",
-        "React.Js",
-        "Vue.Js",
-        "Django",
-        "Express.Js",
-        "Laravel",
-        "Web App Development",
-        "Web App Developer",
-        "React Node Developer",
+        "jQuery",
+        "Next.js",
+        "React.js",
+        "Tailwind CSS",
+        "Express.js",
+        "FastAPI",
+        "NestJS",
+        "Node.js",
+        "Lovable.dev",
+        "Claude AI",
+        "Cursor IDE",
+        "Replit",
         "Full Stack Developer",
-        "Custom Web Developer"
+        "Front End Developer",
+        "Back End Developer"
       ],
       "secondarySkills": [],
       "targetNiches": [
-        "build your custom full stack web app or website in any technology"
+        "develop a custom ai chatbot or intelligent ai agent for your business",
+        "build a custom website, full stack development, front end and back end"
       ],
       "marketStrategy": {
         "recommendedNiches": [],
@@ -7667,30 +8481,30 @@
         "strategicPositioningAdvice": ""
       },
       "onboardingCompleted": false,
-      "updatedAt": "2026-09-09T21:23:26.153Z",
+      "updatedAt": "2026-09-11T20:21:04.442Z",
       "onboardingStep": 2,
       "fiverrProfile": {
-        "username": "dev_zaynee",
-        "displayName": "Zayn Raza",
-        "profileUrl": "https://www.fiverr.com/dev_zaynee",
-        "avatarUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/7adf4016a19046ae4849caa67c830a1b-1751971225688/45f96031-5f04-4578-b65d-a39d9cb3ece2.jpg",
+        "username": "tasaduqe_codes",
+        "displayName": "Tasaduqe Fatima",
+        "profileUrl": "https://www.fiverr.com/tasaduqe_codes",
+        "avatarUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_original/v1/attachments/profile/photo/ff9220b4b24ddb3a9cda3cb7dd162243-1783884175549/a5a9f3df-b573-4a18-902d-8e32769e5fff.png",
         "profileCoverUrl": "",
         "isAgency": false,
-        "tagline": "Full Stack Agency, AI Agents, Web and Mobile Apps",
-        "description": "Businesses hire us when they need something built right — \nwhether that's a website, a mobile app, an AI chatbot that \nhandles their customers, or a voice agent that answers their \ncalls 24/7.\n\nWe handle the full stack. React, Next.js, Node.js, Python, \nFastAPI, Flutter, LangChain, LangGraph, VAPI, TypeScript, \nMongoDB. From a simple landing page to a complex SaaS \nplatform or a multi-agent AI system — we deliver \nproduction-ready, clean code.\n\n24+ projects completed. 100% on-time delivery. \nMessage us — we respond instantly.",
+        "tagline": "Full Stack Developer Web, and AI Chatbot Solutions",
+        "description": "Most businesses lose customers to something simple — a slow website, no chatbot, a lead that never got a reply.\n\nI'm a full stack developer working with businesses in Pakistan and beyond, fixing exactly that — building websites, mobile apps, and AI chatbots that keep working even when you're not around to.\n\nI care about getting it right the first time. Clean code, clear communication, and honest timelines — no surprises, no disappearing after payment.\n\nI reply fast and deliver on time. Message me and let's talk about what your business actually needs.",
         "country": "Pakistan",
         "countryCode": "PK",
-        "memberSince": "May 2023",
-        "joinedAtTimestamp": 1683821061,
-        "responseTimeHours": 0,
-        "responseTimeText": "< 1 hour",
-        "lastDeliveryText": "Feb 2025",
+        "memberSince": "Jul 2026",
+        "joinedAtTimestamp": 1783881453,
+        "responseTimeHours": 1,
+        "responseTimeText": "1 hour",
+        "lastDeliveryText": "Recently",
         "sellerLevel": "New Seller",
         "isPro": false,
         "isVerified": false,
         "isHighlyResponsive": false,
-        "rating": 4.6,
-        "reviewCount": 15,
+        "rating": 5,
+        "reviewCount": 0,
         "languages": [
           {
             "language": "English",
@@ -7701,21 +8515,16 @@
             "language": "Urdu",
             "code": "UR",
             "level": "Native / Bilingual"
-          },
-          {
-            "language": "Hindi",
-            "code": "HI",
-            "level": "Fluent"
           }
         ],
         "skills": [
           {
-            "name": "Chatbot development",
+            "name": "Website development",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Software automation",
+            "name": "Chatbot development",
             "level": "PRO",
             "verified": false
           },
@@ -7725,37 +8534,37 @@
             "verified": false
           },
           {
-            "name": "Rest API",
+            "name": "Full Stack Web Applications",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "React",
+            "name": "AI Integrations",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "E-commerce development",
+            "name": "ChatGPT",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Flutter",
+            "name": "Google Gemini",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Next.js",
+            "name": "LangChain",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "TypeScript",
+            "name": "JavaScript",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Node.js",
+            "name": "PHP",
             "level": "PRO",
             "verified": false
           },
@@ -7765,37 +8574,57 @@
             "verified": false
           },
           {
-            "name": "OpenAI",
+            "name": "TypeScript",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "HTML & CSS",
+            "name": "React",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Debugging",
+            "name": "Ai Chatbot",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Performance",
+            "name": "Ai Website",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Security",
+            "name": "Custom Chatbot",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Design",
+            "name": "Ai Website Developer",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "AngularJS",
+            "name": "Web Performance Optimization",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "API & Web Security",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "UI/UX & Responsive Design",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Databases & SQL",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Automated Testing",
             "level": "PRO",
             "verified": false
           },
@@ -7805,47 +8634,62 @@
             "verified": false
           },
           {
-            "name": "JQuery",
+            "name": "jQuery",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "React.Js",
+            "name": "Next.js",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Vue.Js",
+            "name": "React.js",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Django",
+            "name": "Tailwind CSS",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Express.Js",
+            "name": "Express.js",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Laravel",
+            "name": "FastAPI",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Web App Development",
+            "name": "NestJS",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "Web App Developer",
+            "name": "Node.js",
             "level": "PRO",
             "verified": false
           },
           {
-            "name": "React Node Developer",
+            "name": "Lovable.dev",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Claude AI",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Cursor IDE",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Replit",
             "level": "PRO",
             "verified": false
           },
@@ -7855,85 +8699,214 @@
             "verified": false
           },
           {
-            "name": "Custom Web Developer",
+            "name": "Front End Developer",
+            "level": "PRO",
+            "verified": false
+          },
+          {
+            "name": "Back End Developer",
             "level": "PRO",
             "verified": false
           }
         ],
         "education": [
           {
-            "degree": "bachelor in information technology",
-            "school": "Bahauddin Zakariya University,Multan",
+            "degree": "computer science",
+            "school": "Bahauddin Zakariya University, Multan",
             "degreeTitle": "BSC",
-            "toYear": 2024,
+            "toYear": 2026,
             "countryCode": "PK"
           }
         ],
-        "certifications": [
-          {
-            "name": "Web Design",
-            "from": "freecodecamp",
-            "year": 2023
-          },
-          {
-            "name": "Object Oriented Programming",
-            "from": "coursera",
-            "year": 2024
-          }
-        ],
+        "certifications": [],
         "gigs": [
           {
-            "id": 316571551,
-            "title": "build your custom full stack web app or website in any technology",
-            "slug": "be-your-front-end-web-developer-in-html-css-javascript",
-            "url": "https://www.fiverr.com/dev_zaynee/be-your-front-end-web-developer-in-html-css-javascript",
-            "imageUrl": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
+            "id": 497889743,
+            "title": "develop a custom ai chatbot or intelligent ai agent for your business",
+            "slug": "develop-a-custom-ai-chatbot-or-intelligent-ai-agent-for-website",
+            "url": "https://www.fiverr.com/tasaduqe_codes/develop-a-custom-ai-chatbot-or-intelligent-ai-agent-for-website",
+            "imageUrl": "https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto/gigs/497889743/original/40ada2da6f0c6506c608dd7dcf930341f5816bc4.png",
             "gallery": [
-              "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/316571551/original/2d6c689ee919f48d73ca00488c8776b3645b09c7/be-your-front-end-web-developer-in-html-css-javascript.png",
-              "https://fiverr-res.cloudinary.com/image/upload/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png"
+              "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/497889743/original/40ada2da6f0c6506c608dd7dcf930341f5816bc4/develop-a-custom-ai-chatbot-or-intelligent-ai-agent-for-website.png"
             ],
-            "startingPrice": "$75",
+            "startingPrice": "$90",
             "rating": 5,
-            "reviewCount": 15,
+            "reviewCount": 0,
+            "ordersInQueue": 0,
+            "category": "Programming & Tech",
+            "subCategory": "AI Development",
+            "nestedCategory": "AI Integrations",
+            "description": "Your business is losing leads while you sleep . High-value prospects visit your site at 2 AM, looking for answers, but leave frustrated when nobody replies. A human support team can only work so many hours before costs skyrocket. That's the problem I solve. I build intelligent AI chatbots and automated web agents that work around the clock engaging visitors, capturing leads, and answering complex queries instantly so you never miss an opportunity. WHAT I BUILD: Custom AI chatbots trained specifically on your business data Proactive AI agents capable of capturing and qualifying leads Automated customer support bots that resolve issues 24/7 Intelligent web assistants that book appointments directly Workflow automations connecting your chatbot to your CRM EVERY AI SOLUTION INCLUDES: Accurate context matching no hallucinated or random answers Seamless visual integration tailored to your existing website Secure conversation handling and lead data storage Free consultation to map your workflow before we start On-time delivery and clean deployment I reply quickly. Message me before ordering, and let's map out an AI agent that works for you even when you're offline.",
+            "descriptionHtml": "<p><strong>Your business is losing leads while you sleep</strong>. High-value prospects visit your site at 2 AM, looking for answers, but leave frustrated when nobody replies. A human support team can only work so many hours before costs skyrocket.</p><p><br></p><p><strong>That's the problem I solve. <u>I build intelligent AI chatbots and automated web agents</u></strong> that work around the clock engaging visitors, capturing leads, and answering complex queries instantly so you never miss an opportunity.</p><p><br></p><p><strong>WHAT I BUILD:</strong></p><ul><li>Custom AI chatbots trained specifically on your business data</li><li>Proactive AI agents capable of capturing and qualifying leads</li><li>Automated customer support bots that resolve issues 24/7</li><li>Intelligent web assistants that book appointments directly</li><li>Workflow automations connecting your chatbot to your CRM</li></ul><p><br></p><p><br></p><p><strong>EVERY AI SOLUTION INCLUDES:</strong></p><ul><li>Accurate context matching no hallucinated or random answers</li><li>Seamless visual integration tailored to your existing website</li><li>Secure conversation handling and lead data storage</li><li>Free consultation to map your workflow before we start</li><li>On-time delivery and clean deployment</li></ul><p><br></p><p><strong>I reply quickly. Message me before ordering, and let's map out an AI agent that works for you even when you're offline.</strong></p>",
+            "faqs": [],
+            "tags": [
+              "ai chatbot",
+              "ai website",
+              "custom chatbot",
+              "ai website developer"
+            ],
+            "packages": [
+              {
+                "id": 1,
+                "title": "Custom FAQ Bot",
+                "description": "Custom FAQ AI chatbot trained on your business documents. Smooth web integration.",
+                "price": 90,
+                "durationDays": 4,
+                "revisions": 3,
+                "features": [
+                  {
+                    "label": "Integration of an AI model to existing app",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "title": "Lead Gen AI Agent",
+                "description": "Intelligent AI agent with memory, built to qualify leads, book calls, and sync to CRM.",
+                "price": 250,
+                "durationDays": 7,
+                "revisions": 5,
+                "features": [
+                  {
+                    "label": "Integration of an AI model to existing app",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Database integration",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "title": "Advanced Enterprise Bot",
+                "description": "Advanced enterprise AI system with external API integrations, custom logic, and full handoff.",
+                "price": 600,
+                "durationDays": 14,
+                "revisions": "Unlimited",
+                "features": [
+                  {
+                    "label": "Integration of an AI model to existing app",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Database integration",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Include source code",
+                    "included": true,
+                    "value": 0
+                  },
+                  {
+                    "label": "Detailed code comments",
+                    "included": true,
+                    "value": 0
+                  }
+                ]
+              }
+            ],
+            "metadata": [
+              {
+                "type": "ai_engine",
+                "value": [
+                  "chatgpt",
+                  "gemini",
+                  "langchain"
+                ]
+              },
+              {
+                "type": "programming_language",
+                "value": [
+                  "javascript",
+                  "php",
+                  "python",
+                  "typescript",
+                  "react"
+                ]
+              }
+            ],
+            "aiSummary": [
+              "This service offers custom AI chatbots that engage visitors 24/7.",
+              "Clients value reliable automation and lead capture efficiency.",
+              "This freelancer has a high rating and numerous positive reviews.",
+              "Additional services include workflow automation and seamless integration.",
+              "AI solutions are tailored, secure, and delivered on time for business growth."
+            ]
+          },
+          {
+            "id": 498050909,
+            "title": "build a custom website, full stack development, front end and back end",
+            "slug": "build-a-custom-website-full-stack-development-front-end-and-back-end",
+            "url": "https://www.fiverr.com/tasaduqe_codes/build-a-custom-website-full-stack-development-front-end-and-back-end",
+            "imageUrl": "https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto/gigs/498050909/original/74da77779b415d5c6b2d30051091cf07c23e28aa.png",
+            "gallery": [
+              "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/498050909/original/74da77779b415d5c6b2d30051091cf07c23e28aa/build-a-custom-website-full-stack-development-front-end-and-back-end.png"
+            ],
+            "startingPrice": "$55",
+            "rating": 5,
+            "reviewCount": 0,
             "ordersInQueue": 0,
             "category": "Programming & Tech",
             "subCategory": "Software Development",
             "nestedCategory": "Full Stack Web Applications",
-            "description": "You need something built. We build it full stack, any&nbsp;technology, any scale. Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything WHAT WE BUILD: - Business websites and landing pages - SaaS platforms and startup MVPs - E-commerce with payment integration - Admin dashboards with role-based access - Booking systems and customer portals - REST APIs and third-party integrations ANY TECHNOLOGY: Frontend React, Next.js, Vue.js, Tailwind, TypeScript Backend Node.js, Python, FastAPI, Django, PHP, Laravel Database MongoDB, PostgreSQL, MySQL, Firebase Other JWT Auth, Stripe, AWS, Docker, GraphQL EVERY PROJECT INCLUDES: - Clean, documented, scalable code - Fully responsive on all devices - SEO-friendly structure - Free consultation before we start - 100% on-time delivery - Post-delivery support 24+ projects completed. 100% on-time delivery. Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.",
-            "descriptionHtml": "<p><strong>You need something built. We build it full stack, any&nbsp;technology, any scale.</strong></p><p><br></p><p>Whether you're a business owner with an idea and no tech&nbsp;background, or a startup founder who knows exactly what&nbsp;stack you want we handle everything</p><p><br></p><p><strong>WHAT WE BUILD:</strong></p><p>- Business websites and landing pages</p><p>- SaaS platforms and startup MVPs</p><p>- E-commerce with payment integration</p><p>- Admin dashboards with role-based access</p><p>- Booking systems and customer portals</p><p>- REST APIs and third-party integrations</p><p><br></p><p><strong>ANY TECHNOLOGY:</strong></p><p><br></p><ul><li>Frontend React, Next.js, Vue.js, Tailwind, TypeScript</li><li>Backend Node.js, Python, FastAPI, Django, PHP, Laravel</li><li>Database MongoDB, PostgreSQL, MySQL, Firebase</li><li>Other JWT Auth, Stripe, AWS, Docker, GraphQL</li></ul><p><br></p><p><strong>EVERY PROJECT INCLUDES:</strong></p><p><br></p><p>- Clean, documented, scalable code</p><p>- Fully responsive on all devices</p><p>- SEO-friendly structure</p><p>- Free consultation before we start</p><p>- 100% on-time delivery</p><p>- Post-delivery support</p><p><br></p><p><strong>24+ projects completed. 100% on-time delivery.</strong></p><p><br></p><p>Not sure what you need? Message us first we respond instantly and will tell you exactly what fits your project and budget.</p>",
+            "description": "A weak website is often the only reason a customer chooses your competitor instead of you. A human salesperson can only talk to one customer at a time your website talks to hundreds, every day, if it's built right. That's the problem I solve. I build custom websites and full stack web applications from the ground up clean front end, solid back end, and a site that actually performs. WHAT I BUILD: Custom business and company websites Full stack web applications with front end and back end Landing pages and portfolio sites E-commerce stores with payment integration Admin dashboards and booking systems EVERY PROJECT INCLUDES: Clean, modern design no generic templates Fully responsive on mobile, tablet, desktop Fast loading and SEO-friendly structure Free consultation before we start On-time delivery, every time MY STACK: React Next.js Node.js REST API MongoDB JavaScript HTML/CSS Tailwind CSS and the list goes on.... I reply instantly. Message me before ordering and let's talk about what your website needs to do for your business.",
+            "descriptionHtml": "<p>A weak website is often the only reason a customer chooses your competitor instead of you. A human salesperson can only talk to one customer at a time <strong>your website talks to hundreds, every day, <u>if it's built right.</u></strong></p><p><br></p><p><strong><em>That's the problem I solve.</em></strong> I build custom websites and full stack web applications from the ground up clean front end, solid back end, and a site that actually performs.</p><p><br></p><p><br></p><p><strong>WHAT I BUILD:</strong></p><p><br></p><ul><li>Custom business and company websites</li><li>Full stack web applications with front end and back end</li><li>Landing pages and portfolio sites</li><li>E-commerce stores with payment integration</li><li>Admin dashboards and booking systems</li></ul><p><br></p><p><br></p><p><strong>EVERY PROJECT INCLUDES:</strong></p><p><br></p><ul><li>Clean, modern design no generic templates</li><li>Fully responsive on mobile, tablet, desktop</li><li>Fast loading and SEO-friendly structure</li><li>Free consultation before we start</li><li>On-time delivery, every time</li></ul><p><br></p><p><br></p><p><strong>MY STACK:</strong></p><ol><li>React</li><li>Next.js</li><li>Node.js</li><li>REST API</li><li>MongoDB</li><li>JavaScript</li><li>HTML/CSS</li><li>Tailwind CSS</li><li><strong><u>and the list goes on....</u></strong></li></ol><p><br></p><p><strong>I reply instantly. </strong>Message me before ordering and let's talk about what your website needs to do for your business.</p>",
             "faqs": [
               {
-                "question": "I'm not technical — how do I know what I need?",
-                "answer": "Just tell us what your website needs to do. We recommend the right approach, explain everything in plain English, and handle all technical decisions. No tech knowledge needed at all."
+                "question": "I'm not technical — how do I know what to order?",
+                "answer": "Just tell me what your business does and what you want visitors to be able to do. I'll recommend the right package and explain everything in plain language — no tech knowledge needed on your end."
               },
               {
-                "question": "Can you work with my existing website or code?",
-                "answer": "Yes. We can extend, fix, or rebuild existing projects in any technology. Share your codebase or describe the issue — we'll review it honestly and tell you exactly what we can do before you order."
+                "question": " Can you work with my existing website or codebase?",
+                "answer": "Yes. I can extend, fix, or rebuild existing projects in most technologies. Share your codebase or describe the issue and I'll review it honestly before starting."
               },
               {
-                "question": "Do I own the code after delivery?",
-                "answer": "100% yes. Full source code ownership on every package. Clean, documented code you can modify, deploy, or hand to any developer. No proprietary systems or recurring fees for code we built for you."
-              },
-              {
-                "question": "What if I need changes after delivery?",
-                "answer": "Every package includes revisions — 3 Basic, 7 Standard, unlimited Premium. After that we offer maintenance at fair rates. Most clients come back for Phase 2. We're here long term if you need us."
+                "question": "Will I own the code after delivery?",
+                "answer": "100% yes. Full source code ownership on every package. Clean, documented code you or any developer can modify, extend, or maintain independently."
               }
             ],
             "tags": [
-              "web app development",
-              "web app developer",
-              "react node developer",
+              "ai website",
               "full stack developer",
-              "custom web developer"
+              "website development",
+              "front end developer",
+              "back end developer"
             ],
             "packages": [
               {
                 "id": 1,
                 "title": "Starter Website",
-                "description": "1-page responsive website, frontend only, any technology, clean code, mobile optimized.",
-                "price": 75,
+                "description": "1-page responsive website, front end only, clean design, mobile optimized.",
+                "price": 55,
                 "durationDays": 3,
-                "revisions": 3,
+                "revisions": 2,
                 "features": [
                   {
                     "label": "Number of pages",
@@ -7942,11 +8915,6 @@
                   },
                   {
                     "label": "Design customization",
-                    "included": true,
-                    "value": 0
-                  },
-                  {
-                    "label": "Content upload",
                     "included": true,
                     "value": 0
                   },
@@ -7969,16 +8937,16 @@
               },
               {
                 "id": 2,
-                "title": "Full Stack Web App",
-                "description": "Multi-page web app with backend, database, REST API & user auth. Any stack.",
-                "price": 225,
-                "durationDays": 7,
-                "revisions": 7,
+                "title": "Full Stack Website",
+                "description": "Multi-page full stack site with front end and back end, database, REST API.",
+                "price": 170,
+                "durationDays": 6,
+                "revisions": 5,
                 "features": [
                   {
                     "label": "Number of pages",
                     "included": true,
-                    "value": 3
+                    "value": 5
                   },
                   {
                     "label": "Design customization",
@@ -8009,9 +8977,9 @@
               },
               {
                 "id": 3,
-                "title": "Enterprise System",
-                "description": "Full system: admin dashboard, multi-role access, payments, APIs & deployment.",
-                "price": 550,
+                "title": "Custom Web Application",
+                "description": "Full custom web application, unlimited pages, admin dashboard, deployment.",
+                "price": 400,
                 "durationDays": 14,
                 "revisions": "Unlimited",
                 "features": [
@@ -8052,111 +9020,60 @@
               {
                 "type": "programming_language",
                 "value": [
-                  "HTML & CSS"
+                  "javascript"
                 ]
               },
               {
                 "type": "expertise",
                 "value": [
-                  "Debugging",
-                  "Performance",
-                  "Security",
-                  "Design"
+                  "performance",
+                  "security",
+                  "design",
+                  "databases",
+                  "testing_procedures"
                 ]
               },
               {
                 "type": "frontend_framework",
                 "value": [
-                  "AngularJS",
-                  "Bootstrap",
-                  "jQuery",
-                  "React.js",
-                  "Vue.js"
+                  "bootstrap",
+                  "jquery",
+                  "next_js",
+                  "react_js",
+                  "tailwind_css"
                 ]
               },
               {
                 "type": "backend_framework",
                 "value": [
-                  "Django",
-                  "Express.js",
-                  "Laravel",
-                  "Next.js",
-                  "Node.js"
+                  "express_js",
+                  "fastapi",
+                  "nestjs",
+                  "next_js",
+                  "node_js"
+                ]
+              },
+              {
+                "type": "low_no_code_builders",
+                "value": [
+                  "lovable",
+                  "claude",
+                  "cursor",
+                  "replit"
                 ]
               }
             ],
             "aiSummary": [
-              "This service offers custom full stack web app development in any technology.",
-              "Clients value high-quality, scalable code and on-time delivery.",
-              "The agency has completed over 24 projects with a 4.6 rating.",
-              "Work includes websites, SaaS, e-commerce, APIs, and dashboards.",
-              "Reviews highlight professionalism, responsiveness, and rapid results."
+              "This service offers custom website development with full stack capabilities.",
+              "Clients value responsive, fast-loading, and SEO-friendly designs.",
+              "This freelancer has a strong track record of on-time project delivery.",
+              "Additional services include e-commerce, dashboards, and booking systems.",
+              "The team uses React, Next.js, Node.js, and MongoDB for robust solutions."
             ]
           }
         ],
-        "recentReviews": [
-          {
-            "id": "67b4bfce1767fc5bb8acf437",
-            "reviewer": "davidfelix_",
-            "reviewerCountry": "United Kingdom",
-            "reviewerCountryCode": "GB",
-            "rating": 5,
-            "comment": "I can confidently say that the final result exceeded my expectations. From the outset, Zayn demonstrated a high level of professionalism and expertise in their field, delivering high-quality work that was both efficient and insightful.",
-            "createdAt": "2025-02-18T17:46:40",
-            "workSample": "https://fiverr-res.cloudinary.com/image/upload/c_limit,f_auto,q_auto,t_smartwm,w_500/v1/attachments/delivery/asset/d39e1c3b59bd5530818243d0ed0ef58e-1739819897/dashboard.png",
-            "orderDuration": "8 days",
-            "priceRange": "Up to $50",
-            "sellerResponse": "Thanks\nmy pleasure\n"
-          },
-          {
-            "id": "67aa6746d7a07b18e01c9b87",
-            "reviewer": "davidfelix_",
-            "reviewerCountry": "United Kingdom",
-            "reviewerCountryCode": "GB",
-            "rating": 3.7,
-            "comment": "Zayn Raza's work in software development was generally satisfactory, While collaborating with Zayn was relatively smooth.",
-            "createdAt": "2025-02-10T21:14:23",
-            "orderDuration": "5 days",
-            "priceRange": "$50-$100"
-          },
-          {
-            "id": "66762814b9aaef325b08ba96",
-            "reviewer": "deborahkcole",
-            "reviewerCountry": "United States",
-            "reviewerCountryCode": "US",
-            "rating": 5,
-            "comment": "Zayn is skilled  and delivers professional quality work rapidly. Outstanding results & he was easy and delightful to work with + very responsive to my tweak requests. ",
-            "createdAt": "2024-06-22T03:39",
-            "orderDuration": "2 days",
-            "priceRange": "Up to $50",
-            "sellerResponse": "Thank You!"
-          },
-          {
-            "id": "6673b10ac7c17c43897f0129",
-            "reviewer": "deborahkcole",
-            "reviewerCountry": "United States",
-            "reviewerCountryCode": "US",
-            "rating": 5,
-            "comment": "Absolutely outstanding work. Very professional, excellent communication, rapid delivery & A+ results. Will definitely hire again",
-            "createdAt": "2024-06-20T05:02:10",
-            "orderDuration": "3 days",
-            "priceRange": "Up to $50",
-            "sellerResponse": "Thank you."
-          },
-          {
-            "id": "6661b154ce04e166f6ecb56e",
-            "reviewer": "carlos_galvis",
-            "reviewerCountry": "Bolivia",
-            "reviewerCountryCode": "BO",
-            "rating": 1,
-            "comment": "I have been very disappointed with Zayn's lack of professionalism, he lied for several weeks, even though his final delivery was made a couple of weeks ago, with many missing features that apparently, he does not know how to solve and instead of investigating he decided to give up after losing time.",
-            "createdAt": "2024-06-06T14:18:27",
-            "orderDuration": "5 weeks",
-            "priceRange": "$50-$100",
-            "sellerResponse": "The requirements were unclear, he was aiming for something that seemed nearly impossible. I wanted my potential clients to see my other reviews to get a clear picture."
-          }
-        ],
-        "scrapedAt": "2026-09-09T21:22:23.265Z"
+        "recentReviews": [],
+        "scrapedAt": "2026-09-11T20:20:51.692Z"
       },
       "icpProfiles": [
         {
@@ -8191,8 +9108,8 @@
               "Standard Gig Deliverable"
             ],
             "budgetRange": {
-              "min": 75,
-              "max": 225,
+              "min": 55,
+              "max": 165,
               "currency": "USD"
             },
             "preferredPricingModel": "fixed_price"
@@ -8266,8 +9183,8 @@
               "White-label services"
             ],
             "budgetRange": {
-              "min": 225,
-              "max": 750,
+              "min": 165,
+              "max": 550,
               "currency": "USD"
             },
             "preferredPricingModel": "milestone_based"
@@ -11371,6 +12288,837 @@
         "scrapedAt": "2026-09-09T21:24:40.104Z"
       },
       "onboardingStep": 2
+    },
+    "usr_1789160218090_bwsip": {
+      "userId": "usr_1789160218090_bwsip",
+      "fullName": "Freelancer",
+      "fiverrUrl": "",
+      "experienceYears": "3+ years",
+      "primarySkills": [
+        "Full-Stack Development",
+        "Python",
+        "React"
+      ],
+      "secondarySkills": [],
+      "targetNiches": [
+        "Web Development",
+        "AI Automation"
+      ],
+      "marketStrategy": {
+        "recommendedNiches": [
+          {
+            "niche": "Custom Full-Stack Development Architecture for Businesses",
+            "opportunityScore": 9.6,
+            "competitionDensity": "Low in specialized enterprise scopes",
+            "avgTicketPriceUSD": 280,
+            "rationale": "Buyers pay 4x-8x higher premiums for Full-Stack Development when packaged as an end-to-end business solution with fast turnaround."
+          },
+          {
+            "niche": "Automated Workflow & API Pipeline with Python",
+            "opportunityScore": 9.3,
+            "competitionDensity": "Moderate",
+            "avgTicketPriceUSD": 195,
+            "rationale": "Rapidly growing demand from startups needing automated data workflows and integrations."
+          },
+          {
+            "niche": "High-Converting Interactive Web App Development",
+            "opportunityScore": 9.1,
+            "competitionDensity": "Moderate-High (low at top tier)",
+            "avgTicketPriceUSD": 350,
+            "rationale": "Focusing on performance, responsive design, and production readiness avoids commodity price competition."
+          }
+        ],
+        "marketHiringRateInsight": "Market data shows top 10% sellers in Full-Stack Development charge $65-$120/hr, whereas generic freelancers earn $15-$25. Specialization is the key multiplier.",
+        "strategicPositioningAdvice": "Brand yourself as \"Freelancer | Senior Full-Stack Development Engineer\" rather than a generalist. Guarantee 24-hr turnaround on initial milestone deliveries.",
+        "avoidCommodities": [
+          "Avoid low-ticket $5-$10 gigs that attract difficult clients",
+          "Avoid generic 'I will build any website' listings"
+        ],
+        "growthPlaybook": [
+          "Step 1: Launch primary high-margin gig with the 5 verified SEO tags",
+          "Step 2: Apply to 5 live buyer briefs daily using value-focused psychological hooks",
+          "Step 3: Deliver initial orders within 24 hours to trigger Fiverr's algorithm boost"
+        ]
+      },
+      "onboardingCompleted": true,
+      "updatedAt": "2026-09-11T20:56:59.395Z",
+      "fiverrProfile": {
+        "username": "tester_mtxfsres",
+        "displayName": "Alex Rivers",
+        "profileUrl": "https://www.fiverr.com/tester_mtxfsres",
+        "avatarUrl": "https://images.fiverr.com/mock.jpg",
+        "tagline": "Senior Full Stack & AI Automation Architect",
+        "description": "Expert Next.js, Python, and OpenAI developer with 8+ years building enterprise SaaS and chatbots.",
+        "country": "United States",
+        "rating": 5,
+        "reviewCount": 42,
+        "sellerLevel": "LEVEL_2",
+        "skills": [
+          {
+            "name": "React",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Next.js",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Python",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "OpenAI",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Tailwind CSS",
+            "level": "EXPERT",
+            "verified": true
+          }
+        ],
+        "gigs": [
+          {
+            "id": "gig_1",
+            "title": "I will build custom AI agents, chatbots, and automation systems",
+            "startingPrice": 75,
+            "packages": [
+              {
+                "name": "Basic",
+                "price": 75,
+                "deliveryDays": 2
+              },
+              {
+                "name": "Standard",
+                "price": 175,
+                "deliveryDays": 4
+              },
+              {
+                "name": "Premium",
+                "price": 350,
+                "deliveryDays": 7
+              }
+            ]
+          }
+        ],
+        "recentReviews": [
+          {
+            "reviewer": "TechFounder",
+            "comment": "Alex built an unbelievable AI agent for our customer support. Absolutely top tier quality and 24h turnaround!"
+          }
+        ]
+      },
+      "onboardingStep": 2,
+      "icpProfiles": [
+        {
+          "icpId": "icp_fallback_1",
+          "personaName": "The Core Volume Buyer",
+          "priority": "primary",
+          "confidenceScore": 0.8,
+          "targetFirmographics": {
+            "industries": [
+              "General Business",
+              "E-commerce"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK",
+              "Canada"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Manager",
+              "Owner"
+            ],
+            "seniorityLevel": "Director",
+            "technicalLiteracy": "semi_technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Standard Gig Deliverable"
+            ],
+            "budgetRange": {
+              "min": 75,
+              "max": 225,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "fixed_price"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Lack of time",
+              "Need quick execution"
+            ],
+            "buyingTriggerEvents": [
+              "New project launch"
+            ],
+            "desiredOutcomes": [
+              "Fast delivery",
+              "High quality"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "asynchronous_autonomous",
+            "preferredChannels": [
+              "Fiverr Chat"
+            ],
+            "updateCadence": "upon_completion"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Can we do a call?",
+              "Unlimited revisions"
+            ],
+            "disqualifyingFactors": [
+              "Unclear requirements"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "expert",
+              "fast delivery"
+            ],
+            "recommendedPitchHook": "I can deliver this quickly and accurately."
+          }
+        },
+        {
+          "icpId": "icp_fallback_2",
+          "personaName": "The Premium Agency Partner",
+          "priority": "secondary",
+          "confidenceScore": 0.7,
+          "targetFirmographics": {
+            "industries": [
+              "Marketing Agency",
+              "Development Agency"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Project Manager",
+              "Agency Owner"
+            ],
+            "seniorityLevel": "C-Level",
+            "technicalLiteracy": "technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Complex Projects",
+              "White-label services"
+            ],
+            "budgetRange": {
+              "min": 225,
+              "max": 750,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "milestone_based"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Overflow work",
+              "Need reliable partners"
+            ],
+            "buyingTriggerEvents": [
+              "Winning a large client"
+            ],
+            "desiredOutcomes": [
+              "Seamless integration",
+              "Client satisfaction"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "structured",
+            "preferredChannels": [
+              "Fiverr Chat",
+              "Zoom"
+            ],
+            "updateCadence": "weekly"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Cheap price",
+              "Micro-management"
+            ],
+            "disqualifyingFactors": [
+              "Low budget"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "white label",
+              "reliable partner"
+            ],
+            "recommendedPitchHook": "I can be your reliable backend partner."
+          }
+        }
+      ]
+    },
+    "usr_1789160327895_zrwt2": {
+      "userId": "usr_1789160327895_zrwt2",
+      "fullName": "Freelancer",
+      "fiverrUrl": "",
+      "experienceYears": "3+ years",
+      "primarySkills": [
+        "Full-Stack Development",
+        "Python",
+        "React"
+      ],
+      "secondarySkills": [],
+      "targetNiches": [
+        "Web Development",
+        "AI Automation"
+      ],
+      "marketStrategy": {
+        "recommendedNiches": [
+          {
+            "niche": "Custom Full-Stack Development Architecture for Businesses",
+            "opportunityScore": 9.6,
+            "competitionDensity": "Low in specialized enterprise scopes",
+            "avgTicketPriceUSD": 280,
+            "rationale": "Buyers pay 4x-8x higher premiums for Full-Stack Development when packaged as an end-to-end business solution with fast turnaround."
+          },
+          {
+            "niche": "Automated Workflow & API Pipeline with Python",
+            "opportunityScore": 9.3,
+            "competitionDensity": "Moderate",
+            "avgTicketPriceUSD": 195,
+            "rationale": "Rapidly growing demand from startups needing automated data workflows and integrations."
+          },
+          {
+            "niche": "High-Converting Interactive Web App Development",
+            "opportunityScore": 9.1,
+            "competitionDensity": "Moderate-High (low at top tier)",
+            "avgTicketPriceUSD": 350,
+            "rationale": "Focusing on performance, responsive design, and production readiness avoids commodity price competition."
+          }
+        ],
+        "marketHiringRateInsight": "Market data shows top 10% sellers in Full-Stack Development charge $65-$120/hr, whereas generic freelancers earn $15-$25. Specialization is the key multiplier.",
+        "strategicPositioningAdvice": "Brand yourself as \"Freelancer | Senior Full-Stack Development Engineer\" rather than a generalist. Guarantee 24-hr turnaround on initial milestone deliveries.",
+        "avoidCommodities": [
+          "Avoid low-ticket $5-$10 gigs that attract difficult clients",
+          "Avoid generic 'I will build any website' listings"
+        ],
+        "growthPlaybook": [
+          "Step 1: Launch primary high-margin gig with the 5 verified SEO tags",
+          "Step 2: Apply to 5 live buyer briefs daily using value-focused psychological hooks",
+          "Step 3: Deliver initial orders within 24 hours to trigger Fiverr's algorithm boost"
+        ]
+      },
+      "onboardingCompleted": true,
+      "updatedAt": "2026-09-11T20:58:49.323Z",
+      "fiverrProfile": {
+        "username": "tester_mtxfv43o",
+        "displayName": "Alex Rivers",
+        "profileUrl": "https://www.fiverr.com/tester_mtxfv43o",
+        "avatarUrl": "https://images.fiverr.com/mock.jpg",
+        "tagline": "Senior Full Stack & AI Automation Architect",
+        "description": "Expert Next.js, Python, and OpenAI developer with 8+ years building enterprise SaaS and chatbots.",
+        "country": "United States",
+        "rating": 5,
+        "reviewCount": 42,
+        "sellerLevel": "LEVEL_2",
+        "skills": [
+          {
+            "name": "React",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Next.js",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Python",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "OpenAI",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Tailwind CSS",
+            "level": "EXPERT",
+            "verified": true
+          }
+        ],
+        "gigs": [
+          {
+            "id": "gig_1",
+            "title": "I will build custom AI agents, chatbots, and automation systems",
+            "startingPrice": 75,
+            "packages": [
+              {
+                "name": "Basic",
+                "price": 75,
+                "deliveryDays": 2
+              },
+              {
+                "name": "Standard",
+                "price": 175,
+                "deliveryDays": 4
+              },
+              {
+                "name": "Premium",
+                "price": 350,
+                "deliveryDays": 7
+              }
+            ]
+          }
+        ],
+        "recentReviews": [
+          {
+            "reviewer": "TechFounder",
+            "comment": "Alex built an unbelievable AI agent for our customer support. Absolutely top tier quality and 24h turnaround!"
+          }
+        ]
+      },
+      "onboardingStep": 2,
+      "icpProfiles": [
+        {
+          "icpId": "icp_fallback_1",
+          "personaName": "The Core Volume Buyer",
+          "priority": "primary",
+          "confidenceScore": 0.8,
+          "targetFirmographics": {
+            "industries": [
+              "General Business",
+              "E-commerce"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK",
+              "Canada"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Manager",
+              "Owner"
+            ],
+            "seniorityLevel": "Director",
+            "technicalLiteracy": "semi_technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Standard Gig Deliverable"
+            ],
+            "budgetRange": {
+              "min": 75,
+              "max": 225,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "fixed_price"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Lack of time",
+              "Need quick execution"
+            ],
+            "buyingTriggerEvents": [
+              "New project launch"
+            ],
+            "desiredOutcomes": [
+              "Fast delivery",
+              "High quality"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "asynchronous_autonomous",
+            "preferredChannels": [
+              "Fiverr Chat"
+            ],
+            "updateCadence": "upon_completion"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Can we do a call?",
+              "Unlimited revisions"
+            ],
+            "disqualifyingFactors": [
+              "Unclear requirements"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "expert",
+              "fast delivery"
+            ],
+            "recommendedPitchHook": "I can deliver this quickly and accurately."
+          }
+        },
+        {
+          "icpId": "icp_fallback_2",
+          "personaName": "The Premium Agency Partner",
+          "priority": "secondary",
+          "confidenceScore": 0.7,
+          "targetFirmographics": {
+            "industries": [
+              "Marketing Agency",
+              "Development Agency"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Project Manager",
+              "Agency Owner"
+            ],
+            "seniorityLevel": "C-Level",
+            "technicalLiteracy": "technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Complex Projects",
+              "White-label services"
+            ],
+            "budgetRange": {
+              "min": 225,
+              "max": 750,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "milestone_based"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Overflow work",
+              "Need reliable partners"
+            ],
+            "buyingTriggerEvents": [
+              "Winning a large client"
+            ],
+            "desiredOutcomes": [
+              "Seamless integration",
+              "Client satisfaction"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "structured",
+            "preferredChannels": [
+              "Fiverr Chat",
+              "Zoom"
+            ],
+            "updateCadence": "weekly"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Cheap price",
+              "Micro-management"
+            ],
+            "disqualifyingFactors": [
+              "Low budget"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "white label",
+              "reliable partner"
+            ],
+            "recommendedPitchHook": "I can be your reliable backend partner."
+          }
+        }
+      ]
+    },
+    "usr_1789160397914_5s3u3": {
+      "userId": "usr_1789160397914_5s3u3",
+      "fullName": "Freelancer",
+      "fiverrUrl": "",
+      "experienceYears": "3+ years",
+      "primarySkills": [
+        "Full-Stack Development",
+        "Python",
+        "React"
+      ],
+      "secondarySkills": [],
+      "targetNiches": [
+        "Web Development",
+        "AI Automation"
+      ],
+      "marketStrategy": {
+        "recommendedNiches": [
+          {
+            "niche": "Custom Full-Stack Development Architecture for Businesses",
+            "opportunityScore": 9.6,
+            "competitionDensity": "Low in specialized enterprise scopes",
+            "avgTicketPriceUSD": 280,
+            "rationale": "Buyers pay 4x-8x higher premiums for Full-Stack Development when packaged as an end-to-end business solution with fast turnaround."
+          },
+          {
+            "niche": "Automated Workflow & API Pipeline with Python",
+            "opportunityScore": 9.3,
+            "competitionDensity": "Moderate",
+            "avgTicketPriceUSD": 195,
+            "rationale": "Rapidly growing demand from startups needing automated data workflows and integrations."
+          },
+          {
+            "niche": "High-Converting Interactive Web App Development",
+            "opportunityScore": 9.1,
+            "competitionDensity": "Moderate-High (low at top tier)",
+            "avgTicketPriceUSD": 350,
+            "rationale": "Focusing on performance, responsive design, and production readiness avoids commodity price competition."
+          }
+        ],
+        "marketHiringRateInsight": "Market data shows top 10% sellers in Full-Stack Development charge $65-$120/hr, whereas generic freelancers earn $15-$25. Specialization is the key multiplier.",
+        "strategicPositioningAdvice": "Brand yourself as \"Freelancer | Senior Full-Stack Development Engineer\" rather than a generalist. Guarantee 24-hr turnaround on initial milestone deliveries.",
+        "avoidCommodities": [
+          "Avoid low-ticket $5-$10 gigs that attract difficult clients",
+          "Avoid generic 'I will build any website' listings"
+        ],
+        "growthPlaybook": [
+          "Step 1: Launch primary high-margin gig with the 5 verified SEO tags",
+          "Step 2: Apply to 5 live buyer briefs daily using value-focused psychological hooks",
+          "Step 3: Deliver initial orders within 24 hours to trigger Fiverr's algorithm boost"
+        ]
+      },
+      "onboardingCompleted": true,
+      "updatedAt": "2026-09-11T20:59:59.160Z",
+      "fiverrProfile": {
+        "username": "tester_mtxfwm19",
+        "displayName": "Alex Rivers",
+        "profileUrl": "https://www.fiverr.com/tester_mtxfwm19",
+        "avatarUrl": "https://images.fiverr.com/mock.jpg",
+        "tagline": "Senior Full Stack & AI Automation Architect",
+        "description": "Expert Next.js, Python, and OpenAI developer with 8+ years building enterprise SaaS and chatbots.",
+        "country": "United States",
+        "rating": 5,
+        "reviewCount": 42,
+        "sellerLevel": "LEVEL_2",
+        "skills": [
+          {
+            "name": "React",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Next.js",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Python",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "OpenAI",
+            "level": "EXPERT",
+            "verified": true
+          },
+          {
+            "name": "Tailwind CSS",
+            "level": "EXPERT",
+            "verified": true
+          }
+        ],
+        "gigs": [
+          {
+            "id": "gig_1",
+            "title": "I will build custom AI agents, chatbots, and automation systems",
+            "startingPrice": 75,
+            "packages": [
+              {
+                "name": "Basic",
+                "price": 75,
+                "deliveryDays": 2
+              },
+              {
+                "name": "Standard",
+                "price": 175,
+                "deliveryDays": 4
+              },
+              {
+                "name": "Premium",
+                "price": 350,
+                "deliveryDays": 7
+              }
+            ]
+          }
+        ],
+        "recentReviews": [
+          {
+            "reviewer": "TechFounder",
+            "comment": "Alex built an unbelievable AI agent for our customer support. Absolutely top tier quality and 24h turnaround!"
+          }
+        ]
+      },
+      "onboardingStep": 2,
+      "icpProfiles": [
+        {
+          "icpId": "icp_fallback_1",
+          "personaName": "The Core Volume Buyer",
+          "priority": "primary",
+          "confidenceScore": 0.8,
+          "targetFirmographics": {
+            "industries": [
+              "General Business",
+              "E-commerce"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK",
+              "Canada"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Manager",
+              "Owner"
+            ],
+            "seniorityLevel": "Director",
+            "technicalLiteracy": "semi_technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Standard Gig Deliverable"
+            ],
+            "budgetRange": {
+              "min": 75,
+              "max": 225,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "fixed_price"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Lack of time",
+              "Need quick execution"
+            ],
+            "buyingTriggerEvents": [
+              "New project launch"
+            ],
+            "desiredOutcomes": [
+              "Fast delivery",
+              "High quality"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "asynchronous_autonomous",
+            "preferredChannels": [
+              "Fiverr Chat"
+            ],
+            "updateCadence": "upon_completion"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Can we do a call?",
+              "Unlimited revisions"
+            ],
+            "disqualifyingFactors": [
+              "Unclear requirements"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "expert",
+              "fast delivery"
+            ],
+            "recommendedPitchHook": "I can deliver this quickly and accurately."
+          }
+        },
+        {
+          "icpId": "icp_fallback_2",
+          "personaName": "The Premium Agency Partner",
+          "priority": "secondary",
+          "confidenceScore": 0.7,
+          "targetFirmographics": {
+            "industries": [
+              "Marketing Agency",
+              "Development Agency"
+            ],
+            "companySizes": [
+              "smb_11_50"
+            ],
+            "targetGeographies": [
+              "US",
+              "UK"
+            ]
+          },
+          "buyerPersona": {
+            "jobTitles": [
+              "Project Manager",
+              "Agency Owner"
+            ],
+            "seniorityLevel": "C-Level",
+            "technicalLiteracy": "technical"
+          },
+          "projectFit": {
+            "typicalDeliverables": [
+              "Complex Projects",
+              "White-label services"
+            ],
+            "budgetRange": {
+              "min": 225,
+              "max": 750,
+              "currency": "USD"
+            },
+            "preferredPricingModel": "milestone_based"
+          },
+          "painPointsAndTriggers": {
+            "acutePainPoints": [
+              "Overflow work",
+              "Need reliable partners"
+            ],
+            "buyingTriggerEvents": [
+              "Winning a large client"
+            ],
+            "desiredOutcomes": [
+              "Seamless integration",
+              "Client satisfaction"
+            ]
+          },
+          "collaborationPreferences": {
+            "communicationStyle": "structured",
+            "preferredChannels": [
+              "Fiverr Chat",
+              "Zoom"
+            ],
+            "updateCadence": "weekly"
+          },
+          "antiIcpCriteria": {
+            "redFlagPhrases": [
+              "Cheap price",
+              "Micro-management"
+            ],
+            "disqualifyingFactors": [
+              "Low budget"
+            ]
+          },
+          "targetingSignals": {
+            "searchKeywords": [
+              "white label",
+              "reliable partner"
+            ],
+            "recommendedPitchHook": "I can be your reliable backend partner."
+          }
+        }
+      ]
     }
   },
   "gigs": [
@@ -12179,6 +13927,67 @@
   ],
   "briefs": [
     {
+      "id": "brief_1789160405963_xp1g",
+      "fiverrBriefId": "brief_1789160405951",
+      "userId": "usr_1789160397914_5s3u3",
+      "clientTitle": "Need custom voice AI bot with OpenAI and VAPI integration",
+      "description": "Looking for a senior engineer to build an automated telephone receptionist with calendar booking.",
+      "budget": "$250 - $500",
+      "currency": "USD",
+      "urgencyDays": 2,
+      "urgencyText": "48 Hours",
+      "skills": [],
+      "clientCountry": "United States",
+      "source": "fiverr_extension",
+      "status": "applied",
+      "matchScore": 80,
+      "matchedGigTitle": "I will build custom AI agents, chatbots, and automation systems",
+      "createdAt": "2026-09-11T21:00:05.963Z",
+      "appliedProposal": {
+        "pitchText": "Hi there,\n\nI reviewed your brief regarding \"Need custom voice AI bot with OpenAI and VAPI integration\".\n\nRather than a cookie-cutter setup, this requires clean architecture and rock-solid execution without technical debt.\n\nHere is how I will execute this for you:\n1. Requirements & Spec Audit: Review your exact inputs and establish the baseline environment using Full-Stack Development, Python, React.\n2. Core Implementation: Build and test the full deliverable with zero bottlenecks and clean, documented code.\n3. Verification & Handover: Conduct end-to-end testing, record a quick walkthrough demo, and ensure you are 100% satisfied.\n\nI can have this completed within 2 days for $250500.\n\nFeel free to send a message so we can confirm any technical details before starting.\n\nBest regards,\nAlex Rivers",
+        "offeredPrice": 250500,
+        "deliveryDays": 2,
+        "safetyGapSeconds": 25,
+        "appliedAt": "2026-09-11T21:00:06.608Z"
+      }
+    },
+    {
+      "id": "brief_1789160335780_0quo",
+      "fiverrBriefId": "brief_1789160335735",
+      "userId": "usr_1789160327895_zrwt2",
+      "clientTitle": "Need custom voice AI bot with OpenAI and VAPI integration",
+      "description": "Looking for a senior engineer to build an automated telephone receptionist with calendar booking.",
+      "budget": "$250 - $500",
+      "currency": "USD",
+      "urgencyDays": 2,
+      "urgencyText": "48 Hours",
+      "skills": [],
+      "clientCountry": "United States",
+      "source": "fiverr_extension",
+      "status": "new",
+      "matchScore": 80,
+      "matchedGigTitle": "I will build custom AI agents, chatbots, and automation systems",
+      "createdAt": "2026-09-11T20:58:55.780Z"
+    },
+    {
+      "id": "brief_1789160221589_aaz6",
+      "fiverrBriefId": "brief_1789160221574",
+      "userId": "usr_1789160218090_bwsip",
+      "clientTitle": "Need custom voice AI bot with OpenAI and VAPI integration",
+      "description": "Looking for a senior engineer to build an automated telephone receptionist with calendar booking.",
+      "budget": "$250 - $500",
+      "currency": "USD",
+      "urgencyDays": 2,
+      "urgencyText": "48 Hours",
+      "skills": [],
+      "clientCountry": "United States",
+      "source": "fiverr_extension",
+      "status": "new",
+      "matchScore": 80,
+      "matchedGigTitle": "I will build custom AI agents, chatbots, and automation systems",
+      "createdAt": "2026-09-11T20:57:01.589Z"
+    },
+    {
       "id": "brief_1789075610140_rvlq",
       "fiverrBriefId": "fvr_ext_test_01",
       "userId": "anonymous",
@@ -12197,10 +14006,18 @@
       ],
       "clientCountry": "United States",
       "source": "fiverr_extension",
-      "status": "new",
+      "status": "applied",
       "matchScore": 80,
       "matchedGigTitle": "Custom Full Stack & AI Services",
-      "createdAt": "2026-09-10T21:26:50.140Z"
+      "createdAt": "2026-09-10T21:26:50.140Z",
+      "appliedProposal": {
+        "pitchText": "Hi there,\n\nI reviewed your brief regarding \"Build an AI voice agent with VAPI or Retell for dental clinic\".\n\nRather than a cookie-cutter setup, this requires clean architecture and rock-solid execution without technical debt.\n\nHere is how I will execute this for you:\n1. Requirements & Spec Audit: Review your exact inputs and establish the baseline environment using Website development, Chatbot development, AI developer.\n2. Core Implementation: Build and test the full deliverable with zero bottlenecks and clean, documented code.\n3. Verification & Handover: Conduct end-to-end testing, record a quick walkthrough demo, and ensure you are 100% satisfied.\n\nI can have this completed within 2 days for $120.\n\nFeel free to send a message so we can confirm any technical details before starting.\n\nBest regards,\nTasaduqe Fatima",
+        "targetGigTitle": "build a custom website, full stack development, front end and back end",
+        "offeredPrice": 120,
+        "deliveryDays": 2,
+        "safetyGapSeconds": 30,
+        "appliedAt": "2026-09-11T20:22:23.222Z"
+      }
     },
     {
       "id": "brief_1789075559938_ngi6",
@@ -12516,6 +14333,486 @@
     }
   ],
   "researchHistory": [
+    {
+      "id": "res_1789160410676",
+      "niche": "Python Web Scraping",
+      "overall_niche_score": 89,
+      "competition_density": "Moderate-Low in specialized high-ticket sub-categories",
+      "pricing_benchmarks": {
+        "entry_price": 35,
+        "median_price": 120,
+        "top_earner_price": 350,
+        "recommended_entry_price": 50
+      },
+      "high_volume_tags": [
+        "python web scraping",
+        "custom automation",
+        "api integration",
+        "expert developer",
+        "fast turnaround"
+      ],
+      "unserved_market_gaps": [
+        "Enterprise-grade error handling in Python Web Scraping",
+        "24-hour turnaround with clean documentation",
+        "Pre-built automated testing and containerization"
+      ],
+      "recommended_gig_angles": [
+        "Position as a senior engineer rather than a commodity freelancer",
+        "Lead with business ROI (time saved, revenue unlocked) rather than lines of code"
+      ],
+      "real_time_signals": {
+        "buyer_queries": [
+          "python web scraping fiverr",
+          "python web scraping example"
+        ],
+        "active_market_jobs": 80,
+        "github_tools": [
+          {
+            "name": "vinta/awesome-python",
+            "stars": 320045,
+            "description": "The definitive list that answers \"I want to do X in Python, which tool should I use?\"",
+            "url": "https://github.com/vinta/awesome-python",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "python",
+              "python-frameworks",
+              "python-libraries",
+              "python-tools"
+            ]
+          },
+          {
+            "name": "awesome-selfhosted/awesome-selfhosted",
+            "stars": 318574,
+            "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
+            "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "cloud",
+              "free-software",
+              "hosting",
+              "privacy",
+              "self-hosted",
+              "selfhosted"
+            ]
+          },
+          {
+            "name": "practical-tutorials/project-based-learning",
+            "stars": 282991,
+            "description": "Curated list of project-based tutorials",
+            "url": "https://github.com/practical-tutorials/project-based-learning",
+            "topics": [
+              "beginner-project",
+              "cpp",
+              "golang",
+              "javascript",
+              "project",
+              "python",
+              "tutorial",
+              "webdevelopment"
+            ]
+          },
+          {
+            "name": "trimstray/the-book-of-secret-knowledge",
+            "stars": 243206,
+            "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
+            "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "bsd",
+              "cheatsheets",
+              "devops",
+              "guidelines",
+              "hacking",
+              "hacks",
+              "howtos",
+              "linux",
+              "lists",
+              "manuals",
+              "one-liners",
+              "pentesters",
+              "resources",
+              "search-engines",
+              "security",
+              "security-researchers",
+              "sysops"
+            ]
+          },
+          {
+            "name": "avelino/awesome-go",
+            "stars": 183835,
+            "description": "A curated list of awesome Go frameworks, libraries and software",
+            "url": "https://github.com/avelino/awesome-go",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "go",
+              "golang",
+              "golang-library",
+              "hacktoberfest"
+            ]
+          },
+          {
+            "name": "firecrawl/firecrawl",
+            "stars": 179178,
+            "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "topics": [
+              "ai",
+              "ai-agents",
+              "ai-crawler",
+              "ai-scraping",
+              "ai-search",
+              "crawler",
+              "data-extraction",
+              "html-to-markdown",
+              "llm",
+              "markdown",
+              "scraper",
+              "scraping",
+              "web-crawler",
+              "web-data",
+              "web-data-extraction",
+              "web-scraper",
+              "web-scraping",
+              "web-search",
+              "webscraping"
+            ]
+          }
+        ],
+        "salary_distribution": {
+          "min": "$45/hr",
+          "avg": "$75/hr",
+          "max": "$120/hr"
+        },
+        "opportunity_score": 97,
+        "last_synced": "2026-09-11T21:00:10.659Z"
+      },
+      "userId": "usr_1789160397914_5s3u3",
+      "createdAt": "2026-09-11T21:00:10.676Z"
+    },
+    {
+      "id": "res_1789160339752",
+      "niche": "Python Web Scraping",
+      "overall_niche_score": 89,
+      "competition_density": "Moderate-Low in specialized high-ticket sub-categories",
+      "pricing_benchmarks": {
+        "entry_price": 35,
+        "median_price": 120,
+        "top_earner_price": 350,
+        "recommended_entry_price": 50
+      },
+      "high_volume_tags": [
+        "python web scraping",
+        "custom automation",
+        "api integration",
+        "expert developer",
+        "fast turnaround"
+      ],
+      "unserved_market_gaps": [
+        "Enterprise-grade error handling in Python Web Scraping",
+        "24-hour turnaround with clean documentation",
+        "Pre-built automated testing and containerization"
+      ],
+      "recommended_gig_angles": [
+        "Position as a senior engineer rather than a commodity freelancer",
+        "Lead with business ROI (time saved, revenue unlocked) rather than lines of code"
+      ],
+      "real_time_signals": {
+        "buyer_queries": [
+          "python web scraping fiverr",
+          "python web scraping example"
+        ],
+        "active_market_jobs": 80,
+        "github_tools": [
+          {
+            "name": "vinta/awesome-python",
+            "stars": 320045,
+            "description": "The definitive list that answers \"I want to do X in Python, which tool should I use?\"",
+            "url": "https://github.com/vinta/awesome-python",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "python",
+              "python-frameworks",
+              "python-libraries",
+              "python-tools"
+            ]
+          },
+          {
+            "name": "awesome-selfhosted/awesome-selfhosted",
+            "stars": 318574,
+            "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
+            "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "cloud",
+              "free-software",
+              "hosting",
+              "privacy",
+              "self-hosted",
+              "selfhosted"
+            ]
+          },
+          {
+            "name": "practical-tutorials/project-based-learning",
+            "stars": 282991,
+            "description": "Curated list of project-based tutorials",
+            "url": "https://github.com/practical-tutorials/project-based-learning",
+            "topics": [
+              "beginner-project",
+              "cpp",
+              "golang",
+              "javascript",
+              "project",
+              "python",
+              "tutorial",
+              "webdevelopment"
+            ]
+          },
+          {
+            "name": "trimstray/the-book-of-secret-knowledge",
+            "stars": 243206,
+            "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
+            "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "bsd",
+              "cheatsheets",
+              "devops",
+              "guidelines",
+              "hacking",
+              "hacks",
+              "howtos",
+              "linux",
+              "lists",
+              "manuals",
+              "one-liners",
+              "pentesters",
+              "resources",
+              "search-engines",
+              "security",
+              "security-researchers",
+              "sysops"
+            ]
+          },
+          {
+            "name": "avelino/awesome-go",
+            "stars": 183835,
+            "description": "A curated list of awesome Go frameworks, libraries and software",
+            "url": "https://github.com/avelino/awesome-go",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "go",
+              "golang",
+              "golang-library",
+              "hacktoberfest"
+            ]
+          },
+          {
+            "name": "firecrawl/firecrawl",
+            "stars": 179178,
+            "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "topics": [
+              "ai",
+              "ai-agents",
+              "ai-crawler",
+              "ai-scraping",
+              "ai-search",
+              "crawler",
+              "data-extraction",
+              "html-to-markdown",
+              "llm",
+              "markdown",
+              "scraper",
+              "scraping",
+              "web-crawler",
+              "web-data",
+              "web-data-extraction",
+              "web-scraper",
+              "web-scraping",
+              "web-search",
+              "webscraping"
+            ]
+          }
+        ],
+        "salary_distribution": {
+          "min": "$45/hr",
+          "avg": "$75/hr",
+          "max": "$120/hr"
+        },
+        "opportunity_score": 97,
+        "last_synced": "2026-09-11T20:58:59.728Z"
+      },
+      "userId": "usr_1789160327895_zrwt2",
+      "createdAt": "2026-09-11T20:58:59.752Z"
+    },
+    {
+      "id": "res_1789160226732",
+      "niche": "Python Web Scraping",
+      "overall_niche_score": 89,
+      "competition_density": "Moderate-Low in specialized high-ticket sub-categories",
+      "pricing_benchmarks": {
+        "entry_price": 35,
+        "median_price": 120,
+        "top_earner_price": 350,
+        "recommended_entry_price": 50
+      },
+      "high_volume_tags": [
+        "python web scraping",
+        "custom automation",
+        "api integration",
+        "expert developer",
+        "fast turnaround"
+      ],
+      "unserved_market_gaps": [
+        "Enterprise-grade error handling in Python Web Scraping",
+        "24-hour turnaround with clean documentation",
+        "Pre-built automated testing and containerization"
+      ],
+      "recommended_gig_angles": [
+        "Position as a senior engineer rather than a commodity freelancer",
+        "Lead with business ROI (time saved, revenue unlocked) rather than lines of code"
+      ],
+      "real_time_signals": {
+        "buyer_queries": [
+          "python web scraping fiverr",
+          "python web scraping example"
+        ],
+        "active_market_jobs": 80,
+        "github_tools": [
+          {
+            "name": "vinta/awesome-python",
+            "stars": 320044,
+            "description": "The definitive list that answers \"I want to do X in Python, which tool should I use?\"",
+            "url": "https://github.com/vinta/awesome-python",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "python",
+              "python-frameworks",
+              "python-libraries",
+              "python-tools"
+            ]
+          },
+          {
+            "name": "awesome-selfhosted/awesome-selfhosted",
+            "stars": 318573,
+            "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
+            "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "cloud",
+              "free-software",
+              "hosting",
+              "privacy",
+              "self-hosted",
+              "selfhosted"
+            ]
+          },
+          {
+            "name": "practical-tutorials/project-based-learning",
+            "stars": 282991,
+            "description": "Curated list of project-based tutorials",
+            "url": "https://github.com/practical-tutorials/project-based-learning",
+            "topics": [
+              "beginner-project",
+              "cpp",
+              "golang",
+              "javascript",
+              "project",
+              "python",
+              "tutorial",
+              "webdevelopment"
+            ]
+          },
+          {
+            "name": "trimstray/the-book-of-secret-knowledge",
+            "stars": 243206,
+            "description": "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",
+            "url": "https://github.com/trimstray/the-book-of-secret-knowledge",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "bsd",
+              "cheatsheets",
+              "devops",
+              "guidelines",
+              "hacking",
+              "hacks",
+              "howtos",
+              "linux",
+              "lists",
+              "manuals",
+              "one-liners",
+              "pentesters",
+              "resources",
+              "search-engines",
+              "security",
+              "security-researchers",
+              "sysops"
+            ]
+          },
+          {
+            "name": "avelino/awesome-go",
+            "stars": 183835,
+            "description": "A curated list of awesome Go frameworks, libraries and software",
+            "url": "https://github.com/avelino/awesome-go",
+            "topics": [
+              "awesome",
+              "awesome-list",
+              "go",
+              "golang",
+              "golang-library",
+              "hacktoberfest"
+            ]
+          },
+          {
+            "name": "firecrawl/firecrawl",
+            "stars": 179177,
+            "description": "The context API to search, scrape, and interact with the web at scale. 🔥",
+            "url": "https://github.com/firecrawl/firecrawl",
+            "topics": [
+              "ai",
+              "ai-agents",
+              "ai-crawler",
+              "ai-scraping",
+              "ai-search",
+              "crawler",
+              "data-extraction",
+              "html-to-markdown",
+              "llm",
+              "markdown",
+              "scraper",
+              "scraping",
+              "web-crawler",
+              "web-data",
+              "web-data-extraction",
+              "web-scraper",
+              "web-scraping",
+              "web-search",
+              "webscraping"
+            ]
+          }
+        ],
+        "salary_distribution": {
+          "min": "$45/hr",
+          "avg": "$75/hr",
+          "max": "$120/hr"
+        },
+        "opportunity_score": 97,
+        "last_synced": "2026-09-11T20:57:06.719Z"
+      },
+      "userId": "usr_1789160218090_bwsip",
+      "createdAt": "2026-09-11T20:57:06.733Z"
+    },
     {
       "id": "res_1788987958009",
       "skill_keywords": [
@@ -13163,5 +15460,8 @@
       "createdAt": "2026-09-07T21:06:49.569Z"
     }
   ],
-  "competitorReports": {}
+  "competitorReports": {
+    "usr_1789160327895_zrwt2": [],
+    "usr_1789160397914_5s3u3": []
+  }
 }

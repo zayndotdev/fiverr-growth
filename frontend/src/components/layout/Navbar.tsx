@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Sparkles, BarChart3, Send, Bookmark, LayoutDashboard, User, Users2 } from 'lucide-react';
+import { Sparkles, BarChart3, Send, Bookmark, LayoutDashboard, User, Users2, Terminal } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { ProfileDropdown } from './ProfileDropdown';
 
@@ -24,6 +24,7 @@ export const Navbar: React.FC<NavbarProps> = ({ gigsCount, onOpenAuth }) => {
     { id: 'gigs', path: '/gigs', label: 'Gigs', icon: Sparkles },
     { id: 'briefs', path: '/briefs', label: 'Briefs', icon: Send },
     { id: 'research', path: '/research', label: 'Research', icon: BarChart3 },
+    { id: 'logs', path: '/logs', label: 'Agent Logs', icon: Terminal },
     { id: 'saved', path: '/saved', label: `Saved (${gigsCount})`, icon: Bookmark },
   ];
 

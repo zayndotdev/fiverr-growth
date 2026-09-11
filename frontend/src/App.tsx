@@ -13,6 +13,7 @@ import { MarketResearchView } from './components/modules/MarketResearchView';
 import { SavedGigsView } from './components/modules/SavedGigsView';
 import { SellerDashboardView } from './components/dashboard/SellerDashboardView';
 import { CompetitorsView } from './components/competitors/CompetitorsView';
+import { AgentActivityLogsView } from './components/modules/AgentActivityLogsView';
 import { SettingsPage } from './components/settings/SettingsPage';
 import { AuthModal } from './components/auth/AuthModal';
 import { ProtectedRoute, OnboardingGuard } from './components/guards/RouteGuards';
@@ -173,6 +174,16 @@ const AppContent: React.FC = () => {
                 <ProtectedRoute>
                   <OnboardingGuard>
                     <MarketResearchView />
+                  </OnboardingGuard>
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/logs"
+              element={
+                <ProtectedRoute>
+                  <OnboardingGuard>
+                    <AgentActivityLogsView />
                   </OnboardingGuard>
                 </ProtectedRoute>
               }

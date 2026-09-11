@@ -280,6 +280,7 @@ export class BriefsController {
       const {
         briefId,
         pitchText,
+        proposalText,
         targetGigId,
         targetGigTitle,
         offeredPrice,
@@ -287,15 +288,17 @@ export class BriefsController {
         safetyGapSeconds = 25,
       } = req.body;
 
-      if (!briefId || !pitchText) {
+      const finalPitchText = pitchText || proposalText;
+
+      if (!briefId || !finalPitchText) {
         return res.status(400).json({
           success: false,
-          error: 'briefId and pitchText are required to record an application.',
+          error: 'briefId and pitchText (or proposalText) are required to record an application.',
         });
       }
 
       const updated = db.updateBriefApplication(briefId, {
-        pitchText,
+        pitchText: finalPitchText,
         targetGigId,
         targetGigTitle,
         offeredPrice: Number(offeredPrice) || 100,
