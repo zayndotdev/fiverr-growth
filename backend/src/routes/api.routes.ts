@@ -7,6 +7,7 @@ import { onboardingController } from "../controllers/onboarding.controller.js";
 import { competitorController } from "../controllers/competitor.controller.js";
 import { briefsController } from "../controllers/briefs.controller.js";
 import { gigStudioController } from "../controllers/gigStudio.controller.js";
+import { gigImageAgentController } from "../controllers/gigImageAgent.controller.js";
 import { systemController } from "../controllers/system.controller.js";
 import { requireAuth, optionalAuth } from "../middlewares/auth.middleware.js";
 
@@ -45,6 +46,12 @@ router.post("/gigs/interrogate-turn", optionalAuth, (req, res) => gigStudioContr
 router.post("/gigs/synthesize-studio", optionalAuth, (req, res) => gigStudioController.synthesizeGigStudio(req, res));
 router.post("/gigs/generate-artwork", optionalAuth, (req, res) => gigStudioController.generateArtwork(req, res));
 router.post("/gigs/regenerate-description", optionalAuth, (req, res) => gigStudioController.regenerateDescription(req, res));
+
+// --- Autonomous Gig Visual Design Agent Routes ---
+router.post("/gigs/image-agent/generate", optionalAuth, (req, res) => gigImageAgentController.generateImage(req, res));
+router.post("/gigs/image-agent/variations", optionalAuth, (req, res) => gigImageAgentController.getVariations(req, res));
+router.get("/gigs/image-agent/status", optionalAuth, (req, res) => gigImageAgentController.getStatus(req, res));
+router.get("/gigs/image-agent/knowledge", optionalAuth, (req, res) => gigImageAgentController.getKnowledge(req, res));
 
 // --- Buyer Briefs Routes ---
 router.get("/briefs", optionalAuth, (req, res) => briefsController.getBriefs(req, res));
