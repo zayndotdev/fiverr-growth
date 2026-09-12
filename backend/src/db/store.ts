@@ -234,6 +234,58 @@ class Store {
     return this.data.users.find(u => u.id === id);
   }
 
+  public findFiverrProfileByUsername(username: string): ScrapedFiverrProfile | undefined {
+    const clean = (username || "").trim().toLowerCase().replace(/^@+/, "");
+    if (!clean) return undefined;
+
+    // 1. Search in userContexts
+    for (const ctx of Object.values(this.data.userContexts || {})) {
+      if (ctx?.fiverrProfile?.username?.toLowerCase() === clean) {
+        return ctx.fiverrProfile;
+      }
+    }
+
+    // 2. Search in users
+    for (const u of this.data.users || []) {
+      if (u?.fiverrProfile?.username?.toLowerCase() === clean) {
+        return u.fiverrProfile;
+      }
+    }
+
+    // 3. Search in competitorReports
+    if (Array.isArray(this.data.competitorReports)) {
+      for (const rep of this.data.competitorReports) {
+        if (rep?.competitorProfile?.username?.toLowerCase() === clean) {
+          return rep.competitorProfile;
+        }
+      }
+    }
+
+    return undefined;
+  }
+
+  public getAllSavedFiverrProfiles(): ScrapedFiverrProfile[] {
+    const profilesMap = new Map<string, ScrapedFiverrProfile>();
+    for (const ctx of Object.values(this.data.userContexts || {})) {
+      if (ctx?.fiverrProfile?.username) {
+        profilesMap.set(ctx.fiverrProfile.username.toLowerCase(), ctx.fiverrProfile);
+      }
+    }
+    for (const u of this.data.users || []) {
+      if (u?.fiverrProfile?.username) {
+        profilesMap.set(u.fiverrProfile.username.toLowerCase(), u.fiverrProfile);
+      }
+    }
+    if (Array.isArray(this.data.competitorReports)) {
+      for (const rep of this.data.competitorReports) {
+        if (rep?.competitorProfile?.username) {
+          profilesMap.set(rep.competitorProfile.username.toLowerCase(), rep.competitorProfile);
+        }
+      }
+    }
+    return Array.from(profilesMap.values());
+  }
+
   // --- User Context & Onboarding Store ---
   public getUserContext(userId: string): UserContext | null {
     return this.data.userContexts[userId] || null;
